@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+slug: cohere-startup-program
+company: Cohere
+program: Cohere Startup Program
+category: ai
+tags:
+- llm
+- ai-api
+homepage: https://cohere.com
+apply_url: https://cohere.com/startup-program-application
+official_source: https://cohere.com/startup-program
+benefit_type: discount
+benefit_summary: Cohere publishes a Startup Program page and a separate application page,
+  but no benefit, amount, discount percentage or eligibility rule could be read from either;
+  the program's terms are unconfirmed.
+amount_is_published: false
+amount_max: null
+stages:
+- any
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: 'Nothing could be confirmed. Both https://cohere.com/startup-program and
+  https://cohere.com/startup-program-application return HTTP 200 but serve a JavaScript shell:
+  the retrieved markup contained only Cohere''s global navigation and homepage marketing (platform,
+  models, industries, testimonials), with no program section, no eligibility criteria, no
+  discount figure and no application form. The only program sentence that rendered anywhere
+  was on Cohere''s own blog at https://cohere.com/blog/cohere-launches-startup-program: "Cohere''s
+  startup program helps early-stage companies reach their full potential by leveraging AI
+  to scale their business and gain a competitive edge at an affordable cost." That sentence
+  states no benefit amount, no discount percentage and no eligibility rule, so no gate is
+  recorded. Commonly repeated claims about a Series B or earlier cut-off came only from search
+  snippets and aggregators and are deliberately NOT recorded. benefit_type is a required field
+  and is set to "discount" as the least-committal reading of "at an affordable cost"; it is
+  NOT verified. Requires manual verification in a real browser. Renders no programme content
+  to a fetcher, re-confirmed 2026-09-16. Renders no programme content to a fetcher, re-confirmed
+  2026-09-16.'
+status: unverified
+status_basis: inferred
+fetch_note: 200 but JS-only shell for both https://cohere.com/startup-program and https://cohere.com/startup-program-application
+  — retrieved markup was homepage navigation and marketing only, with no program content.
+  https://cohere.com/blog/cohere-launches-startup-program 200 but rendered only a single descriptive
+  sentence with no terms.
+last_verified: '2026-09-16'
+verified_by: tayyabakmal1
+verification_level: needs-manual-verification
+bot_blocked: true

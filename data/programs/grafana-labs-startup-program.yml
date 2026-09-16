@@ -1,0 +1,82 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: grafana-labs-startup-program
+company: Grafana Labs
+program: Grafana Labs Startup Program
+category: devtools
+tags: [observability, monitoring, metrics, logs, traces]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://grafana.com"
+apply_url: "https://grafana.com/blog/grafana-labs-startup-program/"
+official_source: "https://grafana.com/blog/grafana-labs-startup-program/"
+
+# Benefit
+benefit_type: credit
+benefit_summary: >-
+  $100,000 in credits usable on any Grafana Cloud service for 12 months or
+  until the next funding round, plus Enterprise data source plugins and
+  24x7 support, followed by a guaranteed 20% list-price discount.
+amount_is_published: true
+amount_max: 100000
+currency: USD
+duration_months: 12
+expiry_note: >-
+  Credits run for 12 months or until the startup's next round of funding,
+  whichever comes first.
+after_credits: >-
+  A guaranteed 20% discount from list prices after you deplete the credits
+  or your 12 months are completed.
+partner_gate: none
+funding_max_usd: 10000000
+stages: [pre-seed, seed, series-a]
+employees_max: 25
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  The funding and headcount limits are explicitly SOFT, not hard gates:
+  "Ideally, applicants will have raised less than $10 million in funding
+  and be under 25 employees, but please apply even if you do not meet these
+  guidelines." Treat funding_max_usd and employees_max as guidelines. What
+  I could NOT inspect: the target URL https://grafana.com/startups/ returns
+  404, so no current program landing page exists to confirm the offer is
+  still live; the only official description I could open is this
+  announcement blog post dated 2024-09-25. The post states no application
+  deadline, no cohort cap and no closing notice, so status is inferred
+  rather than asserted. The typeform apply link on the page carried
+  ?pg=blog&plcmt=body-txt tracking parameters, which have been stripped.
+  Independently re-audited: a second reviewer opened the vendor page and
+  checked the quote, amount and source. AUDIT: grafana.com/startups/ now
+  returns 404; the only page still carrying these terms is a Grafana Labs
+  blog post. Per the verification policy an announcement page cannot
+  support an active status, so this is recorded as unverified until a live
+  programme page can be cited.
+
+# Application
+application_mechanism: self-serve-form
+requires_sales_call: false
+obligations:
+  - Agree to be a reference customer
+  - >-
+      May be asked to mutually agree to marketing activities, such as guest
+      blogs and speaking at events
+
+# Status
+status: unverified
+status_basis: inferred
+fetch_note: >-
+  https://grafana.com/startups/ returned 404.
+  https://grafana.com/blog/grafana-labs-startup-program/ returned 200 and
+  rendered in full.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: >-
+  $100,000 in credits that can be used for any Grafana Cloud services for
+  12 months
+bot_blocked: false

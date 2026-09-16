@@ -1,0 +1,74 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: plain-for-startups
+company: Plain
+program: Plain for Startups
+category: support
+tags: [customer-support, vc-gated, annual-discount]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://www.plain.com"
+apply_url: "https://www.plain.com/get/demo"
+official_source: "https://www.plain.com/startups"
+
+# Benefit
+benefit_type: discount
+benefit_summary: >-
+  50% off Plain's Horizon plan: a $6k flat fee covering 12 months and 10
+  seats, for VC-backed startups with up to $5m in funding that are not
+  already Plain customers.
+amount_is_published: true
+duration_months: 12
+after_credits: >-
+  Once your discount wraps up, hop on any plan that fits your new stage —
+  whether it's Foundation, Horizon or Frontier.
+excludes: [Existing Plain customers, Support teams larger than 10]
+stacking_notes: >-
+  If and when you need more than 10 seats throughout the duration of the 12
+  month plan, extra seats will be charged at our annual Expansion tier
+  price. Plain states the program cannot be made cheaper for fewer than 10
+  seats.
+
+# Eligibility. Tri-state gates are written only when the vendor states
+# them. An omitted gate reads as `unknown` and keeps this entry out of
+# the matching collection, which is the intended behaviour.
+funding_required: true
+open_to_bootstrapped: false
+requires_vc_backing: true
+partner_gate: none
+funding_max_usd: 5000000
+new_customer_only: true
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  VENDOR SELF-CONTRADICTION on trial length: the hero CTA says "Free 7 day
+  trial" while step 3 of the same page says "Start your 2-week free trial".
+  The more conservative figure is 7 days. The "10 or less" cap is on the
+  SUPPORT TEAM, not total employees, so employees_max is left null. FAQ
+  answers were read from the page's own FAQPage JSON-LD (the visible
+  accordions are client-rendered).
+
+# Application
+application_mechanism: sales-call
+requires_sales_call: true
+obligations: ["Book a demo call with Plain's team to confirm eligibility"]
+
+# Status
+status: active-sales-gated
+status_basis: asserted
+status_quote: "To be eligible for our startup program, you must:"
+fetch_note: >-
+  200 and rendered. Visible FAQ accordion bodies are client-rendered, but
+  the identical answers are present verbatim in the page's FAQPage JSON-LD,
+  which was parsed.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: >-
+  Get 50% off our Horizon plan: $6k flat fee, 12 months, 10 seats
+bot_blocked: false

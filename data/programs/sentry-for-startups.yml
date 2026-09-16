@@ -1,0 +1,74 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: sentry-for-startups
+company: Sentry
+program: Sentry for Startups
+category: devtools
+tags: [error-monitoring, observability, apm]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://sentry.io"
+apply_url: "https://sentry.io/for/startups/apply/"
+official_source: "https://sentry.io/for/startups/apply/"
+
+# Benefit
+benefit_type: credit
+benefit_summary: >-
+  Up to $5,000 in Sentry credits expiring after 12 months, plus priority
+  support, for companies founded in the last 2 years that have raised under
+  $5M in venture capital and have never paid for Sentry.
+amount_is_published: true
+amount_max: 5000
+currency: USD
+duration_months: 12
+expiry_note: Credits expire after one year of joining the program.
+stacking_notes: >-
+  If you're a founder in YC or a16z speedrun, check bookface or the deals
+  portal; there's a separate deal for you to consider, but they don't
+  stack.
+partner_gate: none
+funding_max_usd: 5000000
+company_age_max_years: 2
+age_basis: incorporation
+new_customer_only: true
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  "New to paying for Sentry" means existing free-tier users are not
+  excluded, only current/former paying customers. The headline program page
+  https://sentry.io/for/startups/ renders its content client-side (an
+  interactive terminal); its server HTML meta description and its
+  vendor-hosted bundle both carry the $5,000 figure, and the apply page
+  carries the full eligibility list in server HTML. Independently
+  re-audited: a second reviewer opened the vendor page and checked the
+  quote, amount and source.
+
+# Application
+application_mechanism: self-serve-form
+approval_time: "You'll generally hear back from us within 2 - 3 days."
+obligations:
+  - >-
+      Set up a free Sentry account and supply your organization slug on the
+      application
+
+# Status
+status: active-self-serve
+status_basis: asserted
+status_quote: Apply to Sentry for Startups
+fetch_note: >-
+  https://sentry.io/for/startups/ returned 200 but its body is a JS-only
+  terminal (server HTML shows only "Startup Terminal Loading"); the $5,000
+  figure appears in that page's meta/og/JSON-LD description and in its
+  vendor-hosted bundle /_astro/StartupsTerminal.BD0UbVus.js ("- $5,000 in
+  credits* so you can try everything Sentry has to offer", "*Credits expire
+  after one year of joining the program.").
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: Get up to $5,000 in credits (expiring after 12 months) and priority support
+bot_blocked: false

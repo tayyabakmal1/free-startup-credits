@@ -1,0 +1,60 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: fivetran-startup-program
+company: Fivetran
+program: Fivetran Startup Program
+category: analytics
+tags: [elt, data-pipelines, yc]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://www.fivetran.com"
+apply_url: "https://www.fivetran.com/pricing/startups"
+official_source: "https://www.fivetran.com/pricing/startups"
+
+# Benefit
+benefit_type: credit
+benefit_summary: >-
+  $50,000 of free Fivetran usage on the Standard plan over 12 months, plus
+  complimentary technical support, for Y Combinator companies with 50 or
+  fewer employees that are not current or former Fivetran customers.
+amount_is_published: true
+amount_max: 50000
+currency: USD
+duration_months: 12
+expiry_note: Usage must be used over the course of 12 months.
+accelerator_required: true
+partner_gate: required-hard
+partners: [Y Combinator]
+stages: [any]
+employees_max: 50
+new_customer_only: true
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  The offer is explicitly and exclusively for Y Combinator companies — the
+  page headline reads "The most reliable data pipelines. Now free to YC
+  Startups." There is no non-YC path published. Independently re-audited: a
+  second reviewer opened the vendor page and checked the quote, amount and
+  source.
+
+# Application
+application_mechanism: self-serve-form
+approval_time: "Within 2 business days, we'll verify your eligibility"
+
+# Status
+status: active-partner-only
+status_basis: asserted
+status_quote: Enrolled in any Y Combinator batch
+fetch_note: >-
+  200 and rendered — full page text present in server HTML. Apply button is
+  an on-page anchor (#page-form) to the registration form.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: $50k in free usage
+bot_blocked: false

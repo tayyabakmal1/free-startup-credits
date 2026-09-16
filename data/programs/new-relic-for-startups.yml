@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+slug: new-relic-for-startups
+company: New Relic
+program: New Relic for Startups
+category: devtools
+tags:
+- observability
+- apm
+- logs
+- monitoring
+homepage: https://newrelic.com
+apply_url: https://newrelic.com/startups
+official_source: https://newrelic.com/startups
+benefit_type: free-plan
+benefit_summary: Free access to the New Relic platform for five users with a monthly data-ingest
+  allowance, plus assigned engineering support; no dollar value, ingest figure, or duration
+  is published.
+amount_is_published: false
+amount_max: null
+stages:
+- any
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: 'Could not inspect: any eligibility criteria (funding, age, employees,
+  new-customer status), the program duration, and the actual data-ingest allowance — the page
+  says only "generous data ingest per month" with no figure. The page markets itself against
+  credit programs ("We stay in the room and help you succeed — not just credits"), so this
+  is a free-plan/service benefit rather than a credit grant. No eligibility criteria are published
+  on the page. No eligibility criteria are published on the page.'
+application_mechanism: self-serve-form
+status: active-amount-undisclosed
+status_basis: inferred
+fetch_note: 200 and rendered on two fetches; benefit bullets consistent. The rendered page
+  returned a post-submission confirmation state ("Thank you for registering your interest!"),
+  so the pre-submission registration form fields and any terms shown there were not inspectable.
+last_verified: '2026-09-16'
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: 5 users and generous data ingest per month, plus every New Relic AI feature.
+bot_blocked: false

@@ -1,0 +1,60 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: webflow-for-startups
+company: Webflow
+program: Webflow for Startups
+category: design
+tags: [website-builder, discontinued, no-code]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://webflow.com"
+apply_url: "https://help.webflow.com/hc/en-us/articles/33961217659923-How-to-redeem-your-Webflow-for-startups-discount"
+official_source: "https://help.webflow.com/hc/en-us/articles/33961217659923-How-to-redeem-your-Webflow-for-startups-discount"
+
+# Benefit
+benefit_type: discount
+benefit_summary: >-
+  Closed program. Startups accepted before 30 June 2026 received a promo
+  code for 100% off the first year of a monthly Premium Site plan; no new
+  applications are accepted.
+amount_is_published: false
+amount_max: null
+duration_months: 12
+expiry_note: >-
+  Promo code applies only to monthly billing for the Premium Site plan (and
+  legacy CMS Site plan); it does not work with yearly billing.
+after_credits: >-
+  All current program participants will be honored through their existing
+  commitments. Access continues through the end of the committed period,
+  after which the account transitions to Webflow's standard plans.
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  Program is closed; historic eligibility criteria are no longer published.
+  Webflow states no replacement is planned: "We don't have plans for a new
+  early-stage program at this time." Webflow points startups to its free
+  Starter plan instead.
+
+# Status
+status: discontinued
+status_basis: asserted
+status_quote: As of June 30, 2026, we no longer accept new applications.
+discontinued_date: "2026-06-30"
+fetch_note: >-
+  The given URL https://webflow.com/solutions/startups could not be fetched
+  via WebFetch (HTTP parse error: header overflow).
+  https://webflow.com/startups 301-redirects cross-subdomain to the Webflow
+  Help Center article above, which returned 200 via curl and carries the
+  sunset notice and FAQ.
+  https://help.webflow.com/hc/en-us/articles/44991635373843-Webflow-discounts-overview
+  returned 403 to WebFetc
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: The Webflow for Startups program ended on June 30, 2026.
+bot_blocked: false

@@ -1,0 +1,88 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: datadog-for-startups
+company: Datadog
+program: Datadog for Startups
+category: devtools
+tags: [observability, monitoring, partner-gated]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://www.datadoghq.com"
+apply_url: "https://www.datadoghq.com/partner/datadog-for-startups/"
+official_source: "https://www.datadoghq.com/partner/datadog-for-startups/"
+
+# Benefit
+benefit_type: credit
+benefit_summary: >-
+  Up to $100k in credits covering up to a year of free Datadog Pro across
+  the full platform, for Series A or earlier companies referred by an
+  official Datadog partner.
+amount_is_published: true
+amount_max: 100000
+currency: USD
+duration_months: 12
+expiry_note: >-
+  Acceptance expires if credits are not activated within 30 days; terms
+  define the Program End Date as the earliest of credit exhaustion, "the
+  12-month anniversary of Activation", or removal from the program.
+  Accounts inactive for three months receive a warning and 30 days to begin
+  using products.
+after_credits: >-
+  Program terms state: "Commencing with the Program End Date, unless the
+  Parties have agreed otherwise in a written Order, Fees will be billed to
+  Customer under the MSA and Customer's self-serve subscription and billing
+  settings at Datadog's then-current rates."
+excludes:
+  - current or prior Datadog customers
+  - companies that have previously received Datadog for Startups credits
+  - Series B and later startups
+stacking_notes: >-
+  Terms state Startup Credits "have no cash value, are non-refundable,
+  non-transferable, and may not be applied to taxes or amounts owed for
+  technical, premier support, or professional services."
+partner_gate: required-hard
+stages: [idea, pre-seed, seed, series-a]
+new_customer_only: true
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  Three stated requirements: "Series A or earlier"; "Must apply through one
+  of our official referral partners"; and "The company must be new to
+  Datadog" — "you cannot be a current or prior Datadog customer, nor can
+  you have previously received DDFS credits." The partner gate is hard:
+  direct applications are not accepted, and the page directs applicants
+  without a partner to their investor, accelerator or startup community
+  contact. The legal terms at
+  https://www.datadoghq.com/legal/datadog-for-startups/ do not restate the
+  funding-stage or partner requirements and state only that "To be eligible
+  for acceptance in the Program, Customer must have a valid Datadog
+  account"; the more restrictive marketing-page criteria are recorded here.
+  Independently re-audited: a second reviewer opened the vendor page and
+  checked the quote, amount and source.
+
+# Application
+application_mechanism: partner-code
+requires_sales_call: false
+approval_time: typically within 3 to 5 business days
+
+# Status
+status: active-partner-only
+status_basis: asserted
+status_quote: Must apply through one of our official referral partners
+fetch_note: >-
+  https://www.datadoghq.com/partner/startups/ (the supplied URL) returned
+  404. https://www.datadoghq.com/partner/datadog-for-startups/ 200 and
+  rendered in full including eligibility and the four application steps.
+  https://www.datadoghq.com/legal/datadog-for-startups/ 200 and rendered.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: >-
+  Datadog for Startups gives early-stage companies up to a year of free
+  access to the full Datadog platform - up to $100k in credits.
+bot_blocked: false

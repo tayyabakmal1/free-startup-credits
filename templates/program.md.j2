@@ -1,0 +1,190 @@
+{{ banner }}
+# {{ program.company }} — {{ program.program }}
+
+{{ program.benefit_summary | trim }}
+
+{% set vlabel, vdesc = VERIFICATION_LABEL[program.verification_level] %}
+| | |
+|---|---|
+| **Status** | {{ STATUS_LABEL.get(program.status, program.status) }} |
+| **Verification** | {{ vlabel }} — {{ vdesc }} |
+| **Last verified** | {{ program.last_verified }} by [@{{ program.verified_by }}](https://github.com/{{ program.verified_by }}) |
+| **Category** | [{{ category.emoji }} {{ category.name }}](../categories/{{ category.id }}.md) |
+{% if program.discontinued_date %}
+| **Closed** | {{ program.discontinued_date }} |
+{% endif %}
+
+{% if program.status in ('discontinued', 'no-program', 'closed-to-new') %}
+> ⚠️ **This programme is not available.** It is kept here, dated, because most
+> other lists still show it as live.
+{% elif program.verification_level == 'needs-manual-verification' %}
+> ⚠️ **We could not read the vendor's page.** The programme is recorded with its
+> official URL, but no amount is published and the terms are unconfirmed.
+{% endif %}
+
+## What you get
+
+| | |
+|---|---|
+| **Type** | {{ program.benefit_type | replace('-', ' ') }} |
+{% if program.amount_max is not none %}
+| **Maximum** | {{ money(program.amount_max, program.currency or 'USD') }} — see the vendor's exact wording below |
+{% elif program.amount_is_published is sameas false %}
+| **Amount** | The vendor publishes no figure |
+{% endif %}
+{% if program.duration_months %}
+| **Duration** | {{ program.duration_months }} months |
+{% endif %}
+{% if program.expiry_note %}
+| **Expiry** | {{ program.expiry_note }} |
+{% endif %}
+{% if program.after_credits %}
+| **When it ends** | {{ program.after_credits }} |
+{% endif %}
+
+{% if program.tiers %}
+### Tiers
+
+Each tier has its own eligibility. A headline figure is usually the top tier, not
+what a typical applicant receives.
+
+| Tier | Amount | The vendor's wording | Gate |
+|---|---|---|---|
+{% for t in program.tiers %}
+| {{ t.name }} | {{ money(t.amount_max, program.currency or 'USD') if t.amount_max else '—' }} | {{ t.quote }} | {{ GATE_LABEL.get(t.partner_gate, '—') if GATE_LABEL is defined else (t.partner_gate or '—') }} |
+{% endfor %}
+{% endif %}
+
+{% if program.excludes %}
+### Not covered
+
+{% for e in program.excludes %}
+- {{ e }}
+{% endfor %}
+{% endif %}
+
+{% if program.stacking_notes %}
+> **Stacking:** {{ program.stacking_notes }}
+{% endif %}
+
+## Can you apply?
+
+{% for label, value in program | elig_rows %}
+{% if loop.first %}
+| Requirement | |
+|---|---|
+{% endif %}
+| {{ label }} | {{ value }} |
+{% endfor %}
+
+> **"Not stated by the vendor" means exactly that — not "no restriction".**
+> This list never infers permission from silence, so anything the vendor did not
+> put in writing stays unknown, and this entry is left out of the matching
+> filters rather than guessed into them.
+
+{% if program.stages %}
+**Stages named by the vendor:** {{ program.stages | join(', ') }}
+{% endif %}
+
+### Where it is available
+
+{% if program.regions_basis == 'asserted' %}
+The vendor states this explicitly{% if program.regions %}: `{{ program.regions | join('`, `') }}`{% endif %}.
+{% if program.regions_quote %}
+
+> {{ program.regions_quote }}
+{% endif %}
+{% elif program.regions_basis == 'inferred' %}
+The vendor names a region but does not say which countries it covers, so
+availability in any particular country is **not** confirmed.
+{% else %}
+**The vendor publishes no geographic restriction.** That is not the same as
+confirming it is available where you are — check their terms before applying.
+{% endif %}
+{% if program.excluded_regions %}
+
+**Explicitly excluded:** `{{ program.excluded_regions | join('`, `') }}`
+{% endif %}
+
+{% if program.eligibility_notes %}
+### Notes
+
+{{ program.eligibility_notes }}
+{% endif %}
+
+## How to apply
+
+| | |
+|---|---|
+| **Process** | {{ (program.application_mechanism or 'unknown') | replace('-', ' ') }} |
+{% if program.approval_time %}
+| **Turnaround** | {{ program.approval_time }} |
+{% endif %}
+{% if program.partners %}
+| **Partners** | {{ program.partners | join(', ') }} |
+{% endif %}
+
+**[Apply →]({{ program.apply_url }})**
+
+{% if program.obligations %}
+### What they ask of you in return
+
+{% for o in program.obligations %}
+- {{ o }}
+{% endfor %}
+{% endif %}
+
+## Evidence
+
+{% if program.evidence_quote %}
+Quoted from the vendor's own page:
+
+> {{ program.evidence_quote }}
+
+{% endif %}
+**Source:** <{{ program.official_source }}>
+{% if program.status_quote %}
+
+**On its status, the page says:** "{{ program.status_quote }}"
+{% endif %}
+{% if program.bot_blocked %}
+
+> This vendor blocks automated access, so this entry can only be re-checked by a
+> person with a browser. It is flagged permanently for manual review.
+{% endif %}
+
+{% if program.conflicting_sources %}
+### The vendor contradicts itself
+
+Both readings are recorded rather than silently picking one, because choosing the
+more generous one would misrepresent your chance of being accepted.
+
+{% for c in program.conflicting_sources %}
+- "{{ c.quote }}" — <{{ c.url }}>{% if c.note %}
+  {{ c.note }}{% endif %}
+{% endfor %}
+{% endif %}
+
+{% if member_of %}
+## Appears in
+
+{% for c in member_of %}
+- [{{ c.emoji }} {{ c.title }}](../collections/{{ c.id }}.md){% if c.section == 'confirmed' %} — confirmed{% elif c.section == 'not-confirmed' %} — **listed, but not confirmed**{% elif c.section == 'not-available' %} — **not available**{% endif %}
+
+{% endfor %}
+{% endif %}
+
+{% if program.related %}
+## Related
+
+{% for r in program.related %}
+- [{{ r }}](./{{ r }}.md)
+{% endfor %}
+{% endif %}
+
+---
+
+Something wrong here? [Report it](../../../issues/new?template=report-expired.yml) —
+a correction is worth more to this list than a new entry.
+Raw data: [`data/programs/{{ program.slug }}.yml`](../data/programs/{{ program.slug }}.yml) ·
+[all categories](../README.md)

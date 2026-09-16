@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+slug: snyk-for-startups
+company: Snyk
+program: Snyk for startups
+category: security
+tags:
+- security
+- appsec
+- no-published-program
+homepage: https://snyk.io
+apply_url: https://snyk.io/startups/
+official_source: https://snyk.io/startups/
+benefit_type: free-plan
+benefit_summary: Snyk's startups page is product marketing with "Book a live demo" and "Start
+  free" calls to action; it publishes no startup-specific credit, discount, term length, eligibility
+  test or application process.
+amount_is_published: false
+amount_max: null
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: 'NEGATIVE RESULT, INFERRED NOT ASSERTED. Snyk does not anywhere state that
+  it has no startup program, so status_basis is "inferred". What I verified directly: (1)
+  https://snyk.io/startups/ returned 200 and its full text contains no credit amount, no discount
+  percentage, no term length, no eligibility criteria and no application form — only "Book
+  a live demo" and "Start free" CTAs and three customer testimonials; (2) https://snyk.io/plans/
+  returned 200 and contains zero occurrences of the word "startup"; (3) https://snyk.io/startup-program
+  and https://snyk.io/startups/program both return 404. Third-party listings claiming a "Startup-tier
+  discount" for pre-seed/seed/Series A with no VC referral required could not be traced to
+  any Snyk-owned page and are NOT recorded. A founder wanting startup pricing would have to
+  contact Snyk sales; that is an inference, not a published route. Re-confirmed 2026-09-16:
+  the quote appears verbatim, and the page publishes no startup-specific discount, credit
+  or eligibility rule - only ''Book a live demo'' and ''Start free'' calls to action.'
+status: no-program
+status_basis: inferred
+fetch_note: snyk.io/startups/ 200 and rendered in full; snyk.io/plans/ 200 and rendered; snyk.io/startup-program
+  and snyk.io/startups/program both 404.
+last_verified: '2026-09-16'
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: Hypergrowth companies need to be able to develop fast, while keeping their
+  applications secure.
+bot_blocked: false

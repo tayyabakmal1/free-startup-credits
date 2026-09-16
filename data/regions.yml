@@ -1,0 +1,97 @@
+# Region groups and country names.
+#
+# ============================================================================
+# THIS FILE IS A DISPLAY AND GROUPING AID. IT IS NEVER PROOF OF ELIGIBILITY.
+# ============================================================================
+#
+# A vendor saying "available in APAC" does NOT establish that a startup in
+# Pakistan can apply, even though PK appears in the `apac` group below.
+# Expanding our own group and calling that confirmation would manufacture
+# eligibility the vendor never granted.
+#
+# The rule, enforced by scripts/validate.py:
+#
+#   A program is CONFIRMED for a country only when the vendor's own page
+#     1. explicitly lists that country, OR
+#     2. states worldwide / global availability, OR
+#     3. names a region AND itself enumerates that country within it.
+#
+#   `regions_basis: asserted`  -> vendor stated it; may appear as Confirmed
+#   `regions_basis: inferred`  -> vendor named a region but not its countries
+#   `regions_basis: unstated`  -> vendor published no geographic restriction
+#
+#   Only `asserted` entries whose `regions` contain `global` or the literal
+#   ISO code may appear in a Confirmed section. Group ids below are REJECTED
+#   by validate.py inside any confirmed-section filter.
+#
+# Use a group id in a program's `regions` only when the vendor itself used
+# that regional wording. Pair it with `regions_basis: inferred` unless the
+# vendor also enumerated the countries.
+
+groups:
+  global:
+    name: Worldwide
+    note: >-
+      Use only when the vendor explicitly says worldwide, global, or
+      "available in all countries where we operate" with no further limit.
+
+  eu:
+    name: European Union
+    countries: [AT, BE, BG, HR, CY, CZ, DK, EE, FI, FR, DE, GR, HU, IE, IT, LV,
+                LT, LU, MT, NL, PL, PT, RO, SK, SI, ES, SE]
+
+  eea:
+    name: European Economic Area
+    countries: [AT, BE, BG, HR, CY, CZ, DK, EE, FI, FR, DE, GR, HU, IE, IS, IT,
+                LV, LI, LT, LU, MT, NL, NO, PL, PT, RO, SK, SI, ES, SE]
+
+  europe:
+    name: Europe
+    note: Broader than the EU. Includes the UK, Switzerland and the Balkans.
+    countries: [AL, AT, BA, BE, BG, CH, CY, CZ, DE, DK, EE, ES, FI, FR, GB, GR,
+                HR, HU, IE, IS, IT, LI, LT, LU, LV, MD, ME, MK, MT, NL, NO, PL,
+                PT, RO, RS, SE, SI, SK, UA]
+
+  north_america:
+    name: North America
+    countries: [CA, MX, US]
+
+  latam:
+    name: Latin America
+    countries: [AR, BO, BR, CL, CO, CR, DO, EC, GT, HN, MX, NI, PA, PE, PY, SV,
+                UY, VE]
+
+  apac:
+    name: Asia-Pacific
+    countries: [AU, BD, CN, HK, ID, IN, JP, KH, KR, LK, MM, MY, NP, NZ, PH, PK,
+                SG, TH, TW, VN]
+
+  mena:
+    name: Middle East & North Africa
+    countries: [AE, BH, DZ, EG, IL, IQ, JO, KW, LB, LY, MA, OM, PS, QA, SA, TN,
+                TR, YE]
+
+  africa:
+    name: Africa
+    countries: [AO, BW, CI, CM, EG, ET, GH, KE, MA, MU, MZ, NG, RW, SN, TN, TZ,
+                UG, ZA, ZM, ZW]
+
+# Countries that get their own generated collection page in v1.
+# Each renders TWO separate sections: Confirmed, then Not confirmed.
+featured_countries:
+  - code: PK
+    name: Pakistan
+  - code: US
+    name: United States
+  - code: GB
+    name: United Kingdom
+  - code: IN
+    name: India
+  - code: CA
+    name: Canada
+  - code: AE
+    name: United Arab Emirates
+  - code: SG
+    name: Singapore
+  - code: NG
+    name: Nigeria

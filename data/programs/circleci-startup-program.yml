@@ -1,0 +1,81 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: circleci-startup-program
+company: CircleCI
+program: Startup program
+category: devtools
+tags: [ci-cd, devtools, compute-credits]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://circleci.com"
+apply_url: "https://circleci.com/startup-program"
+official_source: "https://circleci.com/startup-program"
+
+# Benefit
+benefit_type: credit
+benefit_summary: >-
+  Up to $20,000 in free compute credits and up to 24 months of use, plus
+  free Starter Support (stated as valued at $249 per month) and guided
+  onboarding. Credit amount and promotional period vary by startup stage
+  and location.
+amount_is_published: true
+amount_max: 20000
+currency: USD
+duration_months: 24
+expiry_note: >-
+  The promotional period ends either when the credits are fully consumed or
+  the promotional period ends.
+after_credits: >-
+  Once you run out of your credits or at the end of the promotional period
+  (whichever comes first), we have several options to meet your needs
+  including premium support and volume discounts.
+excludes: [existing paid CircleCI customers]
+accelerator_required: false
+open_to_bootstrapped: false
+partner_gate: required-soft
+funding_min_usd: 500000
+stages: [pre-seed, seed, series-a]
+company_age_max_years: 5
+age_basis: incorporation
+new_customer_only: true
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  All four criteria must be met: "New to CircleCI, or on Free plan /
+  Pre-Seed through Series A / Founded within the last 5 years / Part of a
+  recognized accelerator or VC. If none, proof of funding for a minimum of
+  $500K USD raised". The $500K is a FLOOR and applies only to applicants
+  with no accelerator or VC affiliation. CircleCI also states "The amount
+  of free credits and duration of the promotional period vary based upon
+  startup stage and location" but does not publish the location tiers, so
+  the stated maximums may not be available everywhere. Independently
+  re-audited: a second reviewer opened the vendor page and checked the
+  quote, amount and source.
+
+# Application
+application_mechanism: self-serve-form
+obligations:
+  - >-
+      proof of funding for a minimum of $500K USD raised, if not part of a
+      recognized accelerator or VC
+
+# Status
+status: active-self-serve
+status_basis: inferred
+status_quote: Up to $20,000 of free compute credits for eligible startups
+fetch_note: >-
+  https://circleci.com/solutions/startups/ 200 and rendered (headline offer
+  only). The detailed program page https://circleci.com/startup-program/
+  200 and rendered with the full eligibility FAQ. Apply CTA points to a
+  HubSpot form at https://r2hyl.share.hsforms.com/26qTJZ9w7QtS2Pib6nO2w_g
+  (verified 200); the circleci.com page is used as apply_url.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: Up to $20,000 of free compute credits for eligible startups
+bot_blocked: false

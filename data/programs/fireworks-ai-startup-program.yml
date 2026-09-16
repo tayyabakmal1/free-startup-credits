@@ -1,0 +1,61 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+slug: fireworks-ai-startup-program
+company: Fireworks AI
+program: Fireworks for Startups
+category: ai
+tags:
+- inference
+- llm
+- gpu
+- fine-tuning
+homepage: https://fireworks.ai
+apply_url: https://fireworks.ai/startups
+official_source: https://fireworks.ai/startups
+benefit_type: credit
+benefit_summary: Credits for eligible venture-backed startups, expiring one year after joining,
+  usable for inference, image generation, speech-to-text, embeddings, fine-tuning and on-demand
+  GPU deployments. No credit amount is published.
+amount_is_published: false
+amount_max: null
+duration_months: 12
+expiry_note: Credits expire after 1 year.
+after_credits: Usage rolls into pay-as-you-go pricing; options for higher limits, reserved
+  capacity and tailored support are offered to scaling startups.
+excludes:
+- Reserved compute/GPU commitments — credits apply only to on-demand usage, not long-term
+  reserved GPU capacity or SLAs
+- Fireworks professional services
+- Premium support
+funding_required: true
+open_to_bootstrapped: false
+requires_vc_backing: true
+funding_min_usd: 500000
+stages:
+- pre-seed
+- seed
+- series-a
+- series-b
+- series-c-plus
+company_age_max_years: 5
+age_basis: incorporation
+requires_incorporation: true
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: 'No credit figure is published anywhere on the page; the FAQ only says
+  eligible startups "can get access to credits". Contact startups@fireworks.ai is given for
+  questions about eligibility and usage limits. No dollar figure is published; the benefit
+  is quoted as "Eligible startups can get access to credits (expire after 1-year)". Also verbatim:
+  "Founded within the last 5 years", "Operate as a privately held, for-profit entity", "Not
+  have received Series D or later funding". funding_min is a FLOOR.'
+application_mechanism: self-serve-form
+status: active-amount-undisclosed
+status_basis: inferred
+status_quote: Yes! Eligible startups can get access to credits (expire after 1-year)
+fetch_note: 200 and rendered — full page including the FAQ accordion content is present in
+  the server HTML. Application is an embedded HubSpot form on the same page.
+last_verified: '2026-09-16'
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: Venture backed startups with >$500k in funding
+bot_blocked: false

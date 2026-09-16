@@ -1,0 +1,76 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: ramp-for-startups
+company: Ramp
+program: Ramp for Startups
+category: finance
+tags: [corporate-card, spend-management, perks-marketplace]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://ramp.com"
+apply_url: "https://ramp.com/startups"
+official_source: "https://ramp.com/startups"
+
+# Benefit
+benefit_type: bundle
+benefit_summary: >-
+  Access to a partner rewards marketplace Ramp states is worth $350K+ in
+  credits and discounts, redeemed from the Ramp product dashboard after
+  opening an account. Ramp publishes no eligibility criteria on the page.
+amount_is_published: true
+amount_max: 350000
+currency: USD
+stacking_notes: >-
+  The benefit is a marketplace of third-party partner offers rather than
+  Ramp-issued credits; individual partner offers carry their own terms.
+accelerator_required: false
+partner_gate: improves-offer
+partners: [AWS, Datadog, Notion, OpenAI, Google Cloud, Retool]
+stages: [any]
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  NOT INSPECTABLE: Ramp publishes no eligibility criteria on the startups
+  page — no minimum bank balance, no US-entity requirement, no funding
+  stage, no company age. Widely repeated third-party claims (e.g. a $75,000
+  minimum cash balance) appear only on aggregator sites and are NOT
+  recorded here. The only conditional language on the page is "If your
+  accelerator is a Ramp partner, you may already be pre-qualified", which
+  describes pre-qualification rather than a gate. The perks are a partner
+  marketplace, not Ramp credits: https://ramp.com/rewards states "Get Ramp
+  today and redeem within the product dashboard", i.e. redemption requires
+  an active Ramp account. The $350K figure is written on the page as
+  "$350K+", a floor rather than a cap. Independently re-audited: a second
+  reviewer opened the vendor page and checked the quote, amount and source.
+
+# Application
+application_mechanism: self-serve-form
+requires_sales_call: false
+approval_time: 1-2 business days
+obligations:
+  - >-
+      perks are redeemed inside the Ramp product dashboard, which requires
+      opening a Ramp account
+
+# Status
+status: active-self-serve
+status_basis: asserted
+status_quote: >-
+  Fill out your application. Application review and approval may take 1-2
+  business days
+fetch_note: >-
+  https://ramp.com/startups 200 and rendered with the perks figure and the
+  three application steps; no eligibility section present.
+  https://ramp.com/rewards 200 and rendered.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: >-
+  Get access to $350K+ in perks, including credits and discounts to help
+  you scale.
+bot_blocked: false

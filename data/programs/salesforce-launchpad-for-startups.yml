@@ -1,0 +1,62 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+slug: salesforce-launchpad-for-startups
+company: Salesforce
+program: Salesforce Launchpad for Startups
+category: crm
+tags:
+- crm
+- sales-cloud
+- agentforce
+- slack
+- tableau
+homepage: https://www.salesforce.com
+apply_url: https://invite.salesforce.com/launchpad
+official_source: https://www.salesforce.com/launchpad/
+benefit_type: discount
+benefit_summary: Free and discounted Salesforce products for venture-backed startups, covering
+  Starter Suite, Pro Suite, Sales Cloud Enterprise Edition, Agentforce, Tableau and Slack,
+  plus implementation support. No cost to join; no amounts published.
+amount_is_published: false
+amount_max: null
+stacking_notes: VCs can partner with Launchpad to give portfolio companies access; you do
+  not need to be a Salesforce Ventures portfolio company to join.
+funding_required: true
+open_to_bootstrapped: false
+requires_vc_backing: true
+partner_gate: improves-offer
+stages:
+- any
+regions:
+- US
+- CA
+excluded_regions: []
+regions_basis: inferred
+eligibility_notes: 'The prior target URL salesforce.com/solutions/small-business/startups/
+  404s; salesforce.com/startups redirects to salesforce.com/crm/startup-crm/, which points
+  to Launchpad as the actual program. The geographic and funding restrictions are published
+  on the application page (https://invite.salesforce.com/launchpad), not on salesforce.com/launchpad/,
+  so regions_quote is sourced from the application page. Specific discount percentages and
+  dollar values are not published anywhere on either page. No percentages are published. Benefit
+  quoted verbatim: "There''s no cost to join Launchpad. You''ll also have access to exclusive
+  Salesforce discounts through the program." and "We offer free and discounted Salesforce
+  products tailored for startups of all stages". No percentages are published. Benefit quoted
+  verbatim: "There''s no cost to join Launchpad. You''ll also have access to exclusive Salesforce
+  discounts through the program." and "We offer free and discounted Salesforce products tailored
+  for startups of all stages".'
+application_mechanism: self-serve-form
+requires_sales_call: false
+approval_time: The Salesforce Launchpad team will review your application within 5 business
+  days.
+status: active-amount-undisclosed
+status_basis: inferred
+status_quote: There's no cost to join Launchpad. You'll also have access to exclusive Salesforce
+  discounts through the program.
+fetch_note: salesforce.com/solutions/small-business/startups/ returned 404; salesforce.com/startups
+  200-redirected to /crm/startup-crm/ which links to /launchpad/. Both /launchpad/ and invite.salesforce.com/launchpad
+  fetched 200 and rendered.
+last_verified: '2026-09-16'
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: Salesforce Launchpad is open to venture-backed startups across industries
+  and growth stages.
+bot_blocked: false

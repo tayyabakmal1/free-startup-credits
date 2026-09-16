@@ -1,0 +1,86 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+slug: jetbrains-startup-program
+company: JetBrains
+program: JetBrains Startup Program
+category: devtools
+tags:
+- ide
+- developer-tools
+- percentage-discount
+- five-year
+homepage: https://www.jetbrains.com
+apply_url: https://www.jetbrains.com/shop/eform/startup/
+official_source: https://www.jetbrains.com/startups/
+benefit_type: discount
+benefit_summary: 50% off purchases of up to 10 IDE subscriptions, 10 paid team or learning
+  tool subscriptions and 10 JetBrains AI subscriptions, available over a five-year enrolment
+  period.
+amount_is_published: false
+amount_max: null
+duration_months: 60
+expiry_note: Discount expires five years after approval confirmation, or earlier once the
+  10/10/10 subscription limits are reached.
+after_credits: The Startup Program Discount expires five years after the date of your Startup
+  Program Discount approval confirmation or once you have met the limit for discounted purchases
+excludes:
+- personal licenses
+- floating licenses
+- subsidiaries or other companies within the same organization once the parent has received
+  the discount
+- companies that have already received the Startup Program Discount once
+stacking_notes: The Startup Program Discount cannot be combined with any other JetBrains discounts
+  or special offers.
+tiers:
+- name: Startup Program (direct application)
+  quote: The JetBrains Startup Program is designed for eligible new businesses, offering them
+    a 50% discount on purchases of up to 10 IDE subscriptions, 10 paid team or learning tool
+    subscriptions, and 10 J...
+  partner_gate: none
+  notes: Apply directly at jetbrains.com/shop/eform/startup/. Reviewed within 48 hours.
+- name: Via a JetBrains Partner Program incubator, accelerator or VC
+  quote: six months of free access to up to 10 licenses in total (IDEs, All Products Pack,
+    team tools, or learning tools), followed by the standard 50% Startup Program Discount
+    for the remainder of a five-y...
+  partner_gate: required-hard
+  notes: 'Better offer, reachable only through an affiliated partner. A startup cannot hold
+    both: ''Can a startup apply for both the Startup Program and the Partner Program? No.'''
+partner_gate: improves-offer
+partners:
+- Techstars
+stages:
+- any
+company_age_max_years: 5
+age_basis: incorporation
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: 'What could not be inspected directly: the page is a client-rendered SPA,
+  so the served HTML contains only the header. The body and FAQ copy quoted here were read
+  from JetBrains'' own served assets (https://www.jetbrains.com/_assets/startups/index.entry.facc76393c645839042a.js
+  plus the en-us message catalogue in https://www.jetbrains.com/_assets/common.32377008276e33346b66.js),
+  not from rendered DOM. The 50% figure is independently corroborated by the meta description
+  present in the served HTML: ''Save up to 50% on professional development and team tools
+  designed for startups.'' The three published eligibility requirements are: ''Your company
+  is privately owned.'', ''You can provide evidence proving that your company was established
+  within the last five years.'', ''Your company has a website or other discoverable online
+  presence.'' No funding, revenue or headcount cap is published (the page notes teams of 50+
+  should look at business solutions, but does not state this as an eligibility bar). No currency
+  amount is published - the benefit is a percentage discount only. Renders no discount or
+  eligibility content to a fetcher, re-confirmed 2026-09-16. Renders no discount or eligibility
+  content to a fetcher, re-confirmed 2026-09-16.'
+application_mechanism: self-serve-form
+approval_time: our team will review your application within 48 hours
+obligations:
+- Provide evidence that the company was established within the last five years
+- Maintain a website or other discoverable online presence
+status: active-self-serve
+status_basis: asserted
+status_quote: After you apply, our team will review your application within 48 hours.
+fetch_note: '200 but JS-only: the served HTML for https://www.jetbrains.com/startups/ renders
+  as just the title and two nav links. Body and FAQ text was reconstructed from JetBrains''
+  own served JS bundle and en-us i18n message catalogue (see eligibility_notes). https://www.jetbrains.com/shop/eform/startup/
+  was checked separately and returns 200 with no redirect.'
+last_verified: '2026-09-16'
+verified_by: tayyabakmal1
+verification_level: needs-manual-verification
+bot_blocked: true

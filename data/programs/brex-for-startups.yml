@@ -1,0 +1,71 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+slug: brex-for-startups
+company: Brex
+program: Brex for startups
+category: finance
+tags:
+- banking
+- corporate-card
+- perks
+- spend-management
+homepage: https://www.brex.com
+apply_url: https://www.brex.com/solutions/startups
+official_source: https://www.brex.com/solutions/startups
+benefit_type: bundle
+benefit_summary: Brex cardholders get a catalogue of third-party partner perks, headlined
+  on the startups page as "Over $350K in discounts and credits on AI and SaaS". The figure
+  is stated as a floor, not a cap, so no maximum is recorded. A named subset is the "Day Zero
+  Stack".
+amount_is_published: true
+expiry_note: The availability of these perks may change over time. If a reward is removed
+  from this list, it's no longer available on your account.
+stacking_notes: Perks are redeemed inside the Brex dashboard under Rewards > Perks and discounts;
+  availability may change over time.
+partner_gate: none
+partners:
+- Amazon Web Services
+- Attio
+- Carta
+- Deel
+- Drata
+- Elevenlabs.io
+- Framer
+- Github
+- Granola
+- Gusto
+- Linear
+- Notion
+- OpenAI
+- Pulley
+- Pylon
+- Slack
+- Superhuman
+- Vercel
+- Warp
+- Wispr
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: 'amount_max is left null deliberately: the vendor publishes "Over $350K",
+  which is a floor on aggregate partner value, not a credit ceiling, and rounding or reinterpreting
+  it would misstate the offer. Brex publishes no eligibility criteria for the perks beyond
+  being a Brex cardholder. Individual Day Zero Stack perks carry their own third-party conditions
+  (e.g. AWS "$5,000 in AWS credits depending on Activate eligibility"; Slack "30% Off Slack
+  Pro or Business+ plan for the first 12 months for companies with no more than 200 employees"),
+  and Brex states "These partnerships are always subject to change." This is an aggregate
+  partner-perks figure, not Brex credit. No eligibility criteria are published on the page.
+  This is an aggregate partner-perks figure, not Brex credit. No eligibility criteria are
+  published on the page.'
+application_mechanism: in-product
+status: active-self-serve
+status_basis: inferred
+status_quote: Brex cardholders have access to hundreds of cardholder benefits through our
+  partners, as well as a sign-on bonus for new customers.
+fetch_note: https://www.brex.com/ and /startups redirect to https://www.brex.com/solutions/startups,
+  200 and rendered. Perk detail confirmed on https://www.brex.com/support/brex-partner-perks,
+  200 and rendered with the full Day Zero Stack partner list.
+last_verified: '2026-09-16'
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: Over $350K in discounts and credits on AI and SaaS
+bot_blocked: false

@@ -1,0 +1,44 @@
+# Link checking for data/*.yml.
+#
+# Principle: do NOT globally accept 403. A checker that goes green while vendor
+# pages rot is the exact failure this repository exists to prevent. Instead we
+# behave like a browser, rate-limit ourselves politely, and keep a small,
+# commented exclude list that is reviewed like any other content.
+
+# Behave like a browser. Many vendor pages reject HEAD but answer GET.
+method = ["head", "get"]
+user_agent = "Mozilla/5.0 (compatible; free-startup-credits link checker; +https://github.com/tayyabakmal1/free-startup-credits)"
+
+# Be a good citizen: a burst of parallel requests to one vendor looks like an
+# attack and gets our User-Agent blocked, which would end the project's ability
+# to verify anything.
+max_concurrency = 8
+max_retries = 3
+retry_wait_time = 5
+timeout = 30
+
+# Only real success counts. 403/503 are triaged by hand, not waved through.
+accept = ["200..=299"]
+
+include_verbatim = false
+no_progress = true
+
+exclude = [
+  # Every entry here needs a reason and a date. A CI check fails on an
+  # uncommented exclude so this never becomes a dumping ground.
+
+  # 2026-09-14: bot protection returns 403 to any non-browser client.
+  # Tracked per-entry with bot_blocked: true.
+  '^https://carta\.com/',
+  '^https://help\.webflow\.com/',
+  '^https://www\.oracle\.com/cloud/oracle-for-startups/',
+
+  # 2026-09-14: JS-rendered shell; a fetcher receives navigation only.
+  '^https://cohere\.com/startup-program',
+  '^https://www\.jetbrains\.com/startups/',
+
+  # 2026-09-14: content truncates for automated fetchers and /startup/apply
+  # redirects to a Google accounts login wall. startup.google.com/cloud does
+  # render and is used as official_source instead.
+  '^https://cloud\.google\.com/startup',
+]

@@ -1,0 +1,70 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: amplitude-startup-plan
+company: Amplitude
+program: Startup Plan
+category: analytics
+tags: [product-analytics, session-replay, experimentation]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://amplitude.com"
+apply_url: "https://amplitude.com/startups"
+official_source: "https://amplitude.com/startups"
+
+# Benefit
+benefit_type: free-plan
+benefit_summary: >-
+  Year one is the full Growth plan at 100% off, stated as a $60,000 value,
+  with up to 100M events per month (~200k MTU) and unlimited teammates.
+  Year two is 40% off the annual Plus plan.
+amount_is_published: true
+amount_max: 60000
+currency: USD
+duration_months: 12
+expiry_note: "Volume limit stated as \"200K monthly tracked users or 100M events/month\"."
+after_credits: >-
+  Sixty days before it ends we send a usage-based quote for year two, and
+  you keep a standing startup discount off list price after that.
+stacking_notes: >-
+  Separate YC deal via Bookface; separate Tech for Black Founders track
+  with different limits (<$30M raised, <150 employees, US-based).
+partner_gate: improves-offer
+funding_max_usd: 10000000
+employees_max: 20
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  Eligibility is published in two places that agree: the comparison table
+  ("Eligibility limit / $10M raised / 20 employees") and the FAQ ("<20
+  employees, <$10M raised"). Both are ceilings, not floors. A separate,
+  more generous track exists: "Tech for Black Founders ... <$30M raised,
+  <150 employees and US-based." A separate YC-specific deal is referenced
+  ("We have a separate deal for YC folks - check out Bookface").
+  Independently re-audited: a second reviewer opened the vendor page and
+  checked the quote, amount and source.
+
+# Application
+application_mechanism: in-product
+approval_time: Most applications are approved within hours.
+
+# Status
+status: active-self-serve
+status_basis: asserted
+status_quote: >-
+  Sign up for a free Amplitude account, then apply for the Startup Plan
+  from the banner in your workspace.
+fetch_note: >-
+  200 and rendered via curl; full page including comparison table and all
+  FAQ answers extracted.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: >-
+  Everything: product analytics, session replays, MCP, and agents. Up to
+  100M events a month. $60,000 value. Year two, 40% off.
+bot_blocked: false

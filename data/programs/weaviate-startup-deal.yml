@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+slug: weaviate-startup-deal
+company: Weaviate
+program: Startup Deal Redemption
+category: databases
+tags:
+- vector-database
+- amount-undisclosed
+- partner-affiliation
+homepage: https://weaviate.io
+apply_url: https://weaviate.io/startup-deal
+official_source: https://weaviate.io/startup-deal
+benefit_type: discount
+benefit_summary: A discount of unpublished size on Weaviate Cloud, redeemed by creating a
+  Weaviate Console account and submitting a form naming your company and the program or VC
+  you are affiliated with.
+amount_is_published: false
+amount_max: null
+partner_gate: required-soft
+partners:
+- Y Combinator
+- Techstars
+stages:
+- any
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: The page publishes no discount percentage or amount, no duration, and no
+  funding, company-age, headcount or region criteria. Its 'What you'll need' list includes
+  'Program / VC' with the examples 'e.g., Y Combinator, Techstars, partner program.', which
+  implies a partner affiliation is expected, but the page never states that partner affiliation
+  is mandatory — hence partner_gate required-soft rather than required-hard. The redemption
+  form itself is an on-page anchor (#redemptionForm) injected client-side and was not present
+  in the fetched HTML, so the form's own eligibility questions could not be inspected. Quote
+  re-confirmed verbatim on the page 2026-09-16. No discount percentage or credit amount is
+  published anywhere on it.
+application_mechanism: self-serve-form
+approval_time: Our team will validate the request and apply the deal to your account.
+status: active-amount-undisclosed
+status_basis: inferred
+fetch_note: HTTP 200 via curl at https://weaviate.io/startup-deal; the 'How it works' and
+  'What you'll need' copy rendered, but the redemption form referenced by href="#redemptionForm"
+  is client-side injected and absent from the HTML.
+last_verified: '2026-09-16'
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: If you are a startup, you can redeem this deal to get access to our products
+  and services at a discounted rate.
+bot_blocked: false

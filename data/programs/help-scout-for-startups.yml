@@ -1,0 +1,54 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+slug: help-scout-for-startups
+company: Help Scout
+program: Help Scout for Startups
+category: support
+tags:
+- helpdesk
+- shared-inbox
+- customer-support
+homepage: https://www.helpscout.com
+apply_url: https://www.helpscout.com/startups/
+official_source: https://www.helpscout.com/startups/
+benefit_type: discount
+benefit_summary: Six months free on the Help Scout Plus plan for new customers that are incorporated
+  tech startups under two years old with under $1 million ARR.
+amount_is_published: false
+amount_max: null
+duration_months: 6
+partner_gate: none
+stages:
+- pre-seed
+- seed
+company_age_max_years: 2
+age_basis: incorporation
+revenue_max_usd: 1000000
+new_customer_only: true
+requires_incorporation: true
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: 'Full eligibility sentence on the page: "To qualify for Help Scout''s startup
+  program, your company must be a new Help Scout customer, an incorporated tech startup less
+  than two years old, and generating under $1 million in annual recurring revenue (ARR)."
+  The $1M threshold is ARR, not total revenue. The application form asks for annual revenue
+  band and business structure (sole proprietorship, partnership, LLC, C Corp, S Corp, B Corp,
+  nonprofit). No employee cap, funding rule, or geographic restriction is stated. status_basis
+  is inferred: a working application form is present but the page carries no explicit open/closed
+  statement. Eligibility quoted verbatim: "your company must be a new Help Scout customer,
+  an incorporated tech startup less than two years old, and generating under $1 million in
+  annual recurring revenue (ARR)." The revenue cap is a gate no funding field can express.
+  Eligibility quoted verbatim: "your company must be a new Help Scout customer, an incorporated
+  tech startup less than two years old, and generating under $1 million in annual recurring
+  revenue (ARR)." The revenue cap is a gate no funding field can express.'
+application_mechanism: self-serve-form
+requires_sales_call: false
+status: active-self-serve
+status_basis: inferred
+fetch_note: 200 and rendered; benefit copy, eligibility sentence and inline application form
+  all readable.
+last_verified: '2026-09-16'
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: Get started with 6 months free on a support platform
+bot_blocked: false

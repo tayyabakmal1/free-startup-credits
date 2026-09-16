@@ -1,0 +1,73 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: algolia-startup-program
+company: Algolia
+program: Algolia Startup Program
+category: devtools
+tags: [search, api, site-search]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://www.algolia.com/"
+apply_url: "https://support.algolia.com/hc/en-us/requests/new?ticket_form_id=5005635939217"
+official_source: "https://www.algolia.com/policies/startup-program-terms"
+
+# Benefit
+benefit_type: credit
+benefit_summary: >-
+  $10,000 in Algolia credit usable within the first 12 months after
+  approval, for new or free-tier accounts only; unused credit lapses and
+  accounts move to pay-as-you-go once the credit is spent.
+amount_is_published: true
+amount_max: 10000
+currency: USD
+duration_months: 12
+expiry_note: All the unused credits will expire/lapse after 12 months.
+after_credits: >-
+  The moment your $10,000 credits are exhausted, you will be automatically
+  moved to Pay as you go plan.
+excludes:
+  - Existing paying Algolia customers
+  - Anyone who has previously used another Algolia coupon code
+stacking_notes: >-
+  "Can I redeem more than one code?" is answered "No, if you have used any
+  other coupon code in the past, you will not be eligible for the Algolia
+  Startup Program." Credits are also stated to be non-transferable.
+partner_gate: none
+funding_max_usd: 5000000
+company_age_max_years: 3
+new_customer_only: true
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  VENDOR SELF-CONTRADICTION on the same page. The marketing eligibility
+  bullets read "Less than 7 years old", "Less than $15M in total funding
+  raised", "For new Algolia customers only". The FAQ answer to "Who is
+  eligible for the Algolia startup program?" reads "Startups that are less
+  than three years old and have raised less than $5M in funding are
+  eligible for the program." I have recorded the more conservative FAQ
+  figures (3 years, $5M) in company_age_max_years and funding_max_usd; an
+  applicant between those two sets of limits should confirm with Algolia.
+  Independently re-audited: a second reviewer opened the vendor page and
+  checked the quote, amount and source.
+
+# Application
+application_mechanism: self-serve-form
+
+# Status
+status: active-self-serve
+status_basis: inferred
+fetch_note: >-
+  https://www.algolia.com/industries/startups fetched 200 and rendered
+  fully, including the eligibility bullets and the whole FAQ accordion.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: >-
+  If you get approved, you get $10,000 in Algolia credit that you can use
+  in the first 12 months of getting approved.
+bot_blocked: false

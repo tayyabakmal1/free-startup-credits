@@ -1,0 +1,72 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: akamai-cloud-rise-start-up-program
+company: Akamai (Linode)
+program: Akamai Cloud Rise Start-Up Program
+category: cloud
+tags: [cloud-credits, compute, linode, akamai-cloud]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://www.akamai.com"
+apply_url: "https://www.akamai.com/cloud/start-ups/rise"
+official_source: "https://www.akamai.com/cloud/start-ups/rise"
+
+# Benefit
+benefit_type: credit
+benefit_summary: >-
+  Up to $120,000 in Akamai Cloud credits in year one of a three-year
+  program, with discounts rather than credits in years two and three.
+amount_is_published: true
+amount_max: 120000
+currency: USD
+duration_months: 12
+expiry_note: >-
+  Page states first-year credits do not roll over month to month or to
+  subsequent years.
+after_credits: Rise is a three-year program with discounts offered in years two and three.
+excludes: [Existing Akamai customers, Resellers, MSPs, Systems integrators]
+partner_gate: none
+stages: [pre-seed, seed, series-a]
+company_age_max_years: 7
+new_customer_only: true
+requires_company_email: true
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  Age cap quoted as "established businesses fewer than seven years old".
+  Exclusion quoted as "Sorry, existing customers are not eligible for
+  Rise." Account requirement quoted as "You must create a new account for
+  your start-up with 1) the corporate email address associated with your
+  company domain, and 2) a valid credit card." The page lists traction
+  signals (paid employees outside founders, non-friends-and-family users,
+  initial revenue, or VC funding) as qualifying signals, so VC funding is
+  not stated as mandatory; funding_required left unknown. The intake form
+  is embedded on the same URL, so no separate apply URL exists. A discovery
+  call is described as a process step but is not stated as a requirement,
+  so requires_sales_call is left unknown. Independently re-audited: a
+  second reviewer opened the vendor page and checked the quote, amount and
+  source.
+
+# Application
+application_mechanism: self-serve-form
+approval_time: >-
+  Page describes review within two weeks of the intake form, followed by a
+  discovery call.
+obligations: [Plans must include Akamai Cloud as one of the primary providers]
+
+# Status
+status: active-self-serve
+status_basis: inferred
+fetch_note: >-
+  200 and rendered; page body including FAQ/eligibility accordion retrieved
+  on two separate fetches with consistent text.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: Qualify up to $120,000 during your first year
+bot_blocked: false

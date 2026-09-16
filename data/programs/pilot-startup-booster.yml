@@ -1,0 +1,63 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+slug: pilot-startup-booster
+company: Pilot
+program: Pilot Booster Program for Startups
+category: finance
+tags:
+- bookkeeping
+- tax-filing
+- accounting
+homepage: https://pilot.com
+apply_url: https://pilot.com/startup-booster
+official_source: https://pilot.com/startup-booster
+benefit_type: discount
+benefit_summary: Flat $750 price for the first year covering federal and state corporate income
+  tax filings, monthly accrual-basis bookkeeping, onboarding, and setup help for banking,
+  corporate card and payroll.
+amount_is_published: false
+amount_max: null
+duration_months: 12
+expiry_note: Once you surpass that expense limit, or after one year in the program, whichever
+  comes first
+after_credits: your subscription will become the Pilot Core bookkeeping plan, starting at
+  a rate of $399 per month, plus the Tax Starter plan, starting at $750 per year.
+excludes:
+- companies with revenue
+- companies with $15,001 or more in monthly expenses
+stacking_notes: Bill pay, payment processing and R&D tax credit services are separately priced
+  add-ons.
+partner_gate: none
+stages:
+- idea
+- pre-seed
+company_age_max_years: 1
+age_basis: incorporation
+revenue_max_usd: 0
+requires_incorporation: true
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: 'Pilot publishes a first-year PRICE ($750), not a credit or a discount
+  value, so amount_max is deliberately left null and amount_is_published false to avoid implying
+  $750 of credit. An extra cap beyond age/revenue: ''less than $15,001 in monthly expenses
+  at the time of signature''. Pre-revenue is required, hence revenue_max_usd 0. Eligibility
+  quoted verbatim: "This offer is for newly incorporated tech startups under 1 year old that
+  are pre-revenue with less than $15,001 in monthly expenses at the time of signature." Afterwards
+  "your subscription will become the Pilot Core bookkeeping plan, starting at a rate of $399
+  per month". Eligibility quoted verbatim: "This offer is for newly incorporated tech startups
+  under 1 year old that are pre-revenue with less than $15,001 in monthly expenses at the
+  time of signature." Afterwards "your subscription will become the Pilot Core bookkeeping
+  plan, starting at a rate of $399 per month".'
+application_mechanism: self-serve-form
+status: active-self-serve
+status_basis: inferred
+status_quote: This offer is for newly incorporated tech startups under 1 year old that are
+  pre-revenue with less than $15,001 in monthly expenses at the time of signature.
+fetch_note: 200 and rendered, including the 'THE OFFER DETAILS' block containing the full
+  eligibility sentence and the post-program pricing.
+last_verified: '2026-09-16'
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: $750 for your first year
+bot_blocked: false
+new_customer_only: true

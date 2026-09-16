@@ -1,0 +1,195 @@
+{{ banner }}
+# Free Startup Credits
+
+> Verified cloud, AI and SaaS credits for startups — with real eligibility rules,
+> real amounts, and a verification date on every entry.
+
+**{{ stats.total }} programs**{% if stats.as_of %} · Data as of {{ stats.as_of }} · {{ stats.fresh }} of {{ stats.total }} verified within {{ stats.reverify_days }} days{% endif %}
+
+
+## Start here — can you actually apply?
+
+Most startup credit lists tell you what exists. The hard part is working out
+whether *you* qualify. These views are generated from the dataset, and a program
+only appears in one when the vendor's own page **affirmatively says so** — never
+because a restriction was merely absent.
+
+{% set eligibility_cols = collections | rejectattr('scope') | list %}
+{% set geo_cols = collections | selectattr('scope') | list %}
+| Can I apply? | | |
+|---|---|---|
+{% for row in eligibility_cols | batch(3) %}
+| {% for c in row %}[{{ c.emoji }} {{ c.title }} ({{ c.count }})](collections/{{ c.id }}.md){% if not loop.last %} | {% endif %}{% endfor %}{% if row | length < 3 %}{% for _ in range(3 - (row | length)) %} | {% endfor %}{% endif %} |
+{% endfor %}
+
+| Where am I? | | |
+|---|---|---|
+{% for row in geo_cols | batch(3) %}
+| {% for c in row %}[{{ c.emoji }} {{ c.grid_title }} ({{ c.headline_count }} confirmed)](collections/{{ c.id }}.md){% if not loop.last %} | {% endif %}{% endfor %}{% if row | length < 3 %}{% for _ in range(3 - (row | length)) %} | {% endfor %}{% endif %} |
+{% endfor %}
+
+> Country pages show **confirmed** programs and **not-confirmed** programs in two
+> clearly separated sections. A vendor that simply does not publish a geographic
+> restriction has *not* confirmed availability where you are.
+
+**[{{ sfa.placements.header.cta }} → StartupFlow AI]({{ sfa.placements.header.url }})**
+{{ sfa.placements.header.blurb }}
+
+---
+
+## What this is
+
+A community-maintained dataset of startup credits, cloud and AI credits, SaaS
+perks and founder discounts. Every record carries the vendor's own page as its
+source, a short quoted span of the text that supports it, and the date a human
+last confirmed it.
+
+Two things make it different from the lists that came before:
+
+1. **Eligibility is structured, not prose.** Funding floors and ceilings, partner
+   gates, company-age limits and region rules are typed fields, so you can filter
+   for what you can actually get.
+2. **Nothing is inferred into permission.** An unknown is recorded as unknown and
+   excluded from every "you qualify" view.
+
+**Most credits do not require an accelerator.** That is the most common piece of
+misinformation in this space, and the [{{ (collections | selectattr('id', 'equalto', 'no-partner-required') | first).count }} programs here that need no partner
+or accelerator](collections/no-partner-required.md) are the correction.
+
+## Contents
+
+- [Start here — can you actually apply?](#start-here--can-you-actually-apply)
+- [How to read an entry](#how-to-read-an-entry)
+{% for c in categories %}
+- [{{ c.emoji }} {{ c.name }}](#{{ c.name | lower | replace(' & ', '--') | replace(' ', '-') }})
+{% endfor %}
+{% if closed %}
+- [Discontinued and changed](#discontinued-and-changed)
+{% endif %}
+- [Find credits for your startup](#find-credits-for-your-startup)
+- [Data and API](#data-and-api)
+- [Verification policy](#verification-policy)
+- [Contributing](#contributing)
+- [Related resources](#related-resources)
+- [Licensing](#licensing)
+- [Maintainer and disclosure](#maintainer-and-disclosure)
+
+## How to read an entry
+
+Eligibility tags come **before** the credit amount, deliberately. Knowing you
+qualify for $5,000 is worth more than seeing a $350,000 headline you cannot reach.
+
+| Tag | Meaning |
+|---|---|
+| `🟢 no partner needed` | The vendor states no accelerator, VC or partner referral is required |
+| `🤝 partner required` / `improves offer` / `gates higher tiers` | A partner relationship changes or controls access |
+| `💡 no funding needed` | The vendor states you need not have raised |
+| `💰 VC-backed only` | Institutional funding is a stated condition |
+| `🥾 bootstrapped OK` | The page affirmatively says self-funded companies qualify |
+| `📞 sales call` | No self-serve path; a call is required |
+| `🆕 new customers only` | Existing or prior customers are excluded — a top rejection cause |
+| `🌍 region limits` | The vendor names excluded countries or regions |
+| `✅ verified` | A human opened the official page and confirmed the claim |
+| `➖ partly verified` | Official info was read, but some detail could not be inspected |
+| `⚠️ needs manual check` | The page is blocked or gated; **no amount is published** |
+
+Absence of a tag means **unknown**, never "no restriction".
+
+{% for c in categories %}
+## {{ c.emoji }} {{ c.name }}
+
+{{ c.description }} · [All {{ c.programs | length }} →](categories/{{ c.id }}.md)
+
+{% for p in c.programs %}
+{{ p | render_entry }}
+{% endfor %}
+
+{% endfor %}
+{% if closed %}
+## Discontinued and changed
+
+Programs that have closed, or vendors that state they run no startup program.
+Most aggregators still list several of these as live — which is exactly why they
+are here, dated.
+
+{% for p in closed %}
+{{ p | render_entry }}
+{% endfor %}
+
+{% endif %}
+## Find credits for your startup
+
+This repository answers **"{{ sfa.positioning.repo_answers }}"**
+
+StartupFlow AI answers **"{{ sfa.positioning.product_answers }}"**
+
+{{ sfa.placements.matching.blurb }}
+
+**[{{ sfa.placements.matching.cta }} → StartupFlow AI]({{ sfa.placements.matching.url }})**
+
+## Data and API
+
+**`data/` is the source of truth. Everything else you can read is generated from
+it** — this README, the category pages, the per-program pages and the API files.
+That is why an amount can never say one thing here and another in the JSON.
+
+| Path | What it is | Edit it? |
+|---|---|---|
+| [`data/programs/`](data/programs/) | **One YAML file per program.** The dataset. | ✅ **Yes — this is the only place to edit** |
+| [`data/categories.yml`](data/categories.yml) · [`regions.yml`](data/regions.yml) · [`collections.yml`](data/collections.yml) | Taxonomy and the browse filters | ✅ Yes |
+| [`programs/`](programs/) | A readable page per program: eligibility, evidence, sources | ❌ Generated |
+| [`categories/`](categories/) · [`collections/`](collections/) | Browse views | ❌ Generated |
+| [`api/programs.json`](api/programs.json) · [`.csv`](api/programs.csv) · [`index.json`](api/index.json) | The dataset for machines | ❌ Generated |
+| [`schema/`](schema/) | JSON Schema for one record — powers editor autocomplete | ❌ Generated |
+| [`scripts/`](scripts/) · [`templates/`](templates/) | The generator and the checks CI runs | Only to change how pages render |
+| [`docs/`](docs/) | [Verification policy](docs/verification-policy.md) · [what runs automatically](docs/automation.md) · [measured link rot](docs/audits/) | — |
+
+Records are CC BY 4.0. If you build something on this, attribution is all we ask.
+
+## Verification policy
+
+{{ stats.verified }} verified · {{ stats.partially_verified }} partially verified · {{ stats.needs_manual }} need manual verification
+
+Re-verification runs on a **{{ stats.reverify_days }}-day cycle**. `last_verified` is only ever
+set by a human who opened the page; a separate `last_checked` records automated
+link checks. A bot fetching a URL is not a human confirming that an offer still
+exists on those terms.
+
+Read the full policy: [docs/verification-policy.md](docs/verification-policy.md) ·
+See it measured: [docs/audits/2026-09-link-rot.md](docs/audits/2026-09-link-rot.md)
+
+## Contributing
+
+Add or correct one program by editing a single file in
+[`data/programs/`](data/programs/). Two contributors adding two programs never
+conflict.
+
+The fastest way to help is to **report something that is wrong**. A founder who
+just got rejected is the best rot signal this project has.
+
+See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Related resources
+
+{% for l in sfa.placements.related.links %}
+- [{{ l.label }}]({{ l.url }})
+{% endfor %}
+
+## Licensing
+
+| Path | License |
+|---|---|
+| `scripts/`, `templates/`, `.github/`, `Makefile` | [MIT](LICENSE) |
+| `data/`, `api/`, `schema/` | [CC BY 4.0](data/LICENSE) |
+
+Suggested attribution:
+
+> Data from free-startup-credits
+> (https://github.com/tayyabakmal1/free-startup-credits), licensed CC BY 4.0.
+
+## Maintainer and disclosure
+
+{{ sfa.disclosure }}
+
+Program terms change without notice. Always confirm with the vendor before
+making a decision.

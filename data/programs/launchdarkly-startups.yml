@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: launchdarkly-startups
+company: LaunchDarkly
+program: No startup program page found
+category: devtools
+tags: [feature-flags, experimentation]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://launchdarkly.com"
+apply_url: "https://launchdarkly.com/pricing/"
+official_source: "https://launchdarkly.com/pricing/"
+
+# Benefit
+benefit_type: free-plan
+benefit_summary: >-
+  No LaunchDarkly startup credits or startup discount program page could be
+  found on launchdarkly.com; the pricing page advertises only a free
+  Developer plan and a 14-day trial, neither framed as a startup program.
+amount_is_published: false
+amount_max: null
+stages: [any]
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  Could not inspect: no program page exists to inspect.
+  https://launchdarkly.com/startups returns 308 to
+  https://launchdarkly.com/startups/, which returns 404 with an empty body.
+  The pricing page (200, rendered) contains zero occurrences of the word
+  'startup'. LaunchDarkly has NOT published a statement that it has no
+  startup program, so status is 'unverified' rather than 'no-program'.
+  Third-party claims of a '12 months free Pro via accelerators' offer are
+  unsourced to any LaunchDarkly page and are deliberately not recorded.
+
+# Status
+status: unverified
+status_basis: inferred
+fetch_note: >-
+  https://launchdarkly.com/startups 308 ->
+  https://launchdarkly.com/startups/ which returned 404 (18-byte body).
+  https://launchdarkly.com/pricing/ returned 200 and rendered; no startup
+  program content anywhere on it.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: needs-manual-verification
+bot_blocked: false

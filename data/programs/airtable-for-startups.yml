@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+slug: airtable-for-startups
+company: Airtable
+program: Airtable for Startups
+category: productivity
+tags:
+- no-code
+- database
+- productivity
+homepage: https://www.airtable.com
+apply_url: https://www.airtable.com/startups
+official_source: https://www.airtable.com/startups
+benefit_type: credit
+benefit_summary: Airtable runs an application-gated startup program, but publishes no benefit
+  amount, duration, eligibility criteria or terms on any reachable page — the application
+  form body is JS-rendered.
+amount_is_published: false
+amount_max: null
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: 'NOT INSPECTABLE: the entire form body (eligibility questions, benefit
+  description, terms) is client-rendered. Only the page title "Airtable for Startups - Program
+  Application" is present in the server HTML. No amount, duration, funding cap, region or
+  stage restriction could be read. Renders no offer content to a fetcher, re-confirmed 2026-09-16.
+  Renders no offer content to a fetcher, re-confirmed 2026-09-16.'
+application_mechanism: self-serve-form
+status: unverified
+status_basis: inferred
+fetch_note: https://www.airtable.com/startups 200s but redirects to the Airtable-hosted form
+  https://airtable.com/appGGpHNlmMUkfLol/shrghfGlQLt411Tyr, which is a JS-only shell — the
+  server HTML contains only the title/meta "Airtable for Startups - Program Application" and
+  no program content. https://try.airtable.com/startup redirects to https://www.airtable.com/lp/resources
+  (a generic resource hub, not a prog
+last_verified: '2026-09-16'
+verified_by: tayyabakmal1
+verification_level: needs-manual-verification
+bot_blocked: true

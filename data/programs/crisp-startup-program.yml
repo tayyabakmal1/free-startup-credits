@@ -1,0 +1,53 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+slug: crisp-startup-program
+company: Crisp
+program: Startup Program
+category: support
+tags:
+- customer-support
+- live-chat
+- discount
+homepage: https://crisp.chat
+apply_url: https://help.crisp.chat/en/article/how-to-apply-to-the-startup-program-lyfxt4/
+official_source: https://help.crisp.chat/en/article/how-to-apply-to-the-startup-program-lyfxt4/
+benefit_type: discount
+benefit_summary: A 30% discount code applied to an eligible subscription on the Essentials
+  or Plus plan, reviewed manually by the Crisp team; stated to remain attached to the subscription
+  rather than expiring after a trial period.
+amount_is_published: false
+amount_max: null
+expiry_note: The discount is designed to stay attached to your subscription rather than expire
+  after a short trial period, as long as the subscription remains eligible and the discount
+  code stays active.
+excludes:
+- Mini plan
+stacking_notes: The non-profit discount "cannot be combined with other rebate programs unless
+  Crisp explicitly confirms otherwise."
+partner_gate: none
+funding_max_usd: 1000000
+company_age_max_years: 3
+new_customer_only: true
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: The marketing URL given in the target list, https://crisp.chat/en/startups/,
+  returns a 404 ("Page not found"); the only official source for this program is the Crisp
+  Knowledge Base article, last updated 03/05/2026. A separate non-profit program offers 50%
+  off on the same plans. The recorded source URL returns HTTP 404 as of 2026-09-16. The entry
+  cannot be verified until a live vendor page is found. The recorded source URL returns HTTP
+  404 as of 2026-09-16. The entry cannot be verified until a live vendor page is found.
+obligations:
+- Your website URL
+- A short description of your business and services
+- Your business registration certificate
+status: unverified
+status_basis: inferred
+status_quote: These discounts are reviewed manually by the Crisp team and are available on
+  Essentials and Plus plans only.
+fetch_note: 'https://crisp.chat/en/startups/ returned 404. Found and fetched the official
+  Crisp Knowledge Base article at help.crisp.chat: 200 and rendered in full. Application is
+  via Crisp live chat, so there is no standalone apply form URL.'
+last_verified: '2026-09-16'
+verified_by: tayyabakmal1
+verification_level: needs-manual-verification
+bot_blocked: false

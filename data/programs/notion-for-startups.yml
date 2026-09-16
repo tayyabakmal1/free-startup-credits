@@ -1,0 +1,72 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+slug: notion-for-startups
+company: Notion
+program: Notion for Startups
+category: productivity
+tags:
+- docs
+- wiki
+- project-management
+- ai
+homepage: https://www.notion.com/
+apply_url: https://www.notion.com/startups-apply
+official_source: https://www.notion.com/startups
+benefit_type: free-plan
+benefit_summary: 'Free months of the Notion Business plan with Notion AI included: 6 months
+  for startups affiliated with select Notion partners, 3 months for those with a business
+  website and company domain email, or 1 month for under-10-employee companies or incomplete
+  applications.'
+amount_is_published: false
+amount_max: null
+duration_months: 6
+excludes:
+- Existing paying Notion customers
+- Companies that have received a previous Notion promotion
+- Personal email addresses such as Gmail or Outlook
+stacking_notes: The page states applicants must "have not received any previous Notion promotions".
+tiers:
+- name: 6 months free with Notion AI included
+  quote: For non-paying Notion customers with under 100 employees and are affiliated with
+    one of our select startup partners.
+  partner_gate: required-hard
+- name: 3 months free with Notion AI included
+  quote: For non-paying Notion customers with under 100 employees, a valid business website,
+    and a company domain email address.
+  partner_gate: none
+- name: 1 month free with Notion AI included
+  quote: For non-paying Notion customers with under 10 employees (SMBs) or startups who provided
+    incomplete business information during application.
+  partner_gate: none
+partner_gate: improves-offer
+employees_max: 100
+new_customer_only: true
+requires_company_email: true
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: 'Base eligibility is stated as a non-paying Notion customer with a valid
+  work email (no Gmail, Outlook, etc), no previous Notion promotions, and fewer than 100 employees.
+  A dollar value of "$12,000 for 100 employees" was referenced in the page rendering alongside
+  a "$20 per member paid annually" list price, but I could not isolate a clean verbatim span
+  for it, so no amount is published here. The list of "select startup partners" that unlocks
+  the 6-month tier is not enumerated on the page, and the application form itself (app.notion.com)
+  was not opened. Page also states: "The startup offer is equivalent to a maximum of $12,000
+  for 100 employees." Eligibility quoted verbatim: "You must be a non-paying Notion customer
+  with a valid work email (no Gmail, Outlook, etc), have not received any previous Notion
+  promotions, and have fewer than 100 employees." A partner affiliation extends the offer
+  to 6 months. Page also states: "The startup offer is equivalent to a maximum of $12,000
+  for 100 employees." Eligibility quoted verbatim: "You must be a non-paying Notion customer
+  with a valid work email (no Gmail, Outlook, etc), have not received any previous Notion
+  promotions, and have fewer than 100 employees." A partner affiliation extends the offer
+  to 6 months.'
+application_mechanism: self-serve-form
+status: active-self-serve
+status_basis: inferred
+fetch_note: https://www.notion.com/startups fetched 200 and rendered the three offer tiers
+  and eligibility copy. https://www.notion.com/startups-apply returned a 307 redirect to https://app.notion.com/startups-apply
+  (same brand, application form), which I did not follow through to render.
+last_verified: '2026-09-16'
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: Get up to 6 months free on the Business plan with Notion AI included.
+bot_blocked: false

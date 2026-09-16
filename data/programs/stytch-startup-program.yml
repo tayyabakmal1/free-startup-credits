@@ -1,0 +1,42 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+slug: stytch-startup-program
+company: Stytch
+program: Stytch Startup Program
+category: devtools
+tags:
+- auth
+- program-page-removed
+- stale-listing-risk
+homepage: https://stytch.com
+apply_url: https://stytch.com/pricing
+official_source: https://stytch.com/pricing
+benefit_type: free-plan
+benefit_summary: The dedicated Stytch Startup Program page no longer exists; its URLs now
+  redirect to general pricing, which advertises an always-free tier of 10,000 monthly active
+  users with no startup-specific terms.
+amount_is_published: false
+amount_max: null
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: 'Could not inspect: the Stytch Startup Program page itself. https://stytch.com/for-startups
+  returns 308 -> /credits, which returns 307 -> /pricing; https://stytch.com/startups returns
+  404. The destination /pricing page contains NO occurrence of ''startup'', ''Series A'',
+  ''incorporation'' or ''free until'', and stytch.com/sitemap.xml lists no startup-program
+  URL. Therefore the program''s terms (previously reported as free until Series A or three
+  years from incorporation) could NOT be verified from any live Stytch page, and no amount
+  is published here. Status is recorded as unverified rather than discontinued because Stytch
+  publishes no statement of closure and no closure date. Re-confirmed 2026-09-16: the dedicated
+  Stytch startup programme page no longer exists and the URL resolves to general pricing.
+  The quoted figure is the standard always-free tier, not a startup offer.'
+status: unverified
+status_basis: inferred
+fetch_note: https://stytch.com/for-startups -> 308 Permanent Redirect to /credits -> 307 Temporary
+  Redirect to /pricing. https://stytch.com/startups -> 404. /pricing fetched 200 and rendered;
+  grepped for startup-program wording and found none. sitemap.xml fetched 200 and contains
+  no startup-program URL.
+last_verified: '2026-09-16'
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: 10,000 monthly active users and AI agents
+bot_blocked: false

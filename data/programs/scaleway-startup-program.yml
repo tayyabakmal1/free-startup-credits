@@ -1,0 +1,80 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: scaleway-startup-program
+company: Scaleway
+program: Scaleway Startup Program
+category: cloud
+tags: [cloud-credits, european-cloud, compute, gpu]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://www.scaleway.com"
+apply_url: "https://www.scaleway.com/en/startup-program/"
+official_source: "https://www.scaleway.com/en/startup-program/"
+
+# Benefit
+benefit_type: credit
+benefit_summary: >-
+  Three stage-based cloud credit tiers: up to EUR 1,000 over one year
+  (Founders), EUR 9,000 over six months (Early Stage), and EUR 36,000 over
+  twelve months (Growth Stage).
+amount_is_published: true
+amount_max: 36000
+currency: EUR
+duration_months: 12
+expiry_note: >-
+  Page states the credit window runs 6 or 12 months after credits
+  activation, depending on stage.
+excludes: [Existing Scaleway clients]
+tiers:
+  - name: Founders Program
+    amount_max: 1000
+    quote: up to €1,000 cloud credits to use over one year on our multi-cloud products
+    partner_gate: unknown
+    notes: 12-month credit window.
+  - name: Early Stage Program
+    amount_max: 9000
+    quote: 1 500€ per month for 6 month, for a total of 9,000€ in cloud credits
+    partner_gate: unknown
+    notes: Monthly allocation over 6 months.
+  - name: Growth Stage Program
+    amount_max: 36000
+    quote: 3000€ per month for 12 month, for a total of 36,000€ in cloud credits
+    partner_gate: unknown
+    notes: Monthly allocation over 12 months.
+stages: [idea, pre-seed, seed, series-a]
+company_age_max_years: 5
+employees_max: 50
+new_customer_only: true
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  Core criteria quoted verbatim as "Less than 5 years old I Less than 50
+  employees I Not yet a Scaleway client". Could not inspect: the
+  application form URL and mechanism (the page surfaces only the contact
+  address startup-program@scaleway.com), the per-tier eligibility gates
+  (the page does not say what distinguishes Founders from Early Stage from
+  Growth Stage), and any funding criteria. Prior hint of "region-limited"
+  is NOT supported: the only geographic language is marketing copy
+  ("especially when tackling the EU market"), which states no eligibility
+  restriction, so regions_basis is unstated. Independently re-audited: a
+  second reviewer opened the vendor page and checked the quote, amount and
+  source.
+approval_time: Page states the admission committee reviews applications each week.
+
+# Status
+status: active-self-serve
+status_basis: inferred
+fetch_note: >-
+  200 and rendered on two fetches; tier amounts and eligibility line
+  consistent across both. No application form URL exposed in the rendered
+  markup.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: 3000€ per month for 12 month, for a total of 36,000€ in cloud credits
+bot_blocked: false

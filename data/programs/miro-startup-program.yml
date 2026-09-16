@@ -1,0 +1,109 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: miro-startup-program
+company: Miro
+program: Miro Startup Program
+category: productivity
+tags: [whiteboard, collaboration, credit]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://miro.com"
+apply_url: "https://miro.com/startups/apply/"
+official_source: "https://help.miro.com/hc/en-us/articles/360014912819-Miro-Startup-Program"
+
+# Benefit
+benefit_type: credit
+benefit_summary: >-
+  A one-time Miro account credit: $1,000 for startups connected to a Miro
+  Startup Program partner, or $500 for individual startups applying
+  directly. One credit per startup.
+amount_is_published: true
+amount_max: 1000
+currency: USD
+expiry_note: Your credit should be activated within 6 months.
+after_credits: >-
+  Credit is applied against a plan purchase; once the $1,000 or $500 limit
+  is reached the card on file begins to be charged.
+excludes:
+  - Service providers (for example consulting)
+  - Companies owned by a parent corporation (partner-connected tier)
+stacking_notes: >-
+  One startup is eligible for one credit. Terms state the offer "cannot be
+  combined with volume discounts or other product/order level promotions,
+  discounts or offers" and changing plan later forfeits the promotion.
+tiers:
+  - name: Partner-connected startup
+    amount_max: 1000
+    quote: >-
+      Startups working with one of our global Miro Startup Program partners are
+      eligible for a $1,000 credit.
+    partner_gate: required-hard
+    notes: >-
+      Must not be admins or members of paid Miro subscriptions; must be
+      connected to a Miro Startup Program partner; must be independently owned
+      and operated (not owned by a parent corporation); must have fewer than 30
+      employees; must not be a service provider. Application form comes from
+      the accelerat...
+  - name: Individual startup
+    amount_max: 500
+    quote: >-
+      Individual startups are eligible for a $500 credit. We accept individual
+      startups on a case-by-case basis.
+    partner_gate: none
+    notes: >-
+      Must not be admins or members of paid Miro subscriptions; must "be
+      funded, verified via Crunchbase"; must have its own domain (not
+      gmail.com/yahoo.com/hotmail.com); must not be a service provider.
+      Acceptance is not guaranteed.
+partner_gate: tiered
+stages: [pre-seed, seed, series-a]
+new_customer_only: true
+requires_company_email: true
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  Gates differ by tier, so top-level funding and headcount fields are left
+  null/unknown rather than flattened. The fewer-than-30-employees cap
+  applies ONLY to the partner-connected ($1,000) tier. The funding
+  requirement ("be funded, verified via Crunchbase") applies ONLY to the
+  individual ($500) tier — a bootstrapped startup with no partner
+  connection does not meet the published individual-tier criteria.
+  new_customer_only is true per the T&Cs: "Not currently an Admin and/or
+  member of an active, expired, or trial paid subscription". Miro also
+  warns applicants to remain on the Free plan while waiting, as signing up
+  for a trial may affect eligibility. Separately, the help article notes a
+  25% Enterprise Plan discount for venture-backed startups already paying,
+  applied for at https://miro.com/startups/scale-offer-vc/ — a different
+  offer, not recorded here. Independently re-audited: a second reviewer
+  opened the vendor page and checked the quote, amount and source.
+
+# Application
+application_mechanism: self-serve-form
+approval_time: Your request will be reviewed within 15 days.
+obligations:
+  - >-
+      Eligible Participants must be willing to permit Miro to use their name
+      and/or logo to identify Participant as a user and agrees to participate
+      in a case study or testimonial if requested by Miro.
+
+# Status
+status: active-self-serve
+status_basis: inferred
+fetch_note: >-
+  https://miro.com/startups/apply/ fetched 200 (states $1000 partner / $500
+  individual). Detailed eligibility, T&Cs and FAQ live on the Miro Help
+  Center article, which 301-redirects from
+  .../360014912819-Miro-for-Startups-Program to
+  .../360014912819-Miro-Startup-Program and returned 200 and rendered.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: >-
+  If you aren't connected to one of our startup program partners, you can
+  still apply as an individual startup for $500 credit.
+bot_blocked: false

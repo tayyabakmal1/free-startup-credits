@@ -1,0 +1,105 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: cloudflare-for-startups
+company: Cloudflare
+program: Cloudflare for Startups
+category: cloud
+tags: [cdn, edge, workers, r2, security]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://www.cloudflare.com"
+apply_url: "https://www.cloudflare.com/forstartups/"
+official_source: "https://www.cloudflare.com/forstartups/"
+
+# Benefit
+benefit_type: credit
+benefit_summary: >-
+  Enterprise-level Cloudflare credits in three tiers keyed to how much the
+  startup has raised: $10k, $100k or $350k. Credits are valid for one year
+  or until fully consumed. Tiers 1 and 2 require funding from an affiliated
+  partner.
+amount_is_published: true
+amount_max: 350000
+currency: USD
+duration_months: 12
+expiry_note: Credits are valid for one year or until fully consumed, whichever comes first.
+after_credits: >-
+  Graduating startups are offered three paths: move to a self-serve plan,
+  downgrade to a Free plan, or stay on Enterprise.
+excludes: [Registrar Services, AI Gateway, Enterprise Feature Add-Ons]
+stacking_notes: >-
+  The Startup Plan is a one-time opportunity per startup and credits cannot
+  be transferred. Credits are non-transferable, nonrefundable,
+  non-redeemable for cash.
+tiers:
+  - name: Tier 3
+    amount_max: 10000
+    funding_max_usd: 1000000
+    partner_gate: none
+    quote: Bootstrapped or self-funded
+    notes: >-
+      Also listed for this tier: "Under $1M raised". No affiliated-partner
+      requirement.
+  - name: Tier 2
+    amount_max: 100000
+    funding_max_usd: 5000000
+    partner_gate: required-hard
+    quote: Under $5M raised
+    notes: "This tier additionally requires \"Funded by an affiliated partner\"."
+  - name: Tier 1
+    amount_max: 350000
+    funding_min_usd: 5000000
+    partner_gate: required-hard
+    quote: $5M+ raised
+    notes: >-
+      This tier additionally requires "Funded by an affiliated partner". $5M+
+      is a funding FLOOR for this tier, not a ceiling.
+open_to_bootstrapped: true
+partner_gate: tiered
+stages: [pre-seed, seed, series-a, series-b]
+company_age_max_years: 10
+age_basis: incorporation
+requires_company_email: true
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  Shared requirements across all tiers: "Founded within the last 10 years",
+  "Building a technology product", "a valid, publicly accessible website",
+  "Active on LinkedIn, X (Twitter), or GitHub", "Has not previously been
+  approved into the program", and "For-profit business with a business
+  email matching your domain". open_to_bootstrapped is set true only
+  because Tier 3 names "Bootstrapped or self-funded" explicitly.
+  new_customer_only is left unknown: the page bars companies previously
+  approved into the program, which is not the same as barring existing
+  Cloudflare customers. Some advanced features must be manually enabled by
+  Cloudflare before use. A separate Cloudflare page at
+  https://www.cloudflare.com/startups/ carries the same program and states
+  "Receive up to $350,000 in credits for a year to support your startup."
+  Independently re-audited: a second reviewer opened the vendor page and
+  checked the quote, amount and source.
+
+# Application
+application_mechanism: self-serve-form
+requires_sales_call: false
+approval_time: Up to 48 hours
+
+# Status
+status: active-self-serve
+status_basis: asserted
+status_quote: Credits are valid for one year or until fully consumed, whichever comes first
+fetch_note: >-
+  200 and rendered; tier table and FAQ accordion both readable.
+  https://www.cloudflare.com/startups/ also fetched 200 and describes the
+  same program.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: >-
+  Up to $350k in credits and everything you need to build, deploy, and
+  scale your applications
+bot_blocked: false

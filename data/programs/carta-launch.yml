@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+slug: carta-launch
+company: Carta
+program: Carta Launch
+category: finance
+tags:
+- cap-table
+- equity-management
+- 409a
+homepage: https://carta.com/
+apply_url: https://carta.com/equity-management/launch/
+official_source: https://support.carta.com/kb/guide/en/frequently-asked-questions-about-carta-launch-qZhwW88UXI/Steps/3707441
+benefit_type: free-plan
+benefit_summary: A free Carta cap table platform tier for startups that have raised less than
+  $1M and have 25 stakeholders or fewer.
+amount_is_published: false
+amount_max: null
+partner_gate: none
+funding_max_usd: 1000000
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: 'The marketing page at carta.com/equity-management/launch/ was not inspectable
+  (403), so any additional terms it carries — 409A pricing, upgrade triggers, regional availability
+  — are unverified. The support article''s sub-answers to "When would my company need to upgrade
+  to a paid plan?" and "How do I upgrade to a paid plan?" did not render, so upgrade behaviour
+  past the 25-stakeholder / $1M thresholds is unconfirmed. The 25-stakeholder cap is a limit,
+  not a funding gate. Re-checked 2026-09-16: the recorded support-article URL now returns
+  HTTP 404, and carta.com returns 403 to automated clients. No live vendor page could be read,
+  so no terms are published here. Needs a human with a browser to find the current page.'
+application_mechanism: self-serve-form
+status: unverified
+status_basis: inferred
+fetch_note: https://carta.com/equity-management/launch/ returned 403 Forbidden, and https://carta.com/launch/
+  also returned 403. The claim was verified instead on Carta's own support knowledge base
+  article (support.carta.com), which fetched 200 and rendered; its FAQ sub-answers about upgrading
+  were referenced as clickable topics but their bodies did not render.
+last_verified: '2026-09-16'
+verified_by: tayyabakmal1
+verification_level: needs-manual-verification
+evidence_quote: Carta Launch is our free platform for startups with less than $1M raised and
+  25 stakeholders or fewer, designed to simplify the founder's journey.
+bot_blocked: true

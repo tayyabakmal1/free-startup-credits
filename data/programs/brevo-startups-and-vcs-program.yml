@@ -1,0 +1,63 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: brevo-startups-and-vcs-program
+company: Brevo
+program: Startups and VCs program
+category: marketing
+tags: [email-marketing, crm, partner-only, amount-undisclosed]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://www.brevo.com"
+apply_url: "https://www.brevo.com/partners/startups/"
+official_source: "https://www.brevo.com/partners/startups/"
+
+# Benefit
+benefit_type: discount
+benefit_summary: >-
+  A partner program for accelerators and VCs that gives their portfolio
+  companies unspecified discounts on Brevo, plus integrations and dedicated
+  support. No discount percentage or amount is published.
+amount_is_published: false
+amount_max: null
+partner_gate: required-hard
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  Brevo publishes no founder-facing startup offer:
+  https://www.brevo.com/startups/ 301s to this same partner page. The page
+  is addressed to accelerators and VCs ('Offer exclusive discounts and
+  advanced marketing & CRM tips to your members'), so a startup reaches the
+  benefit only through an affiliated partner. No discount percentage,
+  credit amount, duration, company age, funding or headcount criterion is
+  published anywhere on the page. The form on the page is the partner
+  sign-up, not a startup application. status_quote is taken from the page's
+  own meta description.
+
+# Application
+application_mechanism: self-serve-form
+
+# Status
+status: active-partner-only
+status_basis: asserted
+status_quote: >-
+  Join the Brevo Partner Program for Accelerators & VCs and give your
+  portfolio companies access to our all-in-one marketing platform,
+  benefits, and support.
+fetch_note: >-
+  200 and fully rendered via curl with a browser UA. Full body read.
+  https://www.brevo.com/startups/ was checked separately and 301s to this
+  same URL; https://marketing-assets.brevo.com/en/startups/ (a search
+  result) returns 404.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: >-
+  Discover industry leading solutions at startup-friendly prices. Our
+  exclusive discounts will ensure your growth perfectly aligns with your
+  budget.
+bot_blocked: false

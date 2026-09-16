@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+slug: mercury-perks
+company: Mercury
+program: Perks
+category: ecosystem
+tags:
+- perks
+- banking
+- marketplace
+homepage: https://mercury.com
+apply_url: https://mercury.com/perks
+official_source: https://mercury.com/perks
+benefit_type: bundle
+benefit_summary: Catalogue of 305 third-party partner offers (credits and discounts) available
+  to Mercury account holders, grouped into six themed bundles. Listed examples include AWS
+  "$5k credits", GitHub "$10,000 in GitHub credits", Notion "6 months free + unlimited AI".
+amount_is_published: false
+amount_max: null
+partners:
+- AWS
+- QuickBooks Online
+- Google Workspace
+- Namecheap
+- Gusto
+- Notion
+- Slack
+- GitHub
+- Google Cloud
+- Microsoft for Startups
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: 'The public page lists partner names and headline offers in a table but
+  publishes no eligibility criteria and no per-perk terms; redemption terms, per-partner eligibility
+  and any Mercury account requirements sit behind the Mercury dashboard login, which I could
+  not inspect. The page also does not state whether a Mercury account is required to redeem,
+  only "Sign up to access perks". Imported from a verification sweep whose quote fidelity
+  later failed audit in 13 of 22 sampled records. This entry was NOT independently re-audited,
+  so the evidence quote may be a close paraphrase rather than the vendor''s exact wording.
+  Re-read the source before relying on precise phrasing. Re-confirmed 2026-09-16. The page
+  publishes no aggregate value. A Mercury account is required: the call to action reads ''Sign
+  up to access perks''. Individual perks shown are third-party offers (for example AWS and
+  QuickBooks), not Mercury credit.'
+application_mechanism: in-product
+status: active-self-serve
+status_basis: inferred
+status_quote: Sign up to access perks
+fetch_note: 200 and rendered via curl; perks table (305 rows, first 50 shown) and bundle names
+  captured. Individual perk detail pages are behind login.
+last_verified: '2026-09-16'
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: Save with exclusive credits and discounts on software, systems, and more that
+  help you move faster and smarter.
+bot_blocked: false

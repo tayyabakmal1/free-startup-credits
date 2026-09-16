@@ -1,0 +1,64 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+slug: remote-for-startups
+company: Remote
+program: Remote for Startups
+category: hr
+tags:
+- eor
+- global-payroll
+- contractors
+- vc-perk
+homepage: https://remote.com
+apply_url: https://remote.com/global-hr/startups
+official_source: https://remote.com/partners/vc-partners
+benefit_type: discount
+benefit_summary: Percentage discount on Remote's service fees for startups. The readable page
+  states partner-referred startups get 20% off all hires in their first year, and that introducing
+  a non-partner investor adds 5% up to a 20% ceiling.
+amount_is_published: false
+amount_max: null
+duration_months: 12
+stacking_notes: The 5% introduction bonus is stated to stack up to a 20% total ceiling.
+partner_gate: improves-offer
+stages:
+- pre-seed
+- seed
+- series-a
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: 'WHAT I COULD NOT INSPECT: every Remote support-centre article carrying
+  the hard terms returned HTTP 403 to automated fetching and was never opened — the base discount
+  percentage (support.remote.com/hc/en-us/articles/4407291107725), the eligibility rule (…/4407285494925),
+  the discount validity period (…/4407291167757), and the annual-plan-only condition (…/4407291143693).
+  Those four articles are where the commonly cited "15% for pre-seed/seed/Series A companies
+  funded by a VC, accelerator or incubator, annual plans only, 12 months" terms live, and
+  I am NOT asserting them here because I could not read them. Only two remote.com pages rendered:
+  /partners/vc-partners, which states the 20% partner-referred figure and the +5% introduction
+  bonus and describes partners as "incubators, accelerators, venture capital and private equity
+  firms, angel syndicates, and other startup-enabling organizations", and /global-hr/startups,
+  which repeats only the +5% sentence. Neither readable page states the base self-serve percentage
+  as prose, any funding-stage requirement, or the annual-plan condition — hence all gates
+  are unknown and amount fields are null. duration_months 12 reflects the readable statement
+  that the discount applies to hires "made in their first year with Remote". Remote''s pricing
+  page publishes no startup discount at all. Two rates are published: 15% direct ("special
+  startup pricing, which consists of a 15% discount on Remote''s services") and 20% through
+  a partner. Also verbatim: "If your investor is not a Remote for Startups partner, we''d
+  love to chat with them! Introduce us, and you''ll get an additional 5% off (up to a 20%
+  discount)." Two rates are published: 15% direct ("special startup pricing, which consists
+  of a 15% discount on Remote''s services") and 20% through a partner. Also verbatim: "If
+  your investor is not a Remote for Startups partner, we''d love to chat with them! Introduce
+  us, and you''ll get an additional 5% off (up to a 20% discount)."'
+application_mechanism: partner-code
+status: active-partner-only
+status_basis: inferred
+fetch_note: https://remote.com/partners/vc-partners 200 and rendered; https://remote.com/global-hr/startups
+  200 and rendered; https://remote.com/pricing 200 and rendered with no startup discount.
+  All four support.remote.com articles holding the program terms returned 403 Forbidden and
+  were not inspected.
+last_verified: '2026-09-16'
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: Offer 20% off employer of record, global payroll, and contractor management
+  services on all hires made in their first year with Remote.
+bot_blocked: true

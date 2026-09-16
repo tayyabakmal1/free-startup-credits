@@ -1,0 +1,53 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+slug: close-for-startups
+company: Close
+program: Close for Startups
+category: crm
+tags:
+- crm
+- sales
+- accelerator-perk
+homepage: https://close.com
+apply_url: https://close.com/partners
+official_source: https://close.com/partners
+benefit_type: discount
+benefit_summary: A startup-friendly deal on Close distributed through accelerator, incubator
+  and startup-community perks marketplaces. No discount percentage, credit amount or duration
+  is published.
+amount_is_published: false
+amount_max: null
+partner_gate: required-hard
+stages:
+- pre-seed
+- seed
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: 'The program is described only from the partner side: Close is recruiting
+  accelerators/incubators to carry the deal, so a founder reaches it through their own accelerator''s
+  perks marketplace rather than by applying to Close directly. What I could NOT inspect: the
+  actual discount percentage, duration, and any startup eligibility criteria are not published
+  on any Close page — the partner page states the deal exists but names no figure. Separately,
+  https://close.com/crm-for-startups is purely marketing and contains no startup discount;
+  it offers only the standard "Try Close free for 14 days. No credit card required" trial
+  available to everyone. Close also runs an unrelated Visa Small Business offer (20% off the
+  first month) which is not a startup program. accelerator_required is left unknown because
+  the page states the distribution channel without stating it is the only route. Imported
+  from a verification sweep whose quote fidelity later failed audit in 13 of 22 sampled records.
+  This entry was NOT independently re-audited, so the evidence quote may be a close paraphrase
+  rather than the vendor''s exact wording. Re-read the source before relying on precise phrasing.
+  Re-confirmed verbatim 2026-09-16. This is a partner-marketplace route only: no discount
+  percentage, credit amount or direct eligibility rule is published.'
+application_mechanism: partner-code
+status: active-partner-only
+status_basis: asserted
+status_quote: For accelerators, incubators, and startup communities that have a perks/deals
+  marketplace and are looking to offer a startup-friendly deal for Close
+fetch_note: 200 and rendered. https://close.com/crm-for-startups also returned 200 and contains
+  no startup offer.
+last_verified: '2026-09-16'
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: For accelerators, incubators, and startup communities that have a perks/deals
+  marketplace and are looking to offer a startup-friendly deal for Close
+bot_blocked: false

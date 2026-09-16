@@ -1,0 +1,62 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+slug: attio-startup-program
+company: Attio
+program: Startup Program
+category: crm
+tags:
+- crm
+- sales
+- vc-backed
+homepage: https://attio.com
+apply_url: https://attio.com/startups
+official_source: https://attio.com/startups
+benefit_type: discount
+benefit_summary: 80% off the annual Pro plan plus credits in year one and 30% off in year
+  two, for workspaces of up to 10 seats, with dedicated onboarding and third-party perks (3
+  months of Linear, 6 months of Notion).
+amount_is_published: false
+amount_max: null
+duration_months: 12
+expiry_note: 'Must apply within 90 days of creating an Attio workspace: "Yes, you can apply
+  within your first 90 days of creating a workspace."'
+after_credits: 30% off the second year
+excludes:
+- workspaces over 10 seats
+stacking_notes: Program includes third-party perks (Mercury, Linear, Notion, Intercom, Sentry,
+  Apollo, Miro) via an in-program catalogue.
+funding_required: true
+open_to_bootstrapped: false
+requires_vc_backing: true
+partner_gate: required-soft
+partners:
+- Y Combinator
+- Accel
+- Sequoia
+- Lightspeed
+- Andreessen Horowitz
+company_age_max_years: 10
+age_basis: incorporation
+requires_incorporation: true
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: 'Two eligibility statements on the same page differ slightly: the partners
+  section says "To qualify for the Startup Program, you must be venture backed or affiliated
+  with one of our startup partners" (an OR), while the FAQ states the conservative, stricter
+  form: "Startups that meet all the following criteria: VC-backed, signed up within the last
+  90 days, and incorporated less than 10 years ago." Gates follow the FAQ. Seat cap: "This
+  discount is valid for workspaces of up to 10 seats." Eligibility quoted verbatim: "Startups
+  that meet all the following criteria: VC-backed, signed up within the last 90 days, and
+  incorporated less than 10 years ago." and "This discount is valid for workspaces of up to
+  10 seats." Year two is "30% off the second year".'
+application_mechanism: self-serve-form
+status: active-self-serve
+status_basis: inferred
+status_quote: A member of our team will be in touch to confirm your eligibility and get you
+  started.
+fetch_note: 200 and rendered via curl; full page including all FAQ accordion answers extracted.
+last_verified: '2026-09-16'
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: 80% off the annual Pro plan and credits for the first year
+bot_blocked: false

@@ -1,0 +1,87 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: retool-for-startups
+company: Retool
+program: Retool for Startups
+category: devtools
+tags: [internal-tools, low-code, bootstrapped-friendly, free-year]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://retool.com"
+apply_url: "https://share.hsforms.com/2H3PWbX5wQ9Wq_i3-P_wmZw4k765"
+official_source: "https://retool.com/startups"
+
+# Benefit
+benefit_type: discount
+benefit_summary: >-
+  A 100% off coupon for one year on a monthly Team or Business plan, with a
+  value up to $60k, followed by a 25% discount on the paid plan in the
+  second year.
+amount_is_published: true
+amount_max: 60000
+currency: USD
+duration_months: 12
+expiry_note: "The 100% off discount expires after one year."
+after_credits: "However, you will receive a 25% discount on your paid plan the following year."
+excludes:
+  - >-
+      Retool customers that have already been on a paid plan for multiple
+      billing cycles are not eligible for the offer.
+  - Startups that have raised $10 million or more in total funding
+  - Companies founded more than 10 years ago
+  - Annual plans (the coupon applies to monthly Team or Business plans)
+stacking_notes: >-
+  The Startup offer cannot be used in conjunction with other discounts
+  offered by sales. Once claimed, the offer cannot be transferred to a
+  different cloud account or self-hosted deployment.
+
+# Eligibility. Tri-state gates are written only when the vendor states
+# them. An omitted gate reads as `unknown` and keeps this entry out of
+# the matching collection, which is the intended behaviour.
+funding_required: false
+open_to_bootstrapped: true
+requires_vc_backing: false
+partner_gate: none
+funding_max_usd: 10000000
+stages: [idea, pre-seed, seed, series-a]
+company_age_max_years: 10
+new_customer_only: true
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  amount_max $60,000 is the stated ceiling on the VALUE of the 100%
+  discount, not a credit grant. The claim '$160K in partner deals' appears
+  only in the page's <meta name="description">, not in any visible body
+  copy, so it is not recorded as a benefit. Retool partners with VCs,
+  accelerators and incubators to share offers, but partner affiliation is
+  not among the stated eligibility criteria. Independently re-audited: a
+  second reviewer opened the vendor page and checked the quote, amount and
+  source.
+
+# Application
+application_mechanism: self-serve-form
+approval_time: >-
+  You will receive a confirmation email upon acceptance to the program, and
+  the discount will be applied automatically...
+
+# Status
+status: active-self-serve
+status_basis: inferred
+fetch_note: >-
+  HTTP 200 via curl at https://retool.com/startups; all five FAQ questions
+  AND their full answers were present in the server-rendered HTML. Apply
+  form (share.hsforms.com) returns 200; the on-page variant carrying
+  __hstc/__hssc tracking parameters was discarded in favour of the clean
+  URL.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: >-
+  Eligible startups receive a 100% off coupon for one year, with a value up
+  to $60k.
+bot_blocked: false

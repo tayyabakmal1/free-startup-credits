@@ -1,0 +1,108 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: airwallex-for-startups
+company: Airwallex
+program: Airwallex for Startups
+category: finance
+tags: [payments, fx, business-account, anz]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://www.airwallex.com"
+apply_url: "https://www.airwallex.com/au/startups"
+official_source: "https://www.airwallex.com/au/startups"
+
+# Benefit
+benefit_type: usage-allowance
+benefit_summary: >-
+  Australia/New Zealand program tiered by funding stage. Pre-seed gets the
+  Explore tier free for 3 months; Seed gets the Grow tier free for 3 months
+  plus AUD$100,000 of fee-free payment collection and AUD$100,000 of
+  fee-free FX; Series A+ is sales-handled.
+amount_is_published: false
+amount_max: null
+duration_months: 3
+expiry_note: >-
+  Free tier access runs 3 months; the AUD$100,000 payment-acceptance and
+  AUD$100,000 FX allowances are separate caps and are not additive into a
+  single figure.
+after_credits: >-
+  Standard Airwallex fees and pricing apply after the promotional tier
+  access ends.
+stacking_notes: >-
+  Offers are accessed from the Rewards tab once the Airwallex account is
+  set up. There is no cost to join the program.
+tiers:
+  - name: Pre-seed
+    partner_gate: none
+    quote: Free access to Airwallex Explore tier for 3 months
+    notes: No payment-acceptance or FX allowance published for this tier.
+  - name: Seed
+    amount_max: 100000
+    partner_gate: none
+    quote: Fee-free FX for the first AUD$100,000 worth of conversions
+    notes: >-
+      This tier also lists "Free access to Airwallex Grow tier for 3 months",
+      "Collect payments up to AUD$100,000 and pay no fees" and "Earn
+      competitive returns on USD and AUD with Yield". The two AUD$100,000
+      allowances are separate and must not be summed. Amounts are AUD, not USD.
+  - name: Series A and beyond
+    partner_gate: none
+    quote: Contact our team
+    notes: No benefit amount is published for this tier; it is routed to sales.
+partner_gate: none
+stages: [pre-seed, seed, series-a]
+requires_incorporation: true
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: ["AU", "NZ"]
+excluded_regions: []
+regions_basis: asserted
+regions_quote: >-
+  this program is focused on startups with a business entity registered in
+  Australia or New Zealand, with a valid Australian Business Number (ABN)
+  or New Zealand Business Number (NZBN)
+eligibility_notes: >-
+  funding_required is left unknown deliberately: the FAQ says Airwallex
+  "currently prioritise startups that have raised external funding –
+  typically angel, seed, or institutional rounds", which is a
+  prioritisation, not a stated requirement. Series A and beyond has no
+  published benefit — the page says "Contact our team". This record covers
+  the Australia/New Zealand page only; Airwallex runs separate per-market
+  pages (Hong Kong at /en-hk/airwallex-for-startups, and a global newsroom
+  release dated 29 October 2025 that describes the refreshed program
+  starting in Singapore and mentions $10,000 business acceleration grants
+  in local currencies for select regions). Airwallex itself warns the
+  offers differ by market: "The Airwallex for Startups program's
+  availability and specific benefits vary by market and are contingent upon
+  eligibility checks, successful onboarding (including KYC/KYB) and
+  applicable limits. Not all program features are available in all
+  jurisdictions." Do not reuse the AUD figures for other markets. An active
+  Airwallex account is required to access the offers. Independently
+  re-audited: a second reviewer opened the vendor page and checked the
+  quote, amount and source. AUDIT CORRECTION: the A$100,000 figure is the
+  volume of currency conversion on which fees are waived, NOT a credit or a
+  cash value. Recorded as a usage allowance with no headline amount.
+
+# Application
+application_mechanism: self-serve-form
+requires_sales_call: false
+obligations: [Complete Airwallex onboarding including KYC/KYB]
+
+# Status
+status: active-self-serve
+status_basis: asserted
+status_quote: "No, there's no cost to join the Airwallex for Startups program."
+fetch_note: >-
+  https://www.airwallex.com/au/startups returned 200 and rendered including
+  the per-stage tier blocks and FAQ. The global newsroom release also
+  returned 200. https://www.airwallex.com/partners/startup-ecosystem
+  returned 200 but publishes no amounts.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: >-
+  Fee-free for the first AUD$100,000 of worth of conversions. New customers
+  only. Eligibility requirements apply.
+bot_blocked: false

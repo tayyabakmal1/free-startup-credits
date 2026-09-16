@@ -1,0 +1,74 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: vultr-digital-start-up-program
+company: Vultr
+program: Vultr Digital Start-up Program
+category: cloud
+tags: [iaas, gpu, series-a-plus, public-reference-required]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://www.vultr.com"
+apply_url: "https://discover.vultr.com/startup-program"
+official_source: "https://discover.vultr.com/startup-program"
+
+# Benefit
+benefit_type: bundle
+benefit_summary: >-
+  Up to $100K in cloud credits plus 35% long-term discounts, executive
+  sponsorship, architecture reviews and priority support, for startups with
+  recent Series A through E financing.
+amount_is_published: true
+amount_max: 100000
+currency: USD
+excludes: [Startups without recent Series A, B, C, D or E financing]
+
+# Eligibility. Tri-state gates are written only when the vendor states
+# them. An omitted gate reads as `unknown` and keeps this entry out of
+# the matching collection, which is the intended behaviour.
+funding_required: true
+open_to_bootstrapped: false
+stages: [series-a, series-b, series-c-plus]
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  The page publishes no company-age limit, no credit duration and no
+  revenue or headcount cap. Series A–E financing is required but the page
+  does not say the investor must be a VC, so requires_vc_backing is left
+  unknown. The 'Apply Now' / 'Join Now' calls to action resolve to an
+  on-page form rather than a distinct application URL, so the application
+  form's own questions were not inspected. Independently re-audited: a
+  second reviewer opened the vendor page and checked the quote, amount and
+  source.
+
+# Application
+application_mechanism: self-serve-form
+obligations:
+  - Share your last 6 months of cloud compute invoices
+  - >-
+      Agree to be publicly referenceable as a member of the Vultr Digital
+      Start-up Program
+  - >-
+      Provide the name and contact details of your senior-most technical
+      executive, such as your CTO or equivalent
+  - >-
+      Submit the name and contact details of your senior-most technical cloud
+      infrastructure leader
+
+# Status
+status: active-self-serve
+status_basis: inferred
+fetch_note: >-
+  HTTP 200 via curl at https://discover.vultr.com/startup-program; the full
+  'Startup Program Qualification Criteria' section rendered in the server
+  HTML. The only on-page startup-program href carried utm_ parameters and
+  was stripped to the clean URL.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: "Up to $100K in cloud credits and 35% long-term discounts"
+bot_blocked: false

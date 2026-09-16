@@ -1,0 +1,114 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: langchain-langsmith-for-startups
+company: LangChain
+program: LangSmith for Startups
+category: ai
+tags: [llm-observability, agents, evaluation, tiered, vc-partner]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://www.langchain.com"
+apply_url: "https://www.langchain.com/startups"
+official_source: "https://www.langchain.com/startups"
+
+# Benefit
+benefit_type: credit
+benefit_summary: >-
+  Two tiers: Build gives discounted seat pricing to first-time customers
+  with under $10M raised; Scale gives $10K in LangSmith credits valid for 1
+  year to Series A or earlier startups backed by a LangChain premier VC
+  partner.
+amount_is_published: true
+amount_max: 10000
+currency: USD
+duration_months: 12
+expiry_note: >-
+  If you are eligible, your credits will be available to you within a few
+  days of applying and are available for 1 year. Those in Y Combinator will
+  have 2 years to use their credits.
+excludes:
+  - Existing LangSmith customers (both tiers require a first-time customer)
+tiers:
+  - name: Build
+    quote: >-
+      If you are a first-time customer with less than $10M in funding, and have
+      raised at least $25K in seed funding,
+    funding_min_usd: 25000
+    funding_max_usd: 10000000
+    partner_gate: none
+    notes: >-
+      Benefit is discounted seat pricing; no credit figure is published for
+      this tier. Page adds 'Additional eligibility criteria may apply'.
+  - name: Scale
+    quote: >-
+      If you are a first-time customer backed by a LangChain premier VC
+      partner, and are Series A (up to $50M in funding) or earlier stage,
+    amount_max: 10000
+    funding_max_usd: 50000000
+    partner_gate: required-hard
+    notes: >-
+      $10K in credits, available for 1 year; Y Combinator companies get 2 years
+      to use them.
+
+# Eligibility. Tri-state gates are written only when the vendor states
+# them. An omitted gate reads as `unknown` and keeps this entry out of
+# the matching collection, which is the intended behaviour.
+funding_required: true
+open_to_bootstrapped: false
+partner_gate: tiered
+partners:
+  - Sequoia
+  - Y Combinator
+  - Amplify
+  - South Park Commons
+  - Mayfield
+  - NEA
+  - Bessemer
+  - First Round
+  - Lux
+  - Kleiner Perkins
+  - Accel
+  - Khosla Ventures
+funding_min_usd: 25000
+funding_max_usd: 10000000
+stages: [pre-seed, seed, series-a]
+new_customer_only: true
+requires_company_email: true
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  Top-level funding bounds reflect the Build tier (at least $25K raised,
+  under $10M). The Scale tier instead requires Series A or earlier with up
+  to $50M raised AND backing by a LangChain premier VC partner; both tiers
+  are captured separately in tiers[]. The Build tier card is headed 'For
+  early-stage, VC-backed startups and founders.' but the FAQ says a
+  non-partner VC or accelerator does not block Build eligibility, so
+  requires_vc_backing is left unknown. 'Additional eligibility criteria may
+  apply' is stated but not enumerated. Independently re-audited: a second
+  reviewer opened the vendor page and checked the quote, amount and source.
+
+# Application
+application_mechanism: self-serve-form
+approval_time: >-
+  Once your application is submitted, we will check that you meet our
+  selection criteria. You'll then receive a confirm...
+
+# Status
+status: active-self-serve
+status_basis: inferred
+fetch_note: >-
+  HTTP 200 via curl at https://www.langchain.com/startups; full page
+  including both tier cards and all FAQ answers was present in the
+  server-rendered HTML. Tier apply buttons point to Airtable forms (Build:
+  airtable.com/app8ZrGLtHAtFVO1o/pagfLAmdTz4ep7TGu/form, Scale:
+  airtable.com/app8ZrGLtHAtFVO1o/pagiUnIov2Rs0gW0r/form).
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: $10K in credits, available for 1 year
+bot_blocked: false

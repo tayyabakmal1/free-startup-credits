@@ -1,0 +1,50 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+slug: drata-for-startups
+company: Drata
+program: Drata for Startups
+category: security
+tags:
+- compliance
+- soc2
+- iso-27001
+- percentage-discount
+- sales-gated
+homepage: https://drata.com
+apply_url: https://try.drata.com/dfs
+official_source: https://try.drata.com/dfs
+benefit_type: discount
+benefit_summary: 25% off a startup's first Drata contract, presented on a Drata-hosted landing
+  page whose only call to action is a demo request; no eligibility criteria, duration or region
+  terms are published.
+amount_is_published: false
+amount_max: null
+stages:
+- any
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: 'NOT INSPECTABLE: no eligibility criteria, funding stage, investor list,
+  company-age limit, contract term or region restriction is published anywhere I could open.
+  Drata''s former program page https://drata.com/partner/startup-program redirects to https://drata.com/partners/startup,
+  which returns 404; https://drata.com/startup-program, /partners/startup-program and /partner/guide/startup-program-guide
+  all return 404; and drata.com/sitemap.xml (1,516 URLs) lists no startup-program page. The
+  investor-participation list referenced in third-party listings could therefore not be verified
+  and is not recorded. https://drata.com/solutions/size/startup is a live product page headed
+  ''DRATA FOR STARTUPS'' but publishes no discount, amount or eligibility — only a ''Get a
+  Demo'' CTA. try.drata.com/dfs appears to be a VC/PE partner landing template (it contains
+  an unfilled ''900+'' figure and a ''Drata + Drata for Startups'' title), so whether the
+  25% is universally available or partner-scoped is unconfirmed; partner_gate is left unknown
+  for that reason. No eligibility criteria are published on the offer page. No eligibility
+  criteria are published on the offer page.'
+application_mechanism: sales-call
+status: active-sales-gated
+status_basis: inferred
+fetch_note: HTTP 200 via curl at https://try.drata.com/dfs (Drata-owned HubSpot landing host);
+  full page text rendered, only CTA is 'Get a Demo'. drata.com/partner/startup-program ->
+  redirects to drata.com/partners/startup -> 404. drata.com/solutions/size/startup -> 200
+  but no offer terms. drata.com/sitemap.xml -> 200, 1,516 URLs, no startup-program entry.
+last_verified: '2026-09-16'
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: Get 25% off your first Drata Contract
+bot_blocked: false

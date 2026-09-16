@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+slug: oracle-for-startups
+company: Oracle
+program: Cloud Infrastructure for Startups
+category: cloud
+tags:
+- cloud
+- oci
+- free-tier
+- program-page-removed
+homepage: https://www.oracle.com
+apply_url: https://www.oracle.com/cloud/free/
+official_source: https://www.oracle.com/cloud/oracle-for-startups/
+benefit_type: free-plan
+benefit_summary: The page currently points startups to Oracle Cloud Free Tier and developer
+  resources. No credit amount, discount percentage, eligibility criteria or application form
+  is published on it.
+amount_is_published: false
+amount_max: null
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: 'Could not inspect any live ''Oracle for Startups'' application or benefits
+  page: https://www.oracle.com/startup/ returns 301 to ../cloud/ and https://www.oracle.com/startup/explore-the-program/
+  returns 301 to ../../cloud/, i.e. both redirect up to the generic Oracle Cloud section.
+  The surviving page at /cloud/oracle-for-startups/ is titled ''Cloud Infrastructure for Startups''
+  and offers only Free Tier, the Developer Center, cost calculators and reference architectures
+  - no credits, no eligibility caps, no apply button. Prior third-party claims of ''$500 free
+  credits'' and ''70% discount'' could not be confirmed on any Oracle-hosted page, so no amount
+  is recorded. Status is ''unverified'' rather than ''discontinued'' because Oracle publishes
+  no discontinuation notice and therefore no discontinued_date exists. HTTP 403 to automated
+  clients, re-confirmed 2026-09-16. HTTP 403 to automated clients, re-confirmed 2026-09-16.'
+status: unverified
+status_basis: inferred
+fetch_note: 'WebFetch returned 403; curl with a browser UA returned 200 for https://www.oracle.com/cloud/oracle-for-startups/
+  and the full body rendered. Redirect checks: /startup/ -> 301 Location ../cloud/, /startup/explore-the-program/
+  -> 301 Location ../../cloud/.'
+last_verified: '2026-09-16'
+verified_by: tayyabakmal1
+verification_level: needs-manual-verification
+bot_blocked: true

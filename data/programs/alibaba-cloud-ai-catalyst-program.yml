@@ -1,0 +1,74 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: alibaba-cloud-ai-catalyst-program
+company: Alibaba Cloud
+program: Alibaba Cloud AI Catalyst Program
+category: cloud
+tags: [cloud, ai, model-studio, credits]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://www.alibabacloud.com"
+apply_url: "https://survey.alibabacloud.com/uone/sg/survey/Ki6nZZ5hr"
+official_source: "https://www.alibabacloud.com/en/startup/ai"
+
+# Benefit
+benefit_type: credit
+benefit_summary: >-
+  Up to $120k in Alibaba Cloud credits plus up to 2B free Model Studio
+  tokens, POC coupons, 1:1 office hours with AI experts and 12 months of
+  Alibaba Cloud Academy access.
+amount_is_published: true
+amount_max: 120000
+currency: USD
+expiry_note: >-
+  The credits have different validity periods based on the credit amount.
+  Do contact your account manager for more information.
+excludes:
+  - domain purchase
+  - CDN
+  - Alibaba Cloud Academy
+  - Alibaba Cloud Marketplace
+  - prepaid products / services
+  - accounts under resellers or distributors
+  - listed (public) companies
+partner_gate: none
+company_age_max_years: 10
+age_basis: incorporation
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  The requested URL https://www.alibabacloud.com/en/startup redirects to
+  the AI Catalyst program page; the generic "Alibaba Cloud Startup Program"
+  name in the target list does not appear on the live page. Credit validity
+  is deliberately undisclosed: "The credits have different validity periods
+  based on the credit amount. Do contact your account manager for more
+  information." The page also states "*Eligibility at the full discretion
+  of Alibaba Cloud". Independently re-audited: a second reviewer opened the
+  vendor page and checked the quote, amount and source.
+
+# Application
+application_mechanism: self-serve-form
+approval_time: Successful applicants will be notified via email within 4-5 business days.
+obligations:
+  - >-
+      Provide a solid proposal to show their plan to use Alibaba Cloud and its
+      AI tools.
+
+# Status
+status: active-self-serve
+status_basis: inferred
+status_quote: Submit the online form on this webpage.
+fetch_note: >-
+  301 from https://www.alibabacloud.com/en/startup to
+  https://www.alibabacloud.com/en/startup/ai, 200 and rendered; FAQ content
+  was embedded as JSON in the page payload and was read in full.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: Up to $120k cloud credits support.
+bot_blocked: false

@@ -1,0 +1,96 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: github-for-startups
+company: GitHub
+program: GitHub for Startups
+category: devtools
+tags: [source-control, copilot, ci-cd, code-security]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://github.com"
+apply_url: "https://github.com/enterprise/startups/partners"
+official_source: "https://github.com/enterprise/startups"
+
+# Benefit
+benefit_type: credit
+benefit_summary: >-
+  $10,000 in flexible GitHub credits applied to an Enterprise account for
+  up to 12 months, usable across GitHub Enterprise, Copilot, Advanced
+  Security, Actions and other metered offerings; only available through an
+  affiliated partner.
+amount_is_published: true
+amount_max: 10000
+currency: USD
+duration_months: 12
+expiry_note: >-
+  Credits are valid for up to 12 months from approval. Credits expire upon
+  full consumption or at the end of the 12-month period, whichever occurs
+  first.
+after_credits: >-
+  Upon credit exhaustion or program expiration, any active products will
+  automatically transition to standard paid billing and will be charged to
+  the payment method on file.
+excludes:
+  - Enterprises with data residency
+  - >-
+      startups that have previously received GitHub Enterprise credits through
+      Microsoft or GitHub for Startups
+  - startups on a GitHub Enterprise plan within the past six months
+stacking_notes: >-
+  One-time redemption; credits cannot be transferred to another account.
+  Downgrading before credits are consumed forfeits the remainder and bars
+  reapplication.
+
+# Eligibility. Tri-state gates are written only when the vendor states
+# them. An omitted gate reads as `unknown` and keeps this entry out of
+# the matching collection, which is the intended behaviour.
+funding_required: true
+open_to_bootstrapped: false
+requires_vc_backing: false
+partner_gate: required-hard
+stages: [pre-seed, seed, series-a, series-b]
+new_customer_only: true
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  'Up to Series B or earlier' is a stage ceiling, not a dollar figure, so
+  funding_max_usd is null. The page notes 'our previous startup offer has
+  been discontinued and is no longer available' - that refers to a prior
+  GitHub offer, not this one. A valid payment method is required and an
+  authorization charge is taken; failure to have one locks the account.
+  Independently re-audited: a second reviewer opened the vendor page and
+  checked the quote, amount and source.
+
+# Application
+application_mechanism: partner-code
+approval_time: the account admin will receive an onboarding email within 24 hours
+obligations:
+  - >-
+      Please expect an authorization charge on your payment method within a few
+      weeks of onboarding.
+  - >-
+      Participants are responsible for monitoring the Enterprise account owner
+      inbox.
+
+# Status
+status: active-partner-only
+status_basis: asserted
+status_quote: >-
+  Eligible startups must be affiliated with a GitHub for Startups partner,
+  have received outside funding (up to Series B or earlier), and be new to
+  GitHub Enterprise
+fetch_note: >-
+  200 and rendered; the full FAQ including the terms-and-conditions block
+  is server-rendered in the HTML.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: >-
+  Eligible startups receive $10,000 in GitHub credits to use across the
+  full GitHub Enterprise platform for up to 12 months.
+bot_blocked: false

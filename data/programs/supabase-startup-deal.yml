@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: supabase-startup-deal
+company: Supabase
+program: Supabase Startup Deal
+category: databases
+tags: [database, postgres, backend]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://supabase.com"
+apply_url: "https://forms.supabase.com/supabasedeal"
+official_source: "https://forms.supabase.com/supabasedeal"
+
+# Benefit
+benefit_type: credit
+benefit_summary: >-
+  Supabase hosts an application form titled "Supabase Startup Deal
+  Application Form", but publishes no benefit amount, duration, or
+  eligibility criteria for it on any Supabase-owned page that could be
+  read.
+amount_is_published: false
+amount_max: null
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  Could not inspect: benefit amount, duration, eligibility, and application
+  terms. The form page at forms.supabase.com/supabasedeal is a
+  JavaScript-only shell — the only server-rendered text is the heading
+  "Supabase Startup Deal Application Form".
+  https://supabase.com/solutions/startups is a product marketing page with
+  no credits program, no amounts, and no application.
+  https://supabase.com/docs/guides/platform/credits documents only
+  self-serve credit top-ups (max $2000 per top-up), not a startup program.
+  https://supabase.com/startups and https://supabase.com/startup-program
+  both return 404. Third-party figures circulating for this program are not
+  traceable to any Supabase page and were deliberately not recorded.
+
+# Status
+status: unverified
+status_basis: inferred
+fetch_note: >-
+  forms.supabase.com/supabasedeal returned 200 but is a JS-only shell (123
+  characters of server-rendered text: page title plus the heading "Supabase
+  Startup Deal Application Form"). supabase.com/solutions/startups returned
+  200 and rendered fully but contains no startup credits program.
+  supabase.com/startups and supabase.com/startup-program both 404.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: needs-manual-verification
+bot_blocked: true

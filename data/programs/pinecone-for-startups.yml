@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: pinecone-for-startups
+company: Pinecone
+program: Pinecone for Startups
+category: databases
+tags: [vector-database, rag, ai-infrastructure]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://www.pinecone.io/"
+apply_url: "https://www.pinecone.io/startup-program/"
+official_source: "https://www.pinecone.io/startup-program/"
+
+# Benefit
+benefit_type: bundle
+benefit_summary: >-
+  Free access to Pinecone's Standard tier and Pro Support, plus unspecified
+  usage credits and discounts, for companies with fewer than 100 employees
+  at Series A or earlier.
+amount_is_published: false
+amount_max: null
+partner_gate: none
+stages: [idea, pre-seed, seed, series-a]
+employees_max: 100
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  Eligibility stated verbatim as "You have fewer than 100 employees" and
+  "You're Series A or earlier". No credit figure is published anywhere on
+  the page; the page directs questions to startups@pinecone.io. Program
+  duration is not stated.
+
+# Application
+application_mechanism: self-serve-form
+
+# Status
+status: active-amount-undisclosed
+status_basis: asserted
+status_quote: Startups in the program also receive usage credits and discounts.
+fetch_note: >-
+  The supplied url https://www.pinecone.io/startups/ returned 404.
+  WebSearch on pinecone.io found https://www.pinecone.io/startup-program/,
+  which fetched 200 and rendered benefits and the eligibility bullets.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: >-
+  Pinecone for Startups gives you free access to Pinecone's Standard Tier
+  and Pro Support
+bot_blocked: false

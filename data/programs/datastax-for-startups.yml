@@ -1,0 +1,54 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: datastax-for-startups
+company: DataStax (IBM)
+program: DataStax Startup Program
+category: databases
+tags: [cassandra, vector-database, astra-db]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://www.datastax.com"
+apply_url: "https://www.datastax.com/datastax-enterprise-for-startups/startup-program-faq"
+official_source: "https://www.datastax.com/datastax-enterprise-for-startups/startup-program-faq"
+
+# Benefit
+benefit_type: credit
+benefit_summary: >-
+  No reachable DataStax startup program page exists. Every former
+  startup-program URL either 404s or cross-domain redirects to IBM's
+  DataStax product page, which contains no startup program, eligibility or
+  credit offer.
+amount_is_published: false
+amount_max: null
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  NOT INSPECTABLE: no startup program terms, amount, eligibility criteria
+  or application form are published on any reachable DataStax or IBM page.
+  The cross-domain redirect to the parent brand indicates the program is
+  almost certainly retired post-IBM-acquisition, but no vendor sentence
+  confirming closure could be found and no closure date is published, so
+  status is "unverified" rather than "discontinued". A free Astra DB tier
+  exists on IBM's pricing pages but is a product tier, not a startup
+  program.
+
+# Status
+status: unverified
+status_basis: inferred
+fetch_note: >-
+  Both https://www.datastax.com/products/datastax-astra (the URL given in
+  the target list) and
+  https://www.datastax.com/datastax-enterprise-for-startups/startup-program-faq
+  cross-domain 301 to https://www.ibm.com/products/datastax, which returned
+  200 and rendered but contains no startup program, credits, eligibility or
+  application.
+  https://pages.datastax.com/DataStaxEnterpriseforStartups.html return
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: needs-manual-verification
+bot_blocked: false

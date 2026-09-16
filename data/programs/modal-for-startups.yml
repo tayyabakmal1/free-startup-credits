@@ -1,0 +1,87 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+slug: modal-for-startups
+company: Modal
+program: Modal for Startups
+category: ai
+tags:
+- gpu
+- ai-infrastructure
+- compute-credits
+- vc-gated
+homepage: https://modal.com
+apply_url: https://modal.com/startups#apply
+official_source: https://modal.com/startups
+benefit_type: credit
+benefit_summary: Free GPU credits (quantity not published) plus engineering and GTM support,
+  in two VC-funding-gated tiers. Credits are a one-time grant per tier and applicants must
+  be new to Modal.
+amount_is_published: false
+amount_max: null
+expiry_note: The page's FAQ heading reads "How long do my credits last? Can they be reinstated
+  if they expire?", which implies an expiry, but the answer text is not present in the served
+  HTML.
+excludes:
+- Existing Modal customers
+stacking_notes: Credits are a one-time grant and you may not reapply once you have received
+  credits in a given tier.
+tiers:
+- name: Seed to Series A
+  quote: Raised any amount of VC funding from our VC partner network
+  partner_gate: improves-offer
+  notes: 'The tier lists a second, alternative qualifying condition: "Raised VC funding >$1m
+    from any fund". So the partner-network route has no stated funding floor, while the any-fund
+    route has a stated floor of $1m. Tier is described as "Free credits for rising startups";
+    no figure published.'
+- name: Scaling and Series B+
+  quote: Raised VC funding > $30m or post-series B
+  funding_min_usd: 30000000
+  partner_gate: required-hard
+  notes: A second stated condition for this tier is "VC is part of our partner network". Modal
+    describes the tier as "Custom for rapidly growing AI-native companies" and publishes no
+    credit figure.
+funding_required: true
+open_to_bootstrapped: false
+requires_vc_backing: true
+partner_gate: tiered
+partners:
+- Y Combinator
+- Andreessen Horowitz
+- Sequoia
+- Khosla Ventures
+- Neo
+- HF0
+- Pear VC
+- Lux Capital
+stages:
+- seed
+- series-a
+- series-b
+- series-c-plus
+new_customer_only: true
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: 'Could not inspect: the FAQ accordion answers are client-rendered and absent
+  from the served HTML, so credit expiry length, how a tier is assigned, why a payment method
+  is required, and the full VC partner list were NOT inspectable (only the FAQ question headings
+  are in the HTML). The VC partner list is referenced as living in the FAQ. Logos shown on
+  the page (Y Combinator, Andreessen Horowitz, Sequoia, Khosla Ventures, Neo, HF0, Pear VC,
+  Lux Capital) are presented as examples, not an enumerated list. No dollar figure is published.
+  Eligibility quoted verbatim: "Raised VC funding >$1m from any fund" or "Raised any amount
+  of VC funding from our VC partner network" for the Seed-to-Series-A tier; "Raised VC funding
+  > $30m or post-series B" for the higher tier. Note funding_min is a FLOOR - bootstrapped
+  founders are excluded.'
+application_mechanism: self-serve-form
+status: active-amount-undisclosed
+status_basis: asserted
+status_quote: Customers that are new to Modal and meet the below requirements are eligible
+  to apply.
+fetch_note: 200 and rendered; full server HTML parsed. FAQ accordion answers are not in the
+  served HTML (client-rendered) - only the question headings were visible. Apply button points
+  to the on-page anchor /startups#apply, whose form is also client-rendered.
+last_verified: '2026-09-16'
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: Unlock thousands of free GPU credits to supercharge your startup.
+bot_blocked: false
+funding_min_usd: 1000000

@@ -1,0 +1,64 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+slug: assemblyai-startup-program
+company: AssemblyAI
+program: Startup Program
+category: ai
+tags:
+- speech-to-text
+- voice-ai
+- audio
+- api-credits
+homepage: https://www.assemblyai.com
+apply_url: https://www.assemblyai.com/contact/startup-program/apply
+official_source: https://www.assemblyai.com/contact/startup-program
+benefit_type: credit
+benefit_summary: Twelve months of recurring monthly credits toward AssemblyAI speech APIs
+  for early-stage teams building voice or audio products, with discounted pricing continuing
+  afterwards.
+amount_is_published: false
+amount_max: null
+duration_months: 12
+after_credits: Startup discounts continue after your credits run out. Standard pricing phases
+  in with no migration and no cliff, so graduating from the program is seamless.
+open_to_bootstrapped: true
+partner_gate: improves-offer
+partners:
+- Accel
+- Y Combinator
+stages:
+- pre-seed
+- seed
+- series-a
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: 'Stage stated as "Early stage, pre-seed to Series A" with "Bootstrapped
+  teams welcome too" (the affirmative basis for open_to_bootstrapped: true). Product criteria:
+  "Building with voice or audio" and "Launching within 6 months". Partner benefit quoted:
+  "Portfolio companies of partner VCs, including Accel and Y Combinator are fast-tracked and
+  should receive decisions in 48 hours" — this accelerates review, it is not a gate. Could
+  not inspect: any dollar amount. Neither the program page nor the application form at /contact/startup-program/apply
+  publishes a credit figure or a monthly allocation; third-party aggregators cite figures
+  ranging from $18,000 to $200,000 that AssemblyAI does not publish, so amount_max is null.
+  Also not published: company age, employee, or funding thresholds, and any geographic restriction.
+  Eligibility quoted verbatim: "Early stage, pre-seed to Series A", "Bootstrapped teams welcome
+  too", "Building with voice or audio", "In production or shipping soon". No dollar figure
+  is published. Eligibility quoted verbatim: "Early stage, pre-seed to Series A", "Bootstrapped
+  teams welcome too", "Building with voice or audio", "In production or shipping soon". No
+  dollar figure is published.'
+application_mechanism: self-serve-form
+approval_time: Applications are reviewed within one week; partner VC portfolio companies receive
+  decisions in 48 hours; credits land...
+status: active-amount-undisclosed
+status_basis: inferred
+fetch_note: 'Program page https://www.assemblyai.com/contact/startup-program: 200 and rendered.
+  Application page https://www.assemblyai.com/contact/startup-program/apply: 200 and rendered
+  (form fields visible, review time stated as 2-3 business days there vs. "within one week"
+  on the program page — a minor vendor inconsistency, both recorded in approval_time context).'
+last_verified: '2026-09-16'
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: 12 months of recurring free credits
+bot_blocked: false
+requires_vc_backing: false
+funding_required: false

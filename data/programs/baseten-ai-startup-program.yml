@@ -1,0 +1,78 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: baseten-ai-startup-program
+company: Baseten
+program: Baseten AI Startup Program
+category: ai
+tags: [inference, gpu, model-apis, ai-infrastructure]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://www.baseten.co"
+apply_url: "https://www.baseten.co/talk-to-us/startup-program"
+official_source: "https://www.baseten.co/startup-program/"
+
+# Benefit
+benefit_type: credit
+benefit_summary: >-
+  Two separate credit pools: up to $25,000 for Dedicated Inference or
+  Training and up to $2,500 for Model APIs, plus priority support and GTM
+  consulting.
+amount_is_published: true
+amount_max: 25000
+currency: USD
+excludes: [Companies that have previously received Baseten credits]
+tiers:
+  - name: Dedicated Inference or Training
+    amount_max: 25000
+    quote: Up to $25,000 in credits for Dedicated Inference or Training
+    partner_gate: none
+    notes: Credit pool for dedicated deployments and training workloads.
+  - name: Model APIs
+    amount_max: 2500
+    quote: Up to $2,500 in credits for Model APIs
+    partner_gate: none
+    notes: >-
+      Separate credit pool for Model APIs; not additive with the dedicated pool
+      on the page.
+
+# Eligibility. Tri-state gates are written only when the vendor states
+# them. An omitted gate reads as `unknown` and keeps this entry out of
+# the matching collection, which is the intended behaviour.
+funding_required: true
+partner_gate: none
+stages: [seed, series-a]
+company_age_max_years: 5
+new_customer_only: true
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  Page states "your funding stage should be Seed to Series A and you
+  started less than 5 years ago" and "artificial intelligence needs to be
+  core to your primary products or solutions". Net-new restriction: "Only
+  net new customers can be enrolled into the AI startup program. It means
+  that you have never received any credits from Baseten before". No program
+  duration, geography, or employee cap published. Independently re-audited:
+  a second reviewer opened the vendor page and checked the quote, amount
+  and source.
+
+# Application
+application_mechanism: self-serve-form
+
+# Status
+status: active-self-serve
+status_basis: inferred
+fetch_note: >-
+  200 and rendered; full page including FAQ/accordion eligibility text
+  retrieved. Apply link https://www.baseten.co/talk-to-us/startup-program
+  also loaded (headline "Join Baseten for Startups"); the form itself is
+  JS-rendered.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: Up to $25,000 in credits for Dedicated Inference or Training
+bot_blocked: false

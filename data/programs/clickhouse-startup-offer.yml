@@ -1,0 +1,70 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: clickhouse-startup-offer
+company: ClickHouse
+program: ClickHouse Startup Offer
+category: databases
+tags: [olap, real-time-analytics, data-warehouse]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://clickhouse.com"
+apply_url: "https://clickhouse.com/startup-offer"
+official_source: "https://clickhouse.com/startup-offer"
+
+# Benefit
+benefit_type: credit
+benefit_summary: >-
+  $5,000 in ClickHouse Cloud credits valid for 12 months plus ClickHouse
+  Basic Support, available only to startups affiliated with a selected
+  accelerator, incubator or VC partner who supply a verification code.
+amount_is_published: true
+amount_max: 5000
+currency: USD
+duration_months: 12
+expiry_note: $5000 in ClickHouse Cloud credits, valid for 12 months
+excludes: ["You haven't been a paid ClickHouse Cloud customer before"]
+stacking_notes: >-
+  ClickHouse runs a separate, larger YC-specific offer ($10,000) at
+  https://clickhouse.com/deals/ycombinator, which was not opened for this
+  record.
+partner_gate: required-hard
+stages: [pre-seed, seed, series-a, series-b]
+company_age_max_years: 3
+new_customer_only: true
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  The stage cap is expressed as 'You haven't raised a Series D or later
+  funding round' (a stage ceiling, not a dollar amount), so no
+  funding_max_usd is recorded. The partner list is only visible inside the
+  application form dropdown, which was not inspectable.
+  accelerator_required is left unknown because VC affiliation also
+  qualifies. Independently re-audited: a second reviewer opened the vendor
+  page and checked the quote, amount and source.
+
+# Application
+application_mechanism: partner-code
+obligations:
+  - Get featured in a joint blog post and promoted on our channels
+  - Speaking opportunities at ClickHouse community events
+
+# Status
+status: active-partner-only
+status_basis: asserted
+status_quote: >-
+  You have a valid code for verification to be obtained from your
+  Accelerator/Incubator/VC
+fetch_note: >-
+  The given URL https://clickhouse.com/startups returned 404.
+  https://clickhouse.com/startup-offer returned 200 and rendered fully,
+  including the 'Who can apply?' criteria.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: $5000 in ClickHouse Cloud credits, valid for 12 months
+bot_blocked: false

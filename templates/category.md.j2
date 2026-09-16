@@ -1,0 +1,20 @@
+{{ banner }}
+# {{ category.emoji }} {{ category.name }}
+
+{{ category.description }}
+
+{{ category.programs | length }} program(s){% if stats.as_of %} · data as of {{ stats.as_of }}{% endif %} · [← All categories](../README.md)
+
+{% for p in category.programs %}
+{{ p | render_entry(1) }}
+{% endfor %}
+{% if not category.programs %}
+_No verified programs in this category yet._
+[Add one →](../CONTRIBUTING.md)
+{% endif %}
+
+---
+
+Eligibility tags come before the credit amount. Absence of a tag means
+**unknown**, never "no restriction". See the
+[verification policy](../docs/verification-policy.md).

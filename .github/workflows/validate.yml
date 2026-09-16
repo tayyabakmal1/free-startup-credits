@@ -1,0 +1,49 @@
+name: Validate data
+
+# Runs on every pull request. No network access: schema, hygiene, duplicates and
+# the integrity rules only. Link checking lives in its own scheduled workflow so
+# a contributor is never blocked by a vendor's rate limiter.
+on:
+  pull_request:
+    paths:
+      - "data/**"
+      - "schema/**"
+      - "scripts/**"
+      - "templates/**"
+      - ".github/workflows/validate.yml"
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - uses: actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38 # v5.4.0
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install --disable-pip-version-check pyyaml jsonschema jinja2 rapidfuzz
+
+      - name: Schema, URL hygiene and duplicate checks
+        run: python scripts/validate.py
+
+      - name: Integrity rules
+        # "Unknown is never eligible", the two-section country pages, no amount
+        # without evidence, no tracking on vendor links, bounded promotion.
+        run: python scripts/test_integrity.py
+
+      - name: Summarise
+        if: always()
+        run: |
+          {
+            echo "### Data checks"
+            echo ""
+            echo "- programs: **$(ls data/programs/*.yml 2>/dev/null | wc -l)**"
+          } >> "$GITHUB_STEP_SUMMARY"

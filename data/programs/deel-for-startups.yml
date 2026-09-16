@@ -1,0 +1,79 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: deel-for-startups
+company: Deel
+program: Deel for startups
+category: hr
+tags: [hr, payroll, eor, global-hiring, free-seats]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://www.deel.com"
+apply_url: "https://www.deel.com/segments/startups/"
+official_source: "https://www.deel.com/segments/startups/"
+
+# Benefit
+benefit_type: bundle
+benefit_summary: >-
+  A 'Startup pricing bundle' with two published components: free U.S.
+  payroll for founders for life, and the first 5 seats free for life for
+  venture-backed startups that have raised at least $500k.
+amount_is_published: false
+amount_max: null
+tiers:
+  - name: Free U.S. Payroll for Founders
+    quote: U.S. Payroll for founders for life
+    partner_gate: none
+    notes: >-
+      Card headline is 'Free U.S. Payroll for Founders'; price shown as 'Free'.
+      No funding or backing requirement is published for this component.
+  - name: First 5 seats free for life (venture-backed)
+    quote: >-
+      **Criteria: Must have raised at least $500k in funding (verifiable on
+      Crunchbase)
+    funding_min_usd: 500000
+    partner_gate: none
+    notes: >-
+      $500k is a FLOOR ('at least'), not a cap. Applies to the 'First 5 seats
+      free for life for venture-backed startups' component only.
+partner_gate: none
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  The two published components carry different gates, so they are recorded
+  as tiers rather than merged. The $500k funding floor and the
+  'venture-backed' wording attach only to the 5-free-seats component; the
+  free founder U.S. payroll component carries no published funding or
+  backing requirement. Top-level requires_vc_backing and funding_min_usd
+  are therefore left unset/unknown - see tiers. The only CTA on the page is
+  'Book a demo'; the page does not state that a call is mandatory, so
+  requires_sales_call is unknown. A separate site-wide banner ('Get 3
+  months free of PEO*') is a general promotion, not part of the startup
+  bundle, and is deliberately not recorded here. Requested URL
+  www.deel.com/startups/ 301s to www.deel.com/segments/startups/.
+
+# Application
+application_mechanism: sales-call
+obligations:
+  - >-
+      Funding must be verifiable on Crunchbase (for the venture-backed seats
+      component)
+
+# Status
+status: active-sales-gated
+status_basis: inferred
+fetch_note: >-
+  200 and fully rendered via curl with a browser UA, after a 301 from
+  https://www.deel.com/startups/ to
+  https://www.deel.com/segments/startups/. Full body including the 'Startup
+  pricing bundle' cards, their asterisked criteria footnotes, and the FAQ
+  accordion were read.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: "First 5 seats free for life for venture-backed startups**"
+bot_blocked: false

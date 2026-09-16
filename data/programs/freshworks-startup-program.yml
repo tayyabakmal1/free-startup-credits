@@ -1,0 +1,97 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: freshworks-startup-program
+company: Freshworks
+program: Freshworks Startup Program
+category: support
+tags: [crm, helpdesk, partner-gated, pro-plan-only]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://www.freshworks.com"
+apply_url: "https://www.freshworks.com/company/partners/startup-program/"
+official_source: "https://www.freshworks.com/assets/resources/Freshworks-for-Startups_Terms-&-Conditions.pdf"
+
+# Benefit
+benefit_type: discount
+benefit_summary: >-
+  Partner-referred discount on the Pro plan of Freshworks products, at
+  percentages set in each startup's Service Order Form, claimable within
+  one year of signup; capped at 30 agents per product.
+amount_is_published: false
+amount_max: null
+duration_months: 12
+expiry_note: >-
+  Discounts "must be claimed across all products of Freshworks that You may
+  want to try, within one (1) year from the initial date of signup."
+after_credits: >-
+  Terms state that where a second product is subscribed within the first
+  year, "the discount applied for the second year will be fifty (50%)
+  percent", and that "any new subscriptions in the subsequent years will
+  not be eligible for the startup discount and will be charged at standard
+  rates."
+excludes:
+  - existing paid Freshworks customers
+  - accounts exceeding thirty (30) agents per product
+stacking_notes: >-
+  Terms state the Credit Model and Discount Model "are mutually exclusive
+  and You shall not be allowed to migrate from one model to the other".
+partner_gate: required-hard
+stages: [idea, pre-seed, seed, series-a]
+new_customer_only: true
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  NOT INSPECTABLE: the live program landing page could not be read —
+  https://www.freshworks.com/startups/ and
+  https://www.freshworks.com/freshworks-for-startups/ both 404, and
+  https://www.freshworks.com/company/partners/startup-program/ now renders
+  Freshworks' general partner-program content with no startup terms, so the
+  current discount percentages and funding tiers could not be confirmed.
+  The record is built on the Freshworks Startup Program Terms PDF
+  (effective 9 February 2023). VENDOR SELF-CONTRADICTION: a Freshworks
+  press release dated 11 November 2021 states "Companies can get going with
+  up to $3,000 in credits for Freshstack, as part of the Freshworks Startup
+  Program", but the later Terms state that from the Effective Date "only
+  Discount Model shall apply for new customer registrations under the FSP"
+  and that a participant "cannot migrate to Discount model" / "cannot be
+  migrated to the Credit model". The more conservative, more recent
+  Discount Model is what is recorded here; no credit amount is treated as
+  published. Terms also state "Your startup investment (funding) shall meet
+  our criteria, as more specifically called out in the Service Order Form"
+  — the actual funding thresholds are not published. Imported from a
+  verification sweep whose quote fidelity later failed audit in 13 of 22
+  sampled records. This entry was NOT independently re-audited, so the
+  evidence quote may be a close paraphrase rather than the vendor's exact
+  wording. Re-read the source before relying on precise phrasing.
+
+# Application
+application_mechanism: partner-code
+approval_time: within seven (7) working days from the date of Your signup
+obligations:
+  - >-
+      grants Freshworks a royalty-free, worldwide, perpetual licence over
+      feedback relating to the program
+
+# Status
+status: active-partner-only
+status_basis: asserted
+status_quote: You must be referred by one of our partners
+fetch_note: >-
+  Terms PDF 200 and downloaded (97KB), extracted with pdftotext and read in
+  full including Annexure A and B. https://www.freshworks.com/startups/
+  404. https://www.freshworks.com/freshworks-for-startups/ 404.
+  https://www.freshworks.com/company/partners/startup-program/ 200 but
+  renders the general partner program, not the startup terms. Press release
+  page 200 and rendered.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: partially-verified
+evidence_quote: >-
+  The benefits You receive under this model shall be in the form of
+  discount only on the Pro plan of the products You are subscribing to.
+bot_blocked: false

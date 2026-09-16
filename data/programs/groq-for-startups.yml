@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+slug: groq-for-startups
+company: Groq
+program: Groq for Startups
+category: ai
+tags:
+- inference
+- dead-link
+- needs-recheck
+homepage: https://groq.com
+apply_url: https://groq.com/groq-for-startups
+official_source: https://console.groq.com/docs/billing-faqs
+benefit_type: credit
+benefit_summary: No Groq startup-credits program page is currently reachable; Groq's official
+  billing FAQ documents only occasional promotional credits tied to hackathons and special
+  events.
+amount_is_published: false
+amount_max: null
+stages:
+- any
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: 'NOT INSPECTABLE: no Groq-owned page describing a startup credits program
+  could be opened. https://groq.com/groq-partner-program and https://groq.com/groq-for-startups
+  both return HTTP 308 redirecting to https://groq.com/ (the homepage); https://groq.com/startups
+  returns 404; https://home.cloud.groq.io/apply-to-groq-for-startups does not resolve (connection
+  failure); and groq.com/sitemap.xml (49 URLs) contains no startup- or partner-program page.
+  Widely repeated third-party claims of ''$10,000 in Groq for Startups credits'' and a ''90-day
+  credit expiry'' could NOT be corroborated on any Groq-owned page and are therefore not recorded.
+  The only official statement located is the promotional-credits line in the console billing
+  FAQ, which does not describe a startup program. Status should be re-checked before publication;
+  it may be discontinued, but no discontinuation date is published so ''discontinued'' was
+  not asserted. Re-checked 2026-09-16: the Groq billing FAQ contains no reference to a startup
+  programme, startup credits or a startup discount. Re-checked 2026-09-16: the Groq billing
+  FAQ contains no reference to a startup programme, startup credits or a startup discount.'
+status: no-program
+status_basis: inferred
+fetch_note: groq.com/groq-partner-program -> HTTP 308 to https://groq.com/ (homepage). groq.com/groq-for-startups
+  -> HTTP 308 to https://groq.com/. groq.com/startups -> 404. home.cloud.groq.io/apply-to-groq-for-startups
+  -> connection failure (curl code 000). groq.com/sitemap.xml -> 200, 49 <loc> entries, none
+  startup/program related. console.groq.com/docs/billing-faqs -> 200, rendered, quoted above.
+  apply_url
+last_verified: '2026-09-16'
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: Yes! We occasionally offer promotional credits, such as during hackathons
+  and special events.
+bot_blocked: false

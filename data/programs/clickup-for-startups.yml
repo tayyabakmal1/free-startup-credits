@@ -1,0 +1,76 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: clickup-for-startups
+company: ClickUp
+program: ClickUp for Startups
+category: productivity
+tags: [project-management, partner-only, series-b-max]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://clickup.com"
+apply_url: "https://clickup.com/startup-program"
+official_source: "https://clickup.com/startup-program"
+
+# Benefit
+benefit_type: credit
+benefit_summary: >-
+  $3,000 in ClickUp credit plus an upgraded Enterprise workspace and
+  onboarding resources, for startups affiliated with an approved ClickUp
+  funding partner.
+amount_is_published: true
+amount_max: 3000
+currency: USD
+excludes:
+  - Startups that have raised beyond a Series B round
+  - Companies incorporated 5 or more years ago
+  - >-
+      Existing paying ClickUp customers (eligibility requires being 'New to
+      ClickUp or currently on the Free Forever Plan')
+partner_gate: required-hard
+stages: [pre-seed, seed, series-a, series-b]
+company_age_max_years: 5
+age_basis: incorporation
+new_customer_only: true
+requires_incorporation: true
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  NOT INSPECTABLE: the 'See ClickUp for Startups terms & conditions' link
+  points to https://dev-doc.clickup.com/d/h/ad-308569/9cc1b7aeb887c4e,
+  which redirects to doc.clickup-stg.com (a ClickUp STAGING domain) and
+  returns a JavaScript-only shell with no readable terms — so credit
+  duration, expiry and any further conditions could not be verified. The
+  'Apply for $3,000 in credits' button likewise points to
+  https://dev-forms.clickup.com/333/f/ad-308133/VJNX3OB2T50RD4WD8Z, which
+  redirects to forms.clickup-stg.com; apply_url is therefore set to the
+  program page rather than that staging form. new_customer_only is recorded
+  true because paying customers are excluded, but note the stated wording
+  permits existing users on the Free Forever Plan. Independently
+  re-audited: a second reviewer opened the vendor page and checked the
+  quote, amount and source.
+
+# Application
+application_mechanism: self-serve-form
+
+# Status
+status: active-partner-only
+status_basis: asserted
+status_quote: Affiliated with an approved funding partner
+fetch_note: >-
+  HTTP 200 via curl at https://clickup.com/startup-program; benefits and
+  the four eligibility bullets rendered server-side. Both the application
+  form link and the terms & conditions link resolve to ClickUp staging
+  domains (forms.clickup-stg.com / doc.clickup-stg.com); the terms doc is a
+  JS-only shell with no readable text.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: >-
+  Qualifying startups will receive $3,000 in ClickUp credit with an
+  upgraded Enterprise workspace.
+bot_blocked: false

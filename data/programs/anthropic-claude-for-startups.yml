@@ -1,0 +1,65 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+slug: anthropic-claude-for-startups
+company: Anthropic
+program: Claude for Startups
+category: ai
+tags:
+- ai
+- llm
+- api-credits
+- rate-limits
+homepage: https://claude.com
+apply_url: https://claude.com/form/startups-application
+official_source: https://claude.com/programs/startups
+benefit_type: credit
+benefit_summary: Application-based program offering Claude API credits plus upgraded API rate
+  limits. No credit figure is published. Credits are usable only on the first-party Claude
+  API via Claude Console.
+amount_is_published: false
+amount_max: null
+after_credits: You keep building. Standard API pricing kicks in automatically with no migration.
+excludes:
+- AWS Bedrock
+- Google Cloud Vertex AI
+- other third-party platforms
+- companies that previously received Anthropic startup credits
+funding_required: false
+open_to_bootstrapped: true
+partner_gate: improves-offer
+company_age_max_years: 4
+age_basis: incorporation
+requires_company_email: true
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: 'Page contradicts itself: "Do I need VC funding to apply? No. The program
+  is open to any early-stage founder or startup with or without VC backing." but the more
+  conservative FAQ answer states that to qualify for credits "your company must have received
+  equity funding from institutional investor, been founded within the last four years, and
+  not previously received Anthropic startup credits." Gates below follow the conservative
+  (credits) reading. CORRECTED 2026-09-16: the previously recorded quote ("Venture backed?
+  Apply for free credits and priority rate limits.") was a paraphrase and does not appear
+  on the page. Two different bars apply. Programme membership is open to everyone - the FAQ
+  states verbatim: "No. The program is open to any early-stage founder or startup with or
+  without VC backing. If you''re backed by an Anthropic partner VC or accelerator, mention
+  it in your application and you may qualify for additional benefits." Only the credits and
+  priority rate limits are conditioned on VC backing. No amount is published anywhere. CORRECTED
+  2026-09-16: the previously recorded quote ("Venture backed? Apply for free credits and priority
+  rate limits.") was a paraphrase and does not appear on the page. Two different bars apply.
+  Programme membership is open to everyone - the FAQ states verbatim: "No. The program is
+  open to any early-stage founder or startup with or without VC backing. If you''re backed
+  by an Anthropic partner VC or accelerator, mention it in your application and you may qualify
+  for additional benefits." Only the credits and priority rate limits are conditioned on VC
+  backing. No amount is published anywhere.'
+application_mechanism: self-serve-form
+status: active-amount-undisclosed
+status_basis: inferred
+status_quote: Venture backed? Apply for free credits and priority rate limits.
+fetch_note: 200 and rendered via curl; full page text including all FAQ accordion answers
+  extracted.
+last_verified: '2026-09-16'
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: Backed by a VC? You may qualify for credits and priority rate limits.
+bot_blocked: false
+requires_vc_backing: false

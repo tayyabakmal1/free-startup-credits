@@ -1,0 +1,126 @@
+# SINGLE SOURCE OF TRUTH for the category taxonomy.
+#
+# This file generates:
+#   - the `category` enum in schema/program.schema.json
+#   - the category dropdown in .github/ISSUE_TEMPLATE/add-program.yml
+#   - the README table of contents and section order
+#   - the generated pages under categories/
+#
+# Never hand-edit any of those. Run `make build`.
+#
+# `estimated_available` and `verification_difficulty` come from the research
+# sweep documented in docs/methodology.md. They are planning aids for
+# maintainers, not claims about the dataset, and are not rendered publicly.
+
+categories:
+  - id: ai
+    name: AI & ML
+    emoji: "🤖"
+    description: Model APIs, GPU compute, inference, vector databases and ML tooling.
+    estimated_available: 25
+    verification_difficulty: medium
+
+  - id: cloud
+    name: Cloud
+    emoji: "☁️"
+    description: General-purpose cloud platforms and their startup credit programs.
+    estimated_available: 18
+    verification_difficulty: medium
+
+  - id: devtools
+    name: Developer Tools
+    emoji: "🛠️"
+    description: CI/CD, error tracking, observability, auth, APIs and developer platforms.
+    estimated_available: 20
+    verification_difficulty: easy
+
+  - id: databases
+    name: Databases
+    emoji: "🗄️"
+    description: Managed databases, data warehouses and analytics engines.
+    estimated_available: 14
+    verification_difficulty: medium
+
+  - id: hosting
+    name: Hosting & Infrastructure
+    emoji: "🌐"
+    description: Application hosting, edge platforms, CDN and bare-metal providers.
+    estimated_available: 8
+    verification_difficulty: hard
+
+  - id: marketing
+    name: Marketing & Growth
+    emoji: "📣"
+    description: Email, lifecycle messaging, SEO, content and website builders.
+    estimated_available: 15
+    verification_difficulty: hard
+
+  - id: analytics
+    name: Analytics & Data
+    emoji: "📊"
+    description: Product analytics, session replay, data pipelines and BI.
+    estimated_available: 14
+    verification_difficulty: easy
+
+  - id: security
+    name: Security & Compliance
+    emoji: "🔐"
+    description: SOC 2 and ISO automation, secrets management, scanning and pentesting.
+    estimated_available: 8
+    verification_difficulty: hard
+
+  - id: productivity
+    name: Productivity & Ops
+    emoji: "📋"
+    description: Docs, wikis, project management, whiteboards and internal tools.
+    estimated_available: 16
+    verification_difficulty: medium
+
+  - id: crm
+    name: CRM & Sales
+    emoji: "🤝"
+    description: CRM, sales engagement, prospecting and revenue intelligence.
+    estimated_available: 8
+    verification_difficulty: medium
+
+  - id: design
+    name: Design
+    emoji: "🎨"
+    description: Design tools, prototyping, asset libraries and brand tooling.
+    estimated_available: 5
+    verification_difficulty: hard
+
+  - id: finance
+    name: Finance & Banking
+    emoji: "💳"
+    description: Startup banking, corporate cards, spend management, payroll and bookkeeping.
+    estimated_available: 12
+    verification_difficulty: medium
+
+  - id: legal
+    name: Legal & Incorporation
+    emoji: "⚖️"
+    description: Incorporation, cap table management, contracts and equity tooling.
+    estimated_available: 6
+    verification_difficulty: medium
+
+  - id: hr
+    name: HR & People
+    emoji: "👥"
+    description: Hiring, onboarding, EOR, benefits and people operations.
+    estimated_available: 7
+    verification_difficulty: hard
+
+  - id: support
+    name: Customer Support
+    emoji: "💬"
+    description: Helpdesks, live chat, knowledge bases and support automation.
+    estimated_available: 9
+    verification_difficulty: easy
+
+  - id: ecosystem
+    name: Accelerator & Ecosystem Bundles
+    emoji: "🚀"
+    description: Multi-vendor perk bundles from accelerators, banks and platform programs.
+    estimated_available: 20
+    verification_difficulty: medium

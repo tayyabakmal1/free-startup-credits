@@ -1,0 +1,79 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+slug: clerk-for-startups
+company: Clerk
+program: Clerk for Startups
+category: devtools
+tags:
+- auth
+- user-management
+- devtools
+homepage: https://clerk.com
+apply_url: https://clerk.com/startups
+official_source: https://clerk.com/startups
+benefit_type: discount
+benefit_summary: An unspecified discount on Clerk Pro features for approved early-stage startups,
+  on top of the standard free allowance of 50,000 monthly retained users and 100 monthly retained
+  organizations.
+amount_is_published: false
+amount_max: null
+expiry_note: Your discount period starts as soon as your application is approved. Apply once
+  you're ready to upgrade.
+partner_gate: none
+partners:
+- AI Grant
+- aiPerksBox
+- Andreessen Horowitz
+- AI Engineer Pack
+- Antler India
+- Concept Ventures
+- Developer Starter Pack
+- Forum Ventures
+- Georgian
+- GroudUp
+- Heavybit
+- Hub71
+- LaunchHouse
+- Liquid2 Ventures
+- Lovable
+- Mento
+- Mercury
+- Mucker Capital
+- OnDeck
+- Pioneer
+- PWV
+- Pitchdrive
+- S28
+- Seedcamp
+- South Park Commons
+- Startup India
+- Stripe Atlas
+- Techstars
+- Y Combinator
+funding_max_usd: 5000000
+company_age_max_years: 1
+age_basis: launch
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: 'The discount percentage and the length of the discount period are not
+  published anywhere on the page. The $5 million figure is a ceiling on venture funding, not
+  a floor. The application requires being signed in to a Clerk account that already has an
+  application: "There are no applications associated with your account. Please sign in to
+  a Clerk account with applications or create an application before applying." The partner
+  dropdown is explicitly marked "Optional". The benefit is quoted only as "Apply to get Clerk
+  Pro features at a discount for your early-stage startup" - no discount percentage is published.
+  Note the age limit runs from LAUNCH, not incorporation. The benefit is quoted only as "Apply
+  to get Clerk Pro features at a discount for your early-stage startup" - no discount percentage
+  is published. Note the age limit runs from LAUNCH, not incorporation.'
+application_mechanism: self-serve-form
+status: active-amount-undisclosed
+status_basis: inferred
+status_quote: Apply to get Clerk Pro features at a discount for your early-stage startup
+fetch_note: 200 and rendered via curl; full page including the in-page application form fields
+  and the complete partner dropdown list extracted.
+last_verified: '2026-09-16'
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: Your team is eligible up to 1 year after launch with up to $5 million in venture
+  funding.
+bot_blocked: false

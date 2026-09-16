@@ -1,0 +1,76 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+slug: digitalocean-startups
+company: DigitalOcean
+program: DigitalOcean Startups
+category: cloud
+tags:
+- cloud
+- infrastructure
+- ai-native
+homepage: https://www.digitalocean.com
+apply_url: https://sammydigitalocean.typeform.com/hatch
+official_source: https://www.digitalocean.com/startups
+benefit_type: credit
+benefit_summary: 12 months of DigitalOcean credits set per startup by the approving partner,
+  plus 15 months of free Standard-tier support. Participants generally have a $10,000 monthly
+  credit usage limit.
+amount_is_published: false
+amount_max: null
+duration_months: 12
+expiry_note: Credits are used over the 12-month term of the program; free Standard-tier paid
+  support runs 15 months.
+after_credits: If you go over the monthly credit limit, you will be charged for the additional
+  usage for that month.
+excludes:
+- GPU Droplets
+- NVIDIA H100 GPU Kubernetes
+- Bare Metal GPUs
+- Dedicated Inference
+- Serverless Inference and third-party AI models hosted outside DigitalOcean infrastructure
+  (including Anthropic and OpenAI)
+- Paperspace Machines
+- Cloudways services
+- Any other charges passed through to third-party providers
+- Service-based startups (consulting, web/app development, marketing agencies) are not eligible
+stacking_notes: GPU credits are a separate benefit not covered by core credits; acceptance
+  into the program does not entitle a startup to GPU credits, which are awarded to select
+  customers after a separate GPU credit application.
+accelerator_required: false
+open_to_bootstrapped: true
+requires_vc_backing: false
+partner_gate: improves-offer
+funding_max_usd: 10000000
+new_customer_only: true
+requires_company_email: true
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: 'The requested URL https://www.digitalocean.com/hatch now 301s in-domain
+  to https://www.digitalocean.com/startups; the program is branded "DigitalOcean Startups",
+  not "Hatch" (the Typeform slug is still /hatch). No credit amount is published — award level
+  is set by the DigitalOcean Startups partner. Service-based startups (consulting, web/app
+  development, marketing agencies) are explicitly not eligible, and DigitalOcean states it
+  prioritises AI-native startups. The benefit is quoted as "12 months of DigitalOcean credits
+  to easily deploy and scale your infrastructure" - no dollar amount is published. Also verbatim:
+  "This program is for new startups that have not used prior credits with DigitalOcean." A
+  VC or accelerator is optional; applicants may select "Other". The benefit is quoted as "12
+  months of DigitalOcean credits to easily deploy and scale your infrastructure" - no dollar
+  amount is published. Also verbatim: "This program is for new startups that have not used
+  prior credits with DigitalOcean." A VC or accelerator is optional; applicants may select
+  "Other".'
+application_mechanism: self-serve-form
+obligations:
+- Create a new DigitalOcean team account for the startup with a corporate email on the company
+  domain and a valid credit card before applying
+status: active-amount-undisclosed
+status_basis: asserted
+status_quote: DigitalOcean awards startups credits through approved DigitalOcean Startups
+  partners.
+fetch_note: 200 after in-domain 301 from /hatch to /startups; full page including all FAQ
+  accordion content present in server HTML. Apply link on page carried a typeform-source parameter;
+  the clean FAQ application URL was used instead and verified 200.
+last_verified: '2026-09-16'
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: Must have raised $10m or less.
+bot_blocked: false

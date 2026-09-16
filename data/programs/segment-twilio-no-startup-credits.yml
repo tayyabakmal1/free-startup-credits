@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+slug: segment-twilio-no-startup-credits
+company: Segment
+program: Free resources for startups
+category: analytics
+tags:
+- cdp
+- customer-data
+- twilio
+- negative-result
+homepage: https://segment.com
+apply_url: https://www.twilio.com/en-us/solutions/startups
+official_source: https://www.twilio.com/en-us/solutions/startups
+benefit_type: credit
+benefit_summary: No startup credits are offered. Twilio, which owns Segment, states every
+  customer gets a small account-opening credit and that no additional credits are offered
+  to startups. The former Segment Startup Program pages now redirect to Twilio.
+amount_is_published: false
+amount_max: null
+partner_gate: none
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: 'This is a negative record and is likely to contradict stale third-party
+  listings of a "$25,000 Segment Startup Program". Evidence that the Segment-branded program
+  pages are gone: https://segment.com/industry/startups/ returns a 301 cross-domain to https://www.twilio.com/en-us/solutions/startups;
+  https://segment.com/learn/industry/startups/ resolves through to https://segment.com/pricing
+  which 301s to https://www.twilio.com/en-us/pricing/customer-data; and the original announcement
+  post https://segment.com/blog/introducing-the-segment-startup-program/ 302s to https://twilio.com/en-us/partners/.
+  The destination Twilio startups page mentions Segment only in login navigation and footer
+  status links, with no Segment Startup Program anywhere on it. https://segment.com/docs/guides/usage-and-billing/discounts-for-startups-npos/
+  returned 403 to automated fetching and could not be inspected, so a residual docs-level
+  discount for startups or nonprofits cannot be ruled out; status is recorded as no-program
+  on the strength of the affirmative Twilio FAQ sentence, not on the redirects alone. Imported
+  from a verification sweep whose quote fidelity later failed audit in 13 of 22 sampled records.
+  This entry was NOT independently re-audited, so the evidence quote may be a close paraphrase
+  rather than the vendor''s exact wording. Re-read the source before relying on precise phrasing.
+  Re-confirmed verbatim on Twilio''s own FAQ 2026-09-16. This is an explicit vendor statement
+  that no startup credits exist, which is why the record is kept rather than deleted.'
+status: no-program
+status_basis: asserted
+status_quote: We do not offer additional credits to startups at this time.
+fetch_note: https://www.twilio.com/en-us/solutions/startups returned 200 and rendered including
+  the FAQ. Segment startup URLs 301/302 cross-domain to Twilio as detailed in eligibility_notes.
+  The Segment billing-discounts docs page returned 403.
+last_verified: '2026-09-16'
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: Every Twilio customer gets a small credit when they open an account to start
+  building their first project. We do not offer additional credits to startups at this time.
+bot_blocked: false

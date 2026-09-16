@@ -1,0 +1,79 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: asana-for-startups
+company: Asana
+program: Asana for Startups Discount Program
+category: productivity
+tags: [work-management, productivity, partner-code, annual-plan]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://asana.com"
+apply_url: "https://asana.com/startups"
+official_source: "https://asana.com/startups"
+
+# Benefit
+benefit_type: discount
+benefit_summary: >-
+  A partner-issued discount code applied to a Starter or Advanced annual
+  plan for the first 12 months of the subscription. No discount percentage
+  or amount is published.
+amount_is_published: false
+amount_max: null
+duration_months: 12
+expiry_note: Offer is non-transferable. Limit one offer redemption per customer.
+after_credits: >-
+  After the Discounted Period, your account will be billed at Asana's
+  then-current pricing, as set forth on Asana's plans page.
+excludes:
+  - organizations currently on paid plans
+  - organizations that upgraded to a paid plan within the last 60 days
+  - plans other than Starter or Advanced annual
+stacking_notes: >-
+  Asana may amend or revoke this promotional offer at any time in its sole
+  discretion for organizations that have not yet redeemed the discount
+  code.
+partner_gate: required-hard
+stages: [idea, pre-seed, seed, series-a]
+new_customer_only: true
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  No discount percentage or dollar value is published anywhere on the page,
+  so amount_is_published is false. The offer cannot be self-served: the
+  redemption steps require a code 'you have been given by an existing
+  partner', hence partner_gate required-hard. The 'Claim my discount' CTA
+  resolves to https://asa.na/offer, which redirects to app.asana.com's
+  login/upgrade flow with a coupon parameter; apply_url is set to the
+  program page itself since the code must be obtained from a partner first.
+  Series A or earlier is the stated stage cap; no funding, revenue or
+  headcount figures are published.
+
+# Application
+application_mechanism: partner-code
+obligations:
+  - >-
+      Select a Starter or Advanced annual plan and enter payment information,
+      then check out with the discount code
+
+# Status
+status: active-partner-only
+status_basis: asserted
+status_quote: Copy the discount code you have been given by an existing partner
+fetch_note: >-
+  200 and fully rendered via curl with a browser UA. All four FAQ accordion
+  items and the 'Have an offer? How to redeem.' steps were present in the
+  HTML; content was cross-checked against Asana's own machine-readable
+  mirror at https://asana.com/startups.md (also 200).
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: >-
+  The period of discounted access to an eligible paid Asana plan will apply
+  only for the first 12 months (1 year) of your subscription beginning on
+  the date of your redemption
+bot_blocked: false

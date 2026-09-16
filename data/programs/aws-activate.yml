@@ -1,0 +1,99 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: aws-activate
+company: Amazon Web Services
+program: AWS Activate
+category: cloud
+tags: [cloud-credits, tiered, bedrock]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://aws.amazon.com"
+apply_url: "https://aws.amazon.com/startups/credits"
+official_source: "https://aws.amazon.com/startups/"
+
+# Benefit
+benefit_type: credit
+benefit_summary: >-
+  Tiered AWS credits: up to $5,000 USD for self-funded founders applying
+  directly, and up to $200,000 USD for pre-Series B startups holding an Org
+  ID from an Activate Provider.
+amount_is_published: true
+amount_max: 200000
+currency: USD
+expiry_note: >-
+  The credits page does not state a validity period; it refers to the AWS
+  Promotional Credit Terms & Conditions.
+  https://aws.amazon.com/startups/credits/faq/ 301-redirects to
+  https://startups.aws.com/credits/faq/, which returned 404, so expiry
+  could not be confirmed.
+excludes: [Series B and later startups, startups founded more than 10 years ago]
+tiers:
+  - name: Activate Founders (self-funded)
+    amount_max: 5000
+    partner_gate: none
+    quote: Up to $5,000 USD in Activate Credits
+    notes: >-
+      Page also states "Start with $1,000 USD in Activate Credits" and "Apply
+      directly if you're bootstrapped or self-funded".
+  - name: Activate Portfolio (pre-Series B)
+    amount_max: 200000
+    partner_gate: required-hard
+    quote: You must have an Organization ID (Org ID) from your Activate Provider
+    notes: >-
+      Amount quoted separately on the page as "Up to $200,000 USD in Activate
+      Credits".
+  - name: AWS Credits for AI Startups
+    amount_max: 200000
+    partner_gate: required-hard
+    quote: $200,000+ in AWS Credits
+    notes: >-
+      Page states this band is "Invite only for startups ready to scale post
+      Activate Portfolio". The published figure is a floor ("$200,000+"), not a
+      cap.
+open_to_bootstrapped: true
+requires_vc_backing: false
+partner_gate: tiered
+stages: [idea, pre-seed, seed, series-a]
+company_age_max_years: 10
+age_basis: incorporation
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  Baseline eligibility quoted on the page: "Pre-series B, founded in the
+  last 10 years, AWS Account on Paid Tier Plan, and either new to Activate
+  or requesting more credits than previously received". The $200,000
+  Portfolio tier is partner-gated: "You must have an Organization ID (Org
+  ID) from your Activate Provider". A third, invite-only band (AWS Credits
+  for AI Startups, "$200,000+ in AWS Credits") sits above Activate
+  Portfolio. NOT INSPECTABLE: credit validity/expiry period — the Activate
+  credits FAQ URL now 404s, so duration_months is left null rather than
+  guessed. Tiers are listed separately and deliberately not summed.
+  Independently re-audited: a second reviewer opened the vendor page and
+  checked the quote, amount and source.
+
+# Application
+application_mechanism: self-serve-form
+requires_sales_call: false
+approval_time: within 5–10 business days
+
+# Status
+status: active-self-serve
+status_basis: asserted
+status_quote: "Apply directly if you're bootstrapped or self-funded"
+fetch_note: >-
+  https://aws.amazon.com/startups/credits 200 and rendered with full tier
+  list. https://aws.amazon.com/activate/ 200 and rendered (headline "up to
+  $200,000"). https://aws.amazon.com/startups/credits/faq/ 301s to
+  https://startups.aws.com/credits/faq/ which returns 404.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: >-
+  Get up to $200,000 in AWS Activate Credits and expert support to build
+  what's next.
+bot_blocked: false

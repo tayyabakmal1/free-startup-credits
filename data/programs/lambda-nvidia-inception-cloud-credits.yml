@@ -1,0 +1,72 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: lambda-nvidia-inception-cloud-credits
+company: Lambda
+program: Exclusive offer for NVIDIA Inception and Connect members
+category: ai
+tags: [gpu, ai-infrastructure, nvidia-inception]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://lambda.ai"
+apply_url: "https://lambda.ai/nvidia-inception"
+official_source: "https://lambda.ai/nvidia-inception"
+
+# Benefit
+benefit_type: credit
+benefit_summary: >-
+  $7,500 in Lambda cloud credits toward on-demand NVIDIA GPU instances on
+  Lambda's Public Cloud, limited to members of the NVIDIA Inception or
+  NVIDIA Connect programs, one grant per company.
+amount_is_published: true
+amount_max: 7500
+currency: USD
+stacking_notes: Offer limited to 1 grant per company.
+partner_gate: required-hard
+partners: [NVIDIA Inception, NVIDIA Connect]
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: ["AU", "CA", "CL", "eu", "IS", "IL", "JP", "NZ", "NO", "PR", "SG", "ZA", "KR", "CH", "TW", "TR", "AE", "GB", "US"]
+excluded_regions: ["LT"]
+regions_basis: asserted
+regions_quote: >-
+  Lambda Cloud is available to users located in, and paying with a card
+  from, the following countries: Australia, Canada, Chile, European Union
+  (except for Lithuania), Iceland, Israel, Japan,
+eligibility_notes: >-
+  PARTIALLY VERIFIED: the page embeds a HubSpot form (hs-form) whose fields
+  did not render in the fetched HTML, so the exact application mechanism
+  and any additional qualifying questions were NOT inspected;
+  application_mechanism is therefore unknown. The only stated eligibility
+  condition is NVIDIA Inception or NVIDIA Connect membership — no funding,
+  age, headcount or incorporation test is published. Credit coverage:
+  "Persistent storage is covered by Cloud Credits ($0.20 / Gb / month)" and
+  there are "No data ingress and egress fees." Geography note: the
+  availability statement enumerates individual countries but writes
+  "European Union (except for Lithuania)" without enumerating EU member
+  states, so the group id "eu" is used for that portion and LT is recorded
+  as excluded. Note also that https://lambda.ai/startups and
+  https://lambda.ai/startup-program both return 404 — this
+  Inception/Connect page is the only Lambda-owned startup credit page
+  found. Independently re-audited: a second reviewer opened the vendor page
+  and checked the quote, amount and source.
+
+# Status
+status: active-partner-only
+status_basis: asserted
+status_quote: >-
+  Offer limited to members of NVIDIA Inception and NVIDIA Connect programs.
+  Offer limited to 1 grant per company.
+fetch_note: >-
+  WebSearch surfaced only aggregators; probed Lambda's own domain directly
+  — https://lambda.ai/startups and /startup-program returned 404,
+  https://lambda.ai/nvidia-inception returned 200 and rendered with the
+  full offer and country list.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: >-
+  Accelerate your AI journey with $7,500 cloud credits toward on-demand
+  cloud GPU instances accelerated by NVIDIA.
+bot_blocked: false

@@ -1,0 +1,40 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+slug: rippling-for-startups
+company: Rippling
+program: Rippling for Startups
+category: hr
+tags:
+- hr
+- payroll
+- it-management
+homepage: https://www.rippling.com
+apply_url: https://www.rippling.com/lp/startupstack
+official_source: https://www.rippling.com/lp/startupstack
+benefit_type: free-plan
+benefit_summary: Rippling hosts a startup landing page and accelerator-specific offer pages,
+  but every Rippling page returned 403 to automated retrieval, so no offer term, duration
+  or eligibility rule could be confirmed.
+amount_is_published: false
+amount_max: null
+stages:
+- any
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: Nothing could be confirmed. https://www.rippling.com/lp/startupstack and
+  https://www.rippling.com/partners/venture-firms-and-accelerators both returned HTTP 403
+  Forbidden. Rippling clearly operates partner-specific landing pages (e.g. /lp/first-round,
+  /lp/plug-and-play) whose titles advertise free months, which suggests a partner-gated structure,
+  but no page text could be read, so the free-month count, the US-only and VC-backed conditions,
+  and any new-customer requirement are all unrecorded rather than guessed. benefit_type is
+  a required field and is a placeholder; it is NOT verified. Requires manual verification
+  in a real browser. HTTP 403 to automated clients, re-confirmed 2026-09-16. HTTP 403 to automated
+  clients, re-confirmed 2026-09-16.
+status: unverified
+status_basis: inferred
+fetch_note: 403 Forbidden on https://www.rippling.com/lp/startupstack and 403 Forbidden on
+  https://www.rippling.com/partners/venture-firms-and-accelerators. No page body retrieved.
+last_verified: '2026-09-16'
+verified_by: tayyabakmal1
+verification_level: needs-manual-verification
+bot_blocked: true

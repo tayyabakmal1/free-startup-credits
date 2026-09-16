@@ -1,0 +1,64 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: vanta-for-startups
+company: Vanta
+program: Vanta for Startups
+category: security
+tags: [compliance, soc2, iso27001, grc, new-customer-discount]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://www.vanta.com"
+apply_url: "https://www.vanta.com/demo"
+official_source: "https://www.vanta.com/solutions/startup"
+
+# Benefit
+benefit_type: discount
+benefit_summary: >-
+  A $1,000 discount for new customers via the Vanta for Startups program,
+  accessed by requesting a demo. Not combinable with other offers.
+amount_is_published: true
+amount_max: 1000
+currency: USD
+excludes:
+  - customers already engaged with the Vanta sales team
+  - existing customers
+stacking_notes: >-
+  This discount may not be combined with any other offers or promotions, is
+  applicable for new customers only, and may not be applied if you are
+  already engaged with the Vanta sales team.
+partner_gate: none
+new_customer_only: true
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  The $1,000 figure carries a superscript footnote marker in the markup, so
+  the rendered sentence reads 'Save $1,000¹ with the Vanta for Startups
+  program'; the quote above is the contiguous verbatim span. The footnote
+  is the only terms text published. No company age, funding, revenue or
+  headcount cap is stated anywhere on the page. The only CTA is 'Request a
+  demo', but the page does not state that a call is mandatory, so
+  requires_sales_call is unknown. No duration is published. Independently
+  re-audited: a second reviewer opened the vendor page and checked the
+  quote, amount and source.
+
+# Application
+application_mechanism: sales-call
+
+# Status
+status: active-sales-gated
+status_basis: inferred
+fetch_note: >-
+  200 and fully rendered via curl with a browser UA. Hero copy, the
+  Essentials/Plus plan cards and the page's disclaimer footnote (id
+  #disclaimer) were all present and read. https://www.vanta.com/demo was
+  checked separately and returns 200 with no redirect.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: Save $1,000
+bot_blocked: false

@@ -1,0 +1,72 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+slug: customer-io-startup-program
+company: Customer.io
+program: Startup Program
+category: marketing
+tags:
+- email
+- messaging
+- crm
+- free-plan
+homepage: https://customer.io
+apply_url: https://fly.customer.io/signup?signupType=startup
+official_source: https://customer.io/solutions/startups
+benefit_type: free-plan
+benefit_summary: Up to 12 months of Customer.io at $0, including up to 30,000 customer profiles,
+  on a Startup plan that carries all Essentials features.
+amount_is_published: false
+amount_max: null
+duration_months: 12
+after_credits: When the free term ends the account continues on what Customer.io calls "an
+  exclusive graduation offer"; the terms of that offer are not published on the page.
+partner_gate: none
+partners:
+- Y Combinator
+- Techstars
+- Segment
+- Secret
+- Mercury
+- GAN
+- F6S
+- Seedcamp
+- Tech for Black Founders
+- Tiny Seed
+- TechCrunch
+funding_max_usd: 10000000
+stages:
+- idea
+- pre-seed
+- seed
+- series-a
+new_customer_only: true
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: 'PARTIALLY VERIFIED: only the first FAQ answer ("What''s included in Startup
+  Program?") is present in the fetched HTML; the answers to "How long can I participate",
+  "How do I apply", "Do I need a credit card to join Startup Program?", "What if my company
+  outgrows Startup Program?" and "What happens after my Startup Program term ends?" are collapsed
+  accordions whose body text did not render, so credit-card requirements, overage rates and
+  post-term pricing were NOT inspected. Published requirements are exactly three: "Your business
+  has raised less than $10 million in total funding" (a CEILING); contact lists "must be obtained
+  through standard methods, not purchased"; and "Your business is currently not and has never
+  been a customer of Customer.io." The funding ceiling does not state a floor, so funding_required
+  is unknown. A separate Startup Partner Program exists for accelerators and VC firms but
+  is not a condition of the main offer. Eligibility quoted verbatim: "Your business has raised
+  less than $10 million in total funding." and "Your business is currently not and has never
+  been a customer of Customer.io." A credit card is required: "Yes. We require a credit card
+  for all Startup Program accounts." Includes up to 30,000 customer profiles. Eligibility
+  quoted verbatim: "Your business has raised less than $10 million in total funding." and
+  "Your business is currently not and has never been a customer of Customer.io." A credit
+  card is required: "Yes. We require a credit card for all Startup Program accounts." Includes
+  up to 30,000 customer profiles.'
+application_mechanism: self-serve-form
+status: active-self-serve
+status_basis: inferred
+fetch_note: 200 and rendered (curl). FAQ accordion answers beyond the first were not in the
+  HTML. apply_url https://fly.customer.io/signup?signupType=startup returned 200 with no redirect.
+last_verified: '2026-09-16'
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: Get up to 12 months of Customer.io free
+bot_blocked: false

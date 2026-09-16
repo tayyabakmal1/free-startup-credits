@@ -1,0 +1,93 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: techstars-accelerator
+company: Techstars
+program: Techstars Accelerator
+category: ecosystem
+tags: [accelerator, pre-seed, equity-investment, mentorship]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://www.techstars.com/"
+apply_url: "https://apply.techstars.com/"
+official_source: "https://www.techstars.com/investment-terms"
+
+# Benefit
+benefit_type: bundle
+benefit_summary: >-
+  $220,000 day-one investment ($200,000 uncapped MFN SAFE plus $20,000
+  convertible equity agreement for 5% common stock) alongside a 3-month
+  mentorship-driven accelerator program; Asia-Pacific programs invest
+  $120,000 total.
+amount_is_published: true
+amount_max: 220000
+currency: USD
+duration_months: 3
+after_credits: >-
+  The uncapped MFN SAFE converts into additional ownership at the company's
+  next priced round of at least $1M.
+tiers:
+  - name: Standard accelerator investment
+    quote: >-
+      $200,000 through an uncapped MFN Safe + $20,000 through a Post-Money
+      Convertible Equity Agreement (CEA).
+    amount_max: 220000
+    partner_gate: none
+    notes: >-
+      Equity taken: "$20,000 fixed-percentage CEA for 5% common stock".
+  - name: Asia-Pacific accelerator investment
+    quote: >-
+      Techstars accelerator programs in Asia-Pacific offer a $100,000 uncapped
+      MFN Safe (so $120,000 total day-one investment alongside the $20K CEA for
+      5% common).
+    amount_max: 120000
+    partner_gate: none
+    notes: Regional variation stated on the same page.
+partner_gate: none
+requires_incorporation: true
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  This is an equity investment, not a credit: the $220,000 is capital in
+  exchange for 5% common stock plus the future conversion value of the
+  SAFE. The page states "Techstars invests in US corporations or foreign
+  equivalents" and notes reorganisation may be required for certain
+  countries, which is why requires_incorporation is true. Per-accelerator
+  eligibility (sector, stage, location) lives on individual program pages
+  which I did not open, and the application portal was not inspected.
+  Independently re-audited: a second reviewer opened the vendor page and
+  checked the quote, amount and source.
+
+# Application
+application_mechanism: self-serve-form
+obligations:
+  - >-
+      Techstars receives 5% of the company in common stock through the $20,000
+      Post-Money Convertible Equity Agreement
+  - >-
+      The $200,000 uncapped MFN SAFE converts when the company does a priced
+      round of at least $1M
+  - >-
+      Complete background, incorporation, ownership, IP and company bank
+      account checks before the $20,000 is wired
+  - Participate in the 3-month mentorship-driven accelerator program
+
+# Status
+status: active-self-serve
+status_basis: inferred
+fetch_note: >-
+  https://www.techstars.com/accelerators fetched 200 but carried no
+  investment figures. https://www.techstars.com/investment-terms fetched
+  200 and rendered the full investment terms including the APAC exception.
+  The application portal apply.techstars.com was not opened.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: >-
+  $200,000 through an uncapped MFN Safe + $20,000 through a Post-Money
+  Convertible Equity Agreement (CEA).
+bot_blocked: false

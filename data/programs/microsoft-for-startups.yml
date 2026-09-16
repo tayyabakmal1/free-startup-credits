@@ -1,0 +1,133 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: microsoft-for-startups
+company: Microsoft
+program: Microsoft for Startups
+category: cloud
+tags: [azure, cloud-credits, investor-referral, tiered]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://www.microsoft.com/en-us/startups"
+apply_url: "https://www.microsoft.com/en-us/startups"
+official_source: "https://www.microsoft.com/en-us/startups"
+
+# Benefit
+benefit_type: credit
+benefit_summary: >-
+  Azure credits for early-stage B2B startups in two paths: a no-referral
+  path starting at $1,000 for 90 days, and an investor-referral path that
+  Microsoft's FAQ says most startups begin at $100,000, with the landing
+  page advertising up to $150,000.
+amount_is_published: true
+amount_max: 150000
+currency: USD
+duration_months: 24
+expiry_note: >-
+  You must activate your Azure credits within 90 days of accepting the
+  Microsoft for Startups program agreement. Once activated, Azure credits
+  provided through Microsoft for Startups are valid for up to two years.
+  Extensions are not available.
+after_credits: >-
+  Your Azure Sponsorship subscription automatically converts to
+  pay-as-you-go once your Azure credits are fully used or expired,
+  whichever comes first.
+excludes:
+  - Subsidiaries of larger organizations (must be privately held and independent)
+  - Non-B2B startups
+  - Accounts with a prior Azure account
+  - Work, school or company-domain email accounts at signup
+stacking_notes: >-
+  Credits cannot be transferred to another Microsoft account and are tied
+  to the subscription created at redemption. Benefits generally cannot be
+  redeemed on an account that has previously redeemed the same startup
+  offer, or on an existing enterprise account.
+tiers:
+  - name: Azure startup credit offer (no investor referral code)
+    quote: >-
+      If you're new to Azure, you can start with the Azure startup credit
+      offer: $1,000 for 90 days, then an additional $4,000 for 180 days after
+      business verification.
+    amount_max: 1000
+    partner_gate: none
+    notes: >-
+      Source:
+      https://learn.microsoft.com/en-us/startups/microsoft-for-startups/mfs-faqs.
+      Year-one figure recorded as $1,000 for 90 days; the additional $4,000 for
+      180 days is conditional on business verification and is not summed in.
+  - name: Investor offer (10-character referral code required)
+    quote: >-
+      The investor offer includes Azure credits (most startups begin with
+      $100,000, with the opportunity to earn more)
+    amount_max: 100000
+    partner_gate: required-hard
+    notes: >-
+      Source:
+      https://learn.microsoft.com/en-us/startups/microsoft-for-startups/mfs-faqs.
+      Also includes Azure Standard Support, technical experts, go-to-market
+      support, and discounted or free GitHub Enterprise, LinkedIn Premium
+      Business, Microsoft 365 Business Premium, Visual Studio Enterprise,
+      Dynamic...
+
+# Eligibility. Tri-state gates are written only when the vendor states
+# them. An omitted gate reads as `unknown` and keeps this entry out of
+# the matching collection, which is the intended behaviour.
+funding_required: false
+accelerator_required: false
+open_to_bootstrapped: true
+requires_vc_backing: false
+partner_gate: tiered
+stages: [pre-seed, seed, series-a, series-b, series-c-plus]
+new_customer_only: true
+requires_incorporation: true
+requires_company_email: false
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: inferred
+eligibility_notes: >-
+  VENDOR SELF-CONTRADICTION: the marketing landing page advertises "up to
+  $150,000 in credits" while Microsoft Learn's FAQ states the investor
+  offer means "most startups begin with $100,000, with the opportunity to
+  earn more" and that startups without a referral code get only "$1,000 for
+  90 days, then an additional $4,000 for 180 days after business
+  verification". The more conservative figures are the Learn ones and are
+  recorded in tiers[]. Could not inspect: the application portal itself -
+  the "Get started now" link resolves to
+  https://portal.azure.com/?homeview=startup#home which returned 403, and
+  https://portal.startups.microsoft.com/ returns a JS-only shell - so tier
+  assignment in-product was not inspectable. Microsoft also states it
+  "doesn't publicly share the list of participating investors", so the
+  partner list is not inspectable. Independently re-audited: a second
+  reviewer opened the vendor page and checked the quote, amount and source.
+
+# Application
+application_mechanism: self-serve-form
+approval_time: >-
+  Most applications are reviewed in about three business days (longer if we
+  must verify information).
+obligations:
+  - Credit card required at Azure account setup for identity verification
+  - Registered startup name and address must match legal documents
+
+# Status
+status: active-self-serve
+status_basis: asserted
+status_quote: >-
+  Ready to start building? Join thousands of startups innovating on Azure.
+  Claim your benefits today:
+fetch_note: >-
+  microsoft.com/en-us/startups: 200 and rendered (headline amount and FAQ
+  read from server HTML).
+  learn.microsoft.com/en-us/startups/microsoft-for-startups/application and
+  .../mfs-faqs: 200 and rendered - these carry the eligibility criteria and
+  the per-path credit figures. The application destination
+  https://portal.azure.com/?homeview=startup#home returned 403 and
+  https://portal.startups.microsoft.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: Access cutting-edge AI models, developer tools, and up to $150,000 in credits
+bot_blocked: false

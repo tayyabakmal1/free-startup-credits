@@ -1,0 +1,42 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+slug: pulley-partner-offer
+company: Pulley
+program: Partner Offer
+category: legal
+tags:
+- cap-table
+- equity
+- 409a
+homepage: https://pulley.com
+apply_url: https://pulley.com/partner-offer
+official_source: https://pulley.com/partner-offer
+benefit_type: discount
+benefit_summary: Companies that join Pulley through one of its partners receive a first-year
+  discount and concierge onboarding. No discount percentage, amount or partner list is published.
+amount_is_published: false
+amount_max: null
+duration_months: 12
+expiry_note: Discount applies to the first year.
+partner_gate: required-hard
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: 'NOT INSPECTABLE: the discount size, the eligibility criteria and the list
+  of qualifying partners are not published on this page or anywhere else on pulley.com that
+  I could reach. https://pulley.com/investors 301s to this page. Pulley has no free tier —
+  its public entry plan is the paid "Startup" plan at $1,200/year covering the first 25 stakeholders
+  ($3,500/year "Growth" for 40). No discount percentage and no eligibility criteria are published
+  on the page. No discount percentage and no eligibility criteria are published on the page.'
+application_mechanism: partner-code
+status: active-partner-only
+status_basis: asserted
+status_quote: By joining Pulley through one of our partners, companies receive first-year
+  discounts and concierge onboarding.
+fetch_note: 200 and rendered — https://pulley.com/investors 301s to https://pulley.com/partner-offer,
+  which returned full text in server HTML; https://pulley.com/pricing also 200 and rendered.
+last_verified: '2026-09-16'
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: By joining Pulley through one of our partners, companies receive first-year
+  discounts and concierge onboarding.
+bot_blocked: false

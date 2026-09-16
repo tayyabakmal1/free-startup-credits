@@ -1,0 +1,79 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: qdrant-for-startups
+company: Qdrant
+program: Qdrant for Startups
+category: databases
+tags: [vector-database, ai, cloud-discount]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://qdrant.tech"
+apply_url: "https://qdrant.tech/qdrant-for-startups/#form"
+official_source: "https://qdrant.tech/qdrant-for-startups/"
+
+# Benefit
+benefit_type: discount
+benefit_summary: >-
+  20% discount on Qdrant Cloud for the first year (12 months from
+  acceptance), plus expert technical sessions and partner perks from
+  Hugging Face, LlamaIndex and Airbyte.
+amount_is_published: false
+amount_max: null
+duration_months: 12
+expiry_note: >-
+  The discount is valid for 12 months from the date of acceptance and
+  applies exclusively to our Cloud services billed through Qdrant (via
+  Stripe).
+excludes:
+  - agencies
+  - devshops
+  - billing through a marketplace
+  - previous participants in the Qdrant for Startups program
+partner_gate: none
+partners: [Hugging Face, LlamaIndex, Airbyte]
+funding_max_usd: 5000000
+stages: [pre-seed, seed, series-a]
+company_age_max_years: 5
+new_customer_only: true
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  Vendor self-contradiction: the eligibility list states the flat
+  requirement 'New user of Qdrant Cloud.', while a later FAQ states 'Yes,
+  existing Qdrant customers are eligible to apply for the Startup Program
+  if their cloud account was created within the last 30 days from the date
+  of application.' The more conservative requirement (new user) is quoted
+  in status/eligibility and new_customer_only is set true. No currency
+  amount is published - the benefit is a percentage discount only.
+
+# Application
+application_mechanism: self-serve-form
+approval_time: Applications are reviewed within 7-10 business days
+obligations:
+  - Provide a link to a live, functional website
+  - Add credit card details to the Qdrant account to utilize the discount
+  - >-
+      Billing must be done directly with Qdrant (via Stripe), not through a
+      marketplace
+
+# Status
+status: active-self-serve
+status_basis: asserted
+status_quote: >-
+  Apply through our online form by providing details about your startup and
+  plans for using Qdrant. Do not email your submission.
+fetch_note: >-
+  200 and fully rendered via curl with a browser UA; full body plus the
+  entire Program FAQ accordion (eligibility, application, discount
+  duration, existing-customer, reapplication items) were present in the
+  HTML and read.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: "Enjoy a 20% discount on Qdrant Cloud for the first year."
+bot_blocked: false

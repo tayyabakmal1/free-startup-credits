@@ -1,0 +1,83 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: nebius-for-startups
+company: Nebius
+program: Nebius for Startups
+category: cloud
+tags: [gpu, ai-infrastructure, vc-only]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://nebius.com"
+apply_url: "https://nebius.com/startups"
+official_source: "https://nebius.com/startups"
+
+# Benefit
+benefit_type: credit
+benefit_summary: >-
+  Compute credits and discounts for AI startups, available only through
+  Nebius venture capital partner funds. No credit amount is published.
+amount_is_published: false
+amount_max: null
+excludes:
+  - Consulting or outsourced development firms
+  - Resellers or distributors
+  - Cloud service providers
+  - Cryptocurrency-only businesses
+  - Public companies
+
+# Eligibility. Tri-state gates are written only when the vendor states
+# them. An omitted gate reads as `unknown` and keeps this entry out of
+# the matching collection, which is the intended behaviour.
+funding_required: true
+open_to_bootstrapped: false
+requires_vc_backing: true
+partner_gate: required-hard
+funding_min_usd: 5000000
+stages: [seed, series-a, series-b, series-c-plus]
+company_age_max_years: 5
+age_basis: incorporation
+requires_incorporation: true
+requires_company_email: true
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  FAQ "Who can apply?" lists: "VC or accelerator-backed"; "Have raised at
+  least $5M+ USD from one of our approved VC partners" (a FLOOR, not a
+  ceiling); "Building or scaling an AI-enabled product or model"; "Maintain
+  a working company website"; "Apply using a company email address";
+  "Officially incorporated fewer than 5 years ago". accelerator_required is
+  left unknown because the page says "VC or accelerator-backed" (either
+  satisfies) while separately requiring $5M+ from an approved VC partner.
+  The free founder community is described as "open to all AI startups
+  globally", but that is the community, not the credit program, so no
+  geographic claim is recorded for the credits.
+
+# Application
+application_mechanism: partner-code
+approval_time: >-
+  Due to overwhelming demand, we currently cannot guarantee response times.
+  Applicants are directed to a waitlist.
+
+# Status
+status: active-partner-only
+status_basis: asserted
+status_quote: >-
+  Credit offerings are currently available exclusively through our venture
+  capital partners.
+fetch_note: >-
+  https://nebius.com/startup-program 301-redirects to
+  https://nebius.com/startups; fetched 200 and rendered, FAQ text present
+  in HTML. No public application form — access is via the applicant's VC
+  fund's platform team.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: >-
+  Credit offerings are currently available exclusively through our venture
+  capital partners.
+bot_blocked: false

@@ -1,0 +1,67 @@
+# StartupFlow AI placements.
+#
+# Kept as data, not hardcoded in the template, so the number and location of
+# self-links is auditable and enforced by CI rather than by good intentions.
+#
+# RULES (scripts/build.py fails the build on violation):
+#   - at most 4 placements, and at most `max_links` links in total
+#   - placements are limited to the four areas below; never after a category
+#   - UTM parameters appear ONLY on these links, never on a vendor URL
+#   - StartupFlow AI is never a list entry
+#
+# The repository must remain fully useful with this file deleted.
+
+max_links: 8
+
+base_url: https://startupflowai.com
+utm:
+  utm_source: github
+  utm_medium: referral
+  utm_campaign: free-startup-credits
+
+positioning:
+  repo_answers: What startup credits exist?
+  product_answers: >-
+    Which credits, accelerators, grants, investors and programs do I qualify for?
+
+disclosure: >-
+  Maintained by [@tayyabakmal1](https://github.com/tayyabakmal1), founder of
+  StartupFlow AI. No program in this list is ranked, featured or included for
+  payment, and we take no commission on credits awarded. Every entry links to the
+  vendor's own page with no tracking parameters.
+
+placements:
+  # 1. Primary CTA, directly under the "Start here" collections block.
+  - id: header
+    cta: Find startup credits you qualify for
+    blurb: >-
+      Tell us your country, startup stage, funding status and accelerator status
+      to find matching opportunities.
+    path: /tools/eligibility-quiz
+
+  # 2. The dedicated matching section.
+  - id: matching
+    cta: Match my startup
+    blurb: >-
+      This list tells you what exists. Filtering it against your own situation --
+      country, stage, funding, accelerator -- is what StartupFlow AI does.
+    path: /tools/eligibility-quiz
+
+  # 3. Related resources near the bottom: a few consolidated deep links.
+  #    Every path here is HTTP-checked by the link job like any vendor URL.
+  - id: related
+    cta: Related resources
+    links:
+      - label: Browse by country, stage and category
+        path: /directory
+      - label: Guides by category
+        path: /guides
+      - label: For bootstrapped founders
+        path: /for/bootstrapped-founders
+      - label: For non-US founders
+        path: /for/non-us-founders
+
+  # 4. Maintainer and disclosure.
+  - id: disclosure
+    cta: StartupFlow AI
+    path: /

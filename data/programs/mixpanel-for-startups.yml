@@ -1,0 +1,82 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: mixpanel-for-startups
+company: Mixpanel
+program: Mixpanel for Startups
+category: analytics
+tags: [product-analytics, session-replay, free-year]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://mixpanel.com"
+apply_url: "https://mixpanel.com/startups-apply/"
+official_source: "https://mixpanel.com/startups/"
+
+# Benefit
+benefit_type: free-plan
+benefit_summary: >-
+  One year free on the Mixpanel Startup plan including the full product
+  suite, with 1 billion events and 1 million Session Replays; Mixpanel
+  states the package is worth $145,000.
+amount_is_published: true
+amount_max: 145000
+currency: USD
+duration_months: 12
+after_credits: >-
+  Page states: "When the year is up, we'll help you find the right plan. No
+  vendor lock-in, no surprise billing."
+excludes:
+  - companies that have previously been on a Mixpanel paid plan
+  - companies that have previously redeemed other Mixpanel offers
+accelerator_required: false
+requires_vc_backing: false
+partner_gate: none
+funding_max_usd: 8000000
+stages: [idea, pre-seed, seed]
+company_age_max_years: 5
+age_basis: incorporation
+new_customer_only: true
+requires_incorporation: true
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  The FAQ accordion on https://mixpanel.com/startups/ renders only question
+  headers to a fetcher; the answers (including "What are the eligibility
+  requirements?") did not load, and https://mixpanel.com/startups-apply/
+  returned a title-only shell. Eligibility below is taken from Mixpanel's
+  own blog at https://mixpanel.com/blog/mixpanel-for-startups-whats-new/,
+  which states startups must be "Incorporated less than five years ago",
+  have "Raised no more than $8M (USD) in total funding", and "Haven't been
+  on a paid plan". VENDOR SELF-CONTRADICTION: the /startups page advertises
+  "1 billion events, 1 million Session Replays" and a $145,000 value, while
+  the blog describes a 500k Session Replay recordings allowance and a value
+  "over $150,000"; the conservative figure quoted here is the current
+  /startups page one. Treat the funding and age caps as needing
+  confirmation on the live FAQ. Independently re-audited: a second reviewer
+  opened the vendor page and checked the quote, amount and source.
+
+# Application
+application_mechanism: self-serve-form
+requires_sales_call: false
+
+# Status
+status: active-self-serve
+status_basis: asserted
+status_quote: >-
+  Stop flying blind. Startups get a full year of Mixpanel free — every
+  feature, every add-on, zero compromise.
+fetch_note: >-
+  https://mixpanel.com/startups/ 200 and rendered, but FAQ accordion
+  answers are JS-gated (headers only). https://mixpanel.com/startups-apply/
+  returned a title-only shell.
+  https://mixpanel.com/blog/mixpanel-for-startups-whats-new/ 200 and
+  rendered with the eligibility criteria.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: Worth $145,000. Costs $0.
+bot_blocked: false

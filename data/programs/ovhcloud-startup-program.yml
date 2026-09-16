@@ -1,0 +1,75 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: ovhcloud-startup-program
+company: OVHcloud
+program: OVHcloud Startup Program
+category: cloud
+tags: [iaas, european-cloud, gpu, hosting]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://www.ovhcloud.com/"
+apply_url: "https://startup.ovhcloud.com/en/"
+official_source: "https://startup.ovhcloud.com/en/"
+
+# Benefit
+benefit_type: credit
+benefit_summary: >-
+  Two levels of free OVHcloud credits: EUR 10,000 with 6 hours of engineer
+  time at Start level, and up to EUR 100,000 with up to 20 hours of
+  engineer time at Scale level, for a maximum of 12 months.
+amount_is_published: true
+amount_max: 100000
+currency: EUR
+duration_months: 12
+expiry_note: >-
+  The FAQ & Support page states participation lasts a maximum of 12 months
+  for each level; unused credits do not extend beyond the program period.
+tiers:
+  - name: Start (startups)
+    quote: €10,000 of free cloud credits
+    amount_max: 10000
+    partner_gate: none
+    notes: "Also listed with \"6 hours of 1-on-1 time with an engineer (free)\"."
+  - name: Scale (scaleups)
+    quote: Up to €100,000 of free cloud credits
+    amount_max: 100000
+    partner_gate: none
+    notes: >-
+      Also listed with "Up to 20 hours of 1-on-1 time with an engineer". FAQ
+      associates this level with Series-A and beyond funded startups.
+partner_gate: none
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  I could not inspect a verbatim eligibility page:
+  startup.ovhcloud.com/en/eligibility/ and /en/faq/ are 404. The FAQ &
+  Support page indicates the Scale level is aimed at Series-A-and-beyond
+  funded startups and that Start level applicants need at least a POC or
+  MVP, but no numeric caps on age, revenue or headcount are published, so
+  those remain unknown. Exact verbatim FAQ wording was not retrievable.
+  Independently re-audited: a second reviewer opened the vendor page and
+  checked the quote, amount and source.
+
+# Application
+application_mechanism: self-serve-form
+approval_time: "Response stated as within 7 days on the FAQ & Support page"
+
+# Status
+status: active-self-serve
+status_basis: inferred
+fetch_note: >-
+  https://startup.ovhcloud.com/en/ fetched 200 and rendered the
+  tier/benefit content; /en/eligibility/ and /en/faq/ both 404, and the FAQ
+  content was read at https://startup.ovhcloud.com/en/faq-support/ which
+  fetched 200 but returned only summarised FAQ answers rather than a full
+  verbatim transcript.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: Up to €100,000 of free cloud credits
+bot_blocked: false

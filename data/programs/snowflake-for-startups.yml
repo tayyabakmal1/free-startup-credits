@@ -1,0 +1,42 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+slug: snowflake-for-startups
+company: Snowflake
+program: Snowflake for Startups
+category: databases
+tags:
+- data-warehouse
+- data-cloud
+- ai
+homepage: https://www.snowflake.com
+apply_url: https://www.snowflake.com/en/why-snowflake/startup-program/
+official_source: https://www.snowflake.com/en/why-snowflake/startup-program/
+benefit_type: usage-allowance
+benefit_summary: Free Snowflake usage on an eligible startup's first contract; the vendor
+  publishes no dollar figure, duration, or eligibility thresholds on the program page.
+amount_is_published: false
+amount_max: null
+stages:
+- any
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: 'Could not inspect: the credit/usage amount, the program duration, and
+  any eligibility thresholds (funding, age, employees) — none are published on the program
+  page or its FAQ. The FAQ answers only fit, not eligibility: "Snowflake is a great fit for
+  your startup if you''re working with data." The application route is described only as "We
+  encourage all interested startups to reach out through our contact form"; no form URL is
+  exposed in the rendered markup, so apply_url points at the program page itself. The separate
+  Snowflake Startup Challenge (up to $1 million in investments) is a competition, not this
+  program, and is not reflected in this record. Quote re-confirmed verbatim under the Startup
+  Package section 2026-09-16. No credit amount, duration or eligibility threshold is published;
+  the page directs startups to a contact form.'
+status: active-amount-undisclosed
+status_basis: inferred
+fetch_note: 200 and rendered on two fetches; benefit sentence and FAQ text consistent. Register-your-interest
+  buttons resolve to a JS-driven flow with no href in the rendered markup.
+last_verified: '2026-09-16'
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: Snowflake offers eligible startups free usage on their first contract to help
+  build their business on Snowflake.
+bot_blocked: false

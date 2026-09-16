@@ -1,0 +1,18 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.lycheecache
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+freshness.md
+lychee/
+
+# Local-only working notes, never published
+LAUNCH-PLAYBOOK.md
+selfaudit.json
+incumbent.json
+redirect-audit.*
+.impeccable

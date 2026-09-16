@@ -1,0 +1,203 @@
+# Founder-first browse views, declared as filters over data/programs/*.yml.
+# `make build` renders each to collections/<id>.md and to the README's
+# "Start here" block. Nothing here is hand-maintained: adding one program
+# updates every collection it qualifies for.
+#
+# ============================================================================
+# RULE 1 — UNKNOWN IS NEVER ELIGIBLE
+# ============================================================================
+# A program joins a collection only on an AFFIRMATIVE value read off the
+# vendor's own page. Never on a null, never on a missing field, never on the
+# absence of a stated restriction.
+#
+# scripts/validate.py enforces this structurally:
+#   - every filter clause must name explicit allowed values
+#   - `is_null` is REJECTED as an operator on any field in
+#     `eligibility_gate_fields` below
+#   - a tri-state gate left `unknown` simply excludes the entry from the view
+#
+# ============================================================================
+# RULE 2 — LABEL ONLY WHAT THE FIELDS PROVE
+# ============================================================================
+# There is deliberately NO "Open to everyone" collection. No combination of
+# fields establishes that claim: a self-serve program with no partner gate can
+# still require VC backing, a minimum raise, a funding ceiling, a company-age
+# limit, a revenue cap, incorporation, or a specific country.
+#
+# Filter operators:
+#   {in: [...]}           scalar field's value must appear in the list
+#   {any_of: [...]}       list-valued field must overlap the list
+#   {not_contains: [...]} list-valued field must not contain any of the list
+#   {lte: n} / {gte: n}   numeric comparison; a null value never matches
+#   {is_null: true}       field must be absent/null -- BANNED on gate fields
+
+# Tri-state / boolean eligibility gates. `is_null` is never a legal operator
+# on these, and absence always reads as `unknown`, never as permission.
+eligibility_gate_fields:
+  - funding_required
+  - accelerator_required
+  - open_to_bootstrapped
+  - requires_vc_backing
+  - requires_sales_call
+  - new_customer_only
+  - requires_incorporation
+  - partner_gate
+  - application_mechanism
+
+collections:
+  # `match_any`: an entry qualifies if ANY alternative below holds. Each
+  # alternative still demands an affirmative value, so `unknown` remains
+  # ineligible -- this only stops us requiring a vendor to phrase it our way.
+  # `partner_gate: none` and `accelerator_required: false` are the same claim.
+  - id: no-partner-required
+    title: No Partner or Accelerator Required
+    emoji: "🟢"
+    blurb: >-
+      The vendor states that no accelerator, VC or partner referral is needed.
+      Other eligibility rules may still apply -- check each entry.
+    match_any:
+      - partner_gate: {in: [none]}
+      - accelerator_required: {in: [false]}
+
+  - id: direct-application
+    title: Direct Application
+    emoji: "📝"
+    blurb: >-
+      Apply yourself through a public form. No sales call, no partner code,
+      no waiting on an introduction.
+    match_any:
+      - application_mechanism: {in: [self-serve-form]}
+      - requires_sales_call: {in: [false]}
+
+  - id: no-funding-required
+    title: No Funding Required
+    emoji: "💡"
+    blurb: >-
+      The vendor states, in one form or another, that you do not need to have
+      raised money or be VC-backed to qualify.
+    match_any:
+      - funding_required: {in: [false]}
+      - requires_vc_backing: {in: [false]}
+      - open_to_bootstrapped: {in: [true]}
+
+  - id: bootstrapped
+    title: Bootstrapped Startups
+    emoji: "🥾"
+    blurb: >-
+      The vendor's page affirmatively says bootstrapped or self-funded
+      companies qualify.
+    match_any:
+      - open_to_bootstrapped: {in: [true]}
+
+  - id: ai-startups
+    title: AI Startups
+    emoji: "🤖"
+    blurb: >-
+      Model APIs, GPU compute, inference and vector search -- plus programs
+      from other categories that target AI companies specifically.
+    filter:
+      category: {in: [ai]}
+
+  - id: global-programs
+    title: Global Programs
+    emoji: "🌍"
+    blurb: >-
+      The vendor explicitly states worldwide or global availability. This is
+      vendor-asserted, not inferred from an absence of restrictions.
+    filter:
+      regions: {any_of: [global]}
+      regions_basis: {in: [asserted]}
+
+  - id: cloud-credits
+    title: Cloud Credits
+    emoji: "☁️"
+    blurb: Credits on general-purpose cloud platforms.
+    filter:
+      category: {in: [cloud]}
+
+  - id: ai-credits
+    title: AI Credits
+    emoji: "🧠"
+    blurb: Credits redeemable against model APIs, inference and GPU compute.
+    filter:
+      category: {in: [ai]}
+      benefit_type: {in: [credit, usage-allowance, matched-credit]}
+
+  - id: developer-tools
+    title: Developer Tools
+    emoji: "🛠️"
+    blurb: CI/CD, observability, error tracking, auth and developer platforms.
+    filter:
+      category: {in: [devtools]}
+
+  - id: europe
+    title: Europe
+    emoji: "🇪🇺"
+    blurb: >-
+      Programs the vendor confirms for Europe, shown separately from those
+      that merely state no restriction.
+    # scope: region -- a vendor asserting 'EU' confirms a EUROPE page, but never
+    # confirms any specific country inside it. Country pages use scope: country,
+    # which permits only 'global' or a literal ISO code.
+    scope: region
+    region_groups: [europe, eu, eea]
+    sections:
+      - id: confirmed
+        title: "✅ Confirmed for Europe"
+        blurb: >-
+          The vendor's own page states worldwide availability, or names Europe
+          or an EU/EEA country set explicitly.
+        filter:
+          regions: {any_of: [global, europe, eu, eea]}
+          regions_basis: {in: [asserted]}
+      - id: not-confirmed
+        title: "⚠️ Not confirmed for Europe"
+        blurb: >-
+          The vendor publishes no geographic restriction, or names a region
+          without saying which countries it covers. Availability has NOT been
+          confirmed -- check the vendor's terms before applying.
+        filter:
+          regions_basis: {in: [unstated, inferred]}
+
+# Per-country pages are expanded by build.py from regions.yml:featured_countries.
+# Each renders exactly two sections, Confirmed first. A country code is matched
+# ONLY against `global` or its literal ISO code -- never via a region group.
+country_page_template:
+  scope: country
+  emoji: "📍"
+  sections:
+    - id: confirmed
+      title: "✅ Confirmed for {country_name}"
+      blurb: >-
+        The vendor's own page explicitly lists {country_name}, states worldwide
+        or global availability, or names a region and itself enumerates
+        {country_name} within it.
+      filter:
+        regions: {any_of: ["global", "{country_code}"]}
+        excluded_regions: {not_contains: ["{country_code}"]}
+        regions_basis: {in: [asserted]}
+
+    # Previously these fell through every section and vanished from the page.
+    # "This vendor states where it operates, and it is not here" is the single
+    # most actionable line on a country page -- it saves a wasted application.
+    - id: not-available
+      title: "❌ Not available in {country_name}"
+      blurb: >-
+        The vendor names the places it serves, and {country_name} is not among
+        them -- or it excludes {country_name} explicitly. Applying is very
+        unlikely to succeed.
+      match_any:
+        - regions_basis: {in: [asserted]}
+          regions: {not_contains: ["global", "{country_code}"]}
+        - excluded_regions: {any_of: ["{country_code}"]}
+
+    - id: not-confirmed
+      title: "⚠️ Not confirmed for {country_name}"
+      blurb: >-
+        Either the vendor publishes no geographic restriction, or it names a
+        region (for example "APAC") without saying which countries that
+        includes. Availability in {country_name} has NOT been confirmed --
+        check the vendor's terms before applying.
+      filter:
+        excluded_regions: {not_contains: ["{country_code}"]}
+        regions_basis: {in: [unstated, inferred]}

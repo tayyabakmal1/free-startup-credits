@@ -1,0 +1,82 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: deepgram-startup-program
+company: Deepgram
+program: Deepgram for Startups
+category: ai
+tags: [speech-to-text, text-to-speech, voice-agents]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://deepgram.com"
+apply_url: "https://deepgram.com/startup-program"
+official_source: "https://deepgram.com/startup-program"
+
+# Benefit
+benefit_type: credit
+benefit_summary: >-
+  Up to $100,000 in Deepgram API credits usable within 12 months; direct
+  applicants start at a $1,000 tier with upgrades, and partner-referred
+  applicants may receive a different offer.
+amount_is_published: true
+amount_max: 100000
+currency: USD
+duration_months: 12
+expiry_note: "Each credit grant expires 12 months from when it's issued."
+excludes: [agencies or consultants building on behalf of clients]
+stacking_notes: >-
+  Applying through a VC/accelerator partner replaces the direct-applicant
+  offer with that partner's listed offer.
+tiers:
+  - name: Direct applicant starter
+    amount_max: 1000
+    quote: >-
+      Deepgram's starter offer starts at $1,000 in free Startup Program
+      credits, with opportunities to upgrade to tiers worth up to $100,000 as
+      you grow and deepen your product usage.
+    partner_gate: none
+    notes: Upgrades are usage/growth-based, not published as fixed tiers.
+  - name: Partner-referred offer
+    quote: >-
+      Deepgram has active partnerships with leading venture capital firms,
+      accelerators, and startup networks that provide enhanced offers to their
+      portfolios.
+    partner_gate: improves-offer
+    notes: "Amount not published; page directs you to the partner's own perks page."
+partner_gate: improves-offer
+stages: [pre-seed, seed]
+new_customer_only: false
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  Vendor self-contradiction: the hero states 'up to $100,000 in credits
+  over 12 months', while the FAQ says direct applicants start at $1,000
+  with upgrade tiers up to $100,000. The more conservative FAQ figure is
+  recorded in tiers[]. No funding cap is stated as a hard rule; the FAQ
+  only says applications above $10M raised are reviewed case-by-case.
+  Independently re-audited: a second reviewer opened the vendor page and
+  checked the quote, amount and source.
+
+# Application
+application_mechanism: self-serve-form
+approval_time: Our team reviews applications and typically responds within one week
+obligations: [Committed to actively building and engaging with our community]
+
+# Status
+status: active-self-serve
+status_basis: inferred
+status_quote: Create a Deepgram account to apply. Have your Project ID handy.
+fetch_note: >-
+  200 and rendered. FAQ answers are a JS accordion in the DOM but were
+  recovered verbatim from the page's embedded FAQPage JSON-LD.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: >-
+  Apply to Deepgram for Startups and get up to $100,000 in credits over 12
+  months.
+bot_blocked: false

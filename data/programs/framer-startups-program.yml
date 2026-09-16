@@ -1,0 +1,67 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: framer-startups-program
+company: Framer
+program: Framer startups program
+category: design
+tags: [website-builder, partner-gated, free-year]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://www.framer.com"
+apply_url: "https://www.framer.com/startups/"
+official_source: "https://www.framer.com/startups/"
+
+# Benefit
+benefit_type: free-plan
+benefit_summary: >-
+  A full year of the Framer Pro plan at no cost, stated by Framer as a $360
+  saving, for pre-seed or seed startups backed by a Framer approved partner
+  that have not used Framer before.
+amount_is_published: true
+amount_max: 360
+currency: USD
+duration_months: 12
+excludes:
+  - Startups that have previously used Framer
+  - Startups not backed by a Framer approved partner
+open_to_bootstrapped: false
+partner_gate: required-hard
+stages: [pre-seed, seed]
+new_customer_only: true
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  The page prints no formal program name; its own wording is "Apply for the
+  startups program". The application form's Employees dropdown offers only
+  the values 2 through 10, and the Stage dropdown offers only Pre-seed and
+  Seed - these are form constraints rather than stated rules, so
+  employees_max is left null. The Country dropdown enumerates ~35 countries
+  but also offers "Other", so it is not a stated geographic restriction.
+  The approved-partner list lives at
+  https://www.framer.com/startups/vc-partners/ (200). Independently
+  re-audited: a second reviewer opened the vendor page and checked the
+  quote, amount and source.
+
+# Application
+application_mechanism: self-serve-form
+
+# Status
+status: active-partner-only
+status_basis: asserted
+status_quote: My startup is backed by a Framer approved partner
+fetch_note: >-
+  200 and rendered; the full application form, its requirement checkboxes
+  and its dropdown option lists were all present in the server HTML and
+  were read directly.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: >-
+  Save $360 instantly with a full year of the Framer Pro plan at zero cost
+  for your startup.
+bot_blocked: false

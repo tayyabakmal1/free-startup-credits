@@ -1,0 +1,76 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: coda-startup-discount
+company: Coda
+program: Apply for startup discount
+category: productivity
+tags: [docs, workspace, free-plan, superhuman-docs]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://coda.io"
+apply_url: "https://coda.io/form/Apply-for-6-months-free-for-startups_dhHeEqGp3E0"
+official_source: "https://coda.io/solutions/team-size/startups/apply-startup-credit"
+
+# Benefit
+benefit_type: free-plan
+benefit_summary: >-
+  Six months of the Coda Team plan free, plus startup-specific templates;
+  unlimited Coda AI is included only for startups that apply through a Coda
+  partner.
+amount_is_published: false
+amount_max: null
+duration_months: 6
+stacking_notes: The offer is non-transferable and cannot be combined with any other offer.
+partner_gate: improves-offer
+funding_max_usd: 10000000
+stages: [idea, pre-seed, seed, series-a]
+company_age_max_years: 5
+new_customer_only: false
+requires_company_email: true
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  Published acceptance criteria verbatim: "You have a small or big team and
+  you're not using Coda on your own"; "Be a business less than 5 years
+  old"; "Have raised less than $10M USD" (a CEILING, with no floor stated,
+  so funding_required stays unknown); "Your Coda account is using a
+  business domain and not a personal email (gmail.com, hotmail.com, etc)";
+  "You can provide a company website"; "You don't currently have a paid
+  subscription and have not paid for Coda in the last 30 days."
+  new_customer_only is recorded as false because that last criterion
+  explicitly admits former paying customers after a 30-day gap rather than
+  requiring a brand-new account. Partner route: "Free unlimited Coda AI if
+  you apply through one of our partners" and "All partner-affiliated
+  startups that meet our requirements will be approved (must include proof
+  in application)" — a partner improves the offer and guarantees approval
+  but is not required. NOTE: Coda has rebranded — the page banner reads
+  "Coda is now Superhuman Docs" and the application form URL resolves to
+  docs.superhuman.com; the historic $1,000 startup credit that aggregators
+  still list does not appear anywhere on this page. AUDIT: the application
+  form now redirects cross-domain to superhuman.com, following Coda's
+  acquisition. A cross-brand redirect is the strongest discontinuation
+  signal available without reading the page, so this is no longer treated
+  as active pending a human re-check.
+
+# Application
+application_mechanism: self-serve-form
+
+# Status
+status: unverified
+status_basis: inferred
+fetch_note: >-
+  200 and rendered (curl); acceptance criteria present in HTML. The
+  application form itself is an embed that did not render ("This embedded
+  link can't be shown"), but the form's own URL was recovered from the page
+  markup and returned 200, redirecting to
+  https://docs.superhuman.com/form/Apply-for-6-months-free-for-startups_dhHeEqGp3E0.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: 6 months of free Team plan.
+bot_blocked: false

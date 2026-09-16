@@ -1,0 +1,68 @@
+name: Report an expired or changed program
+description: A dead link, a closed program, a changed amount, or a rejection for a reason we do not list
+title: "[Expired] "
+labels: ["rot-report", "priority"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **This is the most valuable report you can file.**
+
+        Every list in this space dies the same way: entries get added and never
+        re-checked. A link can return a perfectly healthy `200 OK` for years after
+        the company behind it was acquired or shut down. Automated checking cannot
+        see that. You can.
+
+        If you applied and got rejected for a reason we do not list, that is
+        exactly the information nobody else has. Please tell us.
+
+  - type: input
+    id: program
+    attributes:
+      label: Which program?
+      placeholder: Cloudflare for Startups
+    validations:
+      required: true
+
+  - type: dropdown
+    id: what_happened
+    attributes:
+      label: What happened?
+      options:
+        - The application link is dead or 404s
+        - The link redirects somewhere unrelated
+        - The program has closed to new applicants
+        - The credit amount has changed
+        - The eligibility rules have changed
+        - I was rejected for a reason not listed here
+        - The vendor now says they have no startup program
+        - Something else
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: What does the page say now?
+      description: >-
+        Paste the relevant sentence from the vendor's page, or describe what you
+        saw. If you were rejected, what reason were you given? Please do not paste
+        anything confidential from a private email.
+    validations:
+      required: true
+
+  - type: input
+    id: url
+    attributes:
+      label: URL you checked
+      placeholder: https://www.cloudflare.com/forstartups/
+    validations:
+      required: true
+
+  - type: input
+    id: date_checked
+    attributes:
+      label: When did you check? (YYYY-MM-DD)
+      placeholder: "2026-09-14"
+    validations:
+      required: true

@@ -1,0 +1,98 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: zendesk-for-startups
+company: Zendesk
+program: Zendesk for Startups
+category: support
+tags: [customer-support, helpdesk, free-plan]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://www.zendesk.com"
+apply_url: "https://www.zendesk.com/register/startups/"
+official_source: "https://www.zendesk.com/business/startups/"
+
+# Benefit
+benefit_type: free-plan
+benefit_summary: >-
+  Free Zendesk Professional Suite and Copilot for up to 50 agents; baseline
+  term is 6 months, with 1- or 2-year terms only for startups affiliated
+  with Zendesk's institutional funding partners.
+amount_is_published: false
+amount_max: null
+duration_months: 6
+after_credits: >-
+  No credit card is required upfront, but when your trial ends, you'll need
+  to choose a paid plan to keep using your Zendesk account.
+tiers:
+  - name: Baseline (no partner affiliation)
+    quote: Once accepted, the baseline program length for all startups is 6 months.
+    partner_gate: none
+    notes: >-
+      Page adds: "If you are not currently affiliated with an established
+      partner in our ecosystem, your program term will be the standard 6
+      months."
+  - name: Partner-affiliated (VC or accelerator)
+    quote: >-
+      Extended offers of 1 or 2 years are tied to specific institutional
+      funding partnerships, such as our VC and accelerator partners.
+    partner_gate: required-hard
+    notes: >-
+      Extended 1- or 2-year terms are not available without an institutional
+      funding partnership; apply through the partner's community referral link.
+
+# Eligibility. Tri-state gates are written only when the vendor states
+# them. An omitted gate reads as `unknown` and keeps this entry out of
+# the matching collection, which is the intended behaviour.
+funding_required: true
+open_to_bootstrapped: false
+requires_vc_backing: false
+partner_gate: tiered
+stages: [pre-seed, seed, series-a, series-b]
+company_age_max_years: 10
+employees_max: 250
+new_customer_only: true
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  VENDOR SELF-CONTRADICTION on this same page. The hero disclaimer (more
+  conservative, quoted here) says: "This offer is available only to new
+  Zendesk customers who have received outside funding (Angel, Pre-seed,
+  Seed, Series A, or Series B rounds) and who have (i) 250 or fewer
+  employees if referred by one of our partners, or (ii) 50 or fewer
+  employees if not referred by our partners." The FAQ instead says "Must
+  have fewer than 250 employees", "If employee size 50-249, must be
+  referred by a partner", and "Whether you are venture-backed,
+  bootstrapped, or anywhere in between, we are committed to supporting
+  founders at every stage of their journey." funding_required=true and
+  open_to_bootstrapped=false follow the conservative disclaimer. IMPORTANT:
+  employees_max=250 applies ONLY to partner-referred startups; without a
+  partner referral the cap is 50 employees. FAQ also requires: "Must be a
+  brand new Zendesk subscriber (previous or active paid customers may not
+  participate)" and "Company must be under 10 years old".
+  requires_vc_backing=false because the disclaimer explicitly accepts Angel
+  rounds.
+
+# Application
+application_mechanism: self-serve-form
+
+# Status
+status: active-self-serve
+status_basis: inferred
+fetch_note: >-
+  https://www.zendesk.com/startups/ 301-redirects to
+  https://www.zendesk.com/business/startups/; fetched 200 and rendered,
+  including the full FAQ accordion text and the hero eligibility
+  disclaimer.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: >-
+  The startups program provides early stage qualified startups up to 2
+  years free of the Zendesk Resolution Platform for up to 50 agents
+  (depending on the funding profile and partner).
+bot_blocked: false

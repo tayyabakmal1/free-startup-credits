@@ -1,0 +1,69 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+slug: intercom-early-stage-program
+company: Intercom
+program: Early Stage Program
+category: support
+tags:
+- helpdesk
+- ai-agent
+- customer-support
+homepage: https://www.intercom.com
+apply_url: https://www.intercom.com/signup?solution_id=26
+official_source: https://www.intercom.com/early-stage
+benefit_type: discount
+benefit_summary: 'Tiered discount on the Intercom helpdesk from $33/month: 93% off in year
+  one, 50% off in year two and 25% off in year three, with 300 free Fin outcomes and 15 Fin
+  qualifications per month in year one.'
+amount_is_published: true
+duration_months: 36
+after_credits: Discount steps down to 50% in Year 2 and 25% in Year 3, with free Fin usage
+  dropping to 150 outcomes (Y2) and 75 outcomes (Y3) per month. "If the costs become too high
+  after your first year, you can move onto our Essential plan starting at $39 per seat per
+  month." Year 2 and Year 3 discounts are...
+excludes:
+- Additional Fin outcomes or qualifications beyond the included allowance
+- Phone, SMS & WhatsApp — charged at list price
+tiers:
+- name: Year 1
+  quote: 93% off in Year 1
+  notes: Includes 300 Fin outcomes and 15 Fin qualifications per month, 2 Advanced Seats,
+    2 Copilot Seats, 20 Lite Seats, Proactive Support Plus (500 messages/month), 1k Pro conversations
+    analyzed/month.
+  partner_gate: none
+- name: Year 2
+  quote: 50% off in Year 2
+  notes: 150 outcomes and 15 Fin qualifications per month.
+  partner_gate: none
+- name: Year 3
+  quote: 25% off in Year 3
+  notes: 75 outcomes and 15 Fin qualifications per month.
+  partner_gate: none
+partner_gate: none
+funding_max_usd: 10000000
+employees_max: 15
+new_customer_only: true
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: 'VENDOR SELF-CONTRADICTION on the employee cap: the eligibility panel says
+  "Fewer than 15 employees." while the FAQ says "If your company has more than 15 employees,
+  you’re not eligible for the Early Stage Program." The more conservative of the two (fewer
+  than 15, i.e. max 14) is recorded. The published figures are percentage discounts, not a
+  currency credit amount, so amount_max is left null. Eligibility quoted verbatim: "Up to
+  $10M in funding.", "Fewer than 15 employees.", "Not currently an Intercom customer." Eligibility
+  quoted verbatim: "Up to $10M in funding.", "Fewer than 15 employees.", "Not currently an
+  Intercom customer."'
+application_mechanism: self-serve-form
+obligations:
+- Stay on the program to keep the Year 2 and Year 3 discounts
+status: active-self-serve
+status_basis: asserted
+status_quote: Get 93% off Intercom
+fetch_note: 200 and rendered — full page including the eligibility panel and all FAQ content
+  present in server HTML.
+last_verified: '2026-09-16'
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: 93% off in your first year, 50% off in your second year, and 25% off in your
+  third year.
+bot_blocked: false

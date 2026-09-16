@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: vercel-for-startups
+company: Vercel
+program: Vercel for Startups
+category: devtools
+tags: [hosting, frontend, nextjs]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://vercel.com"
+apply_url: "https://vercel.com/startups"
+official_source: "https://vercel.com/startups"
+
+# Benefit
+benefit_type: credit
+benefit_summary: >-
+  Up to $30,000 in what Vercel calls a Flexible Commitment Amount, plus
+  Enterprise-tier access and startup-focused support.
+amount_is_published: true
+amount_max: 30000
+currency: USD
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  The page publishes NO eligibility criteria at all — no funding stage,
+  company age, headcount, revenue, incorporation or geography test, and no
+  FAQ. The only qualifier is the phrase "eligible teams". The application
+  is an on-page interest form ("Interested in joining Vercel for Startups?
+  We'd love to hear from you if you're interested in participating in
+  Vercel's startup program.") collecting name, work email, company size,
+  website and country, submitted via a "Submit interest" button; the page
+  does not state what happens next or whether a sales call is required. The
+  form's country dropdown lists most countries but is a form field, not a
+  published availability statement, so no region claim is recorded.
+  Independently re-audited: a second reviewer opened the vendor page and
+  checked the quote, amount and source.
+
+# Application
+application_mechanism: self-serve-form
+
+# Status
+status: active-self-serve
+status_basis: inferred
+fetch_note: >-
+  200 and rendered (curl, full HTML). Page has no FAQ or terms section; the
+  only program figure on it is the $30,000 sentence quoted.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: >-
+  Vercel for Startups gives eligible teams up to $30,000 in Flexible
+  Commitment Amount, Enterprise-tier access, and startup-focused support to
+  build and scale on Vercel.
+bot_blocked: false

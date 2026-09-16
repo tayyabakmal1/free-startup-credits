@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: How verification works
+    url: https://github.com/tayyabakmal1/free-startup-credits/blob/main/docs/verification-policy.md
+    about: What "verified" means here, why unknown is never treated as eligible, and how country confirmation works
+  - name: How to contribute
+    url: https://github.com/tayyabakmal1/free-startup-credits/blob/main/CONTRIBUTING.md
+    about: Editing one YAML file, the sourcing rules, and what is never accepted

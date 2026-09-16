@@ -1,0 +1,71 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: openai-grove
+company: OpenAI
+program: OpenAI Grove
+category: ai
+tags: [ai, accelerator, cohort, pre-idea, applications-closed]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://openai.com"
+apply_url: "https://openai.com/index/openai-grove/"
+official_source: "https://openai.com/index/openai-grove/"
+
+# Benefit
+benefit_type: services
+benefit_summary: >-
+  A five-week cohort program (approx. fifteen participants) of workshops,
+  office hours and mentoring at OpenAI's San Francisco HQ, with early
+  access to OpenAI tools and unspecified credits. Applications closed 12
+  Jan 2026.
+amount_is_published: false
+amount_max: null
+expiry_note: >-
+  Applications were due by January 12th, 2026; the cohort ran Thursday,
+  January 22nd, 2026 to Friday, February 27th, 2026.
+after_credits: >-
+  Following the program, participants will be able to explore raising
+  capital or pursue another avenue, internally or externally to OpenAI.
+partner_gate: none
+stages: [idea, pre-seed]
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  No credit amount is published: the FAQ names credits only as an
+  unquantified 'additional benefit'. The page is an announcement for a
+  specific cohort and carries the banner 'Update on January 12, 2026:
+  Applications are now closed.' - recorded as closed-to-new rather than
+  discontinued because OpenAI describes Grove as 'the starting point of a
+  long-term network' and gives no end date for the program itself. The
+  program is explicitly for pre-idea individuals, not companies: 'OpenAI
+  Grove is designed for founders at the very earliest stages - whether
+  you're pre-idea, just starting out, or preparing to launch a company.'
+
+# Application
+application_mechanism: self-serve-form
+obligations:
+  - >-
+      Required in-person sessions in San Francisco during the first and last
+      week of the program (travel costs covered by OpenAI)
+  - Approximately 4-6 hours a week time commitment
+
+# Status
+status: closed-to-new
+status_basis: asserted
+status_quote: Applications are now closed.
+fetch_note: >-
+  200 and fully rendered via curl with a browser UA (unlike
+  openai.com/startups/, this path is not behind the Cloudflare challenge).
+  Full announcement body and all seven FAQ items were present and read.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: >-
+  we will offer additional benefits such as credits and introductions to
+  raise capital
+bot_blocked: false

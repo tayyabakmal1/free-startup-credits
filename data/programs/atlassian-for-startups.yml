@@ -1,0 +1,77 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: atlassian-for-startups
+company: Atlassian
+program: Atlassian for Startups
+category: productivity
+tags: [jira, confluence, bitbucket, loom, project-management]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://www.atlassian.com"
+apply_url: "https://www.atlassian.com/software/views/startups-request"
+official_source: "https://www.atlassian.com/software/startups"
+
+# Benefit
+benefit_type: free-plan
+benefit_summary: >-
+  Premium editions of Atlassian Cloud products at $0 for 12 months for up
+  to 50 users, with Jira Product Discovery limited to 10 creator seats and
+  unlimited contributors.
+amount_is_published: false
+amount_max: null
+duration_months: 12
+expiry_note: Page states the offer covers one 12-month period.
+after_credits: >-
+  Before the end of your 12-month offer period, you will have the option to
+  renew or cancel; paid upgrade options apply if user limits are exceeded.
+excludes:
+  - Existing Atlassian paid customers
+  - Companies that have raised more than US$10 million in external funding
+partner_gate: required-soft
+funding_max_usd: 10000000
+stages: [pre-seed, seed, series-a]
+new_customer_only: true
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  All three criteria quoted verbatim: "Your company is not an existing
+  Atlassian paid customer", "VC funded or associated with a partner
+  accelerator and/or incubator", "Have not raised more than US$10 million
+  in external funding". The prior hint of "partner-only" is only partly
+  right: partner accelerator/incubator association is one of two accepted
+  routes, VC funding being the other, so partner_gate is required-soft
+  rather than required-hard. Because either route satisfies the gate,
+  funding_required, requires_vc_backing and accelerator_required are each
+  left unknown. The $10M figure is a CEILING (funding_max_usd). Covered
+  products listed as Jira Premium, Confluence Premium, Loom Business + AI,
+  Jira Service Management, Jira Product Discovery Premium and Bitbucket
+  Premium, at up to 50 seats each (10 seats for Jira Service Management).
+
+# Application
+application_mechanism: self-serve-form
+obligations:
+  - >-
+      May be asked to provide proof of funding (e.g., Crunchbase or Pitchbook
+      profile)
+
+# Status
+status: active-self-serve
+status_basis: inferred
+fetch_note: >-
+  200 and rendered on two fetches; eligibility list and offer sentence
+  consistent. Apply URL
+  https://www.atlassian.com/software/views/startups-request returned 200
+  with the request form rendered client-side, so form fields were not
+  inspectable.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: >-
+  you get included Atlassian Cloud products for $0 for 12 months for up to
+  50 users
+bot_blocked: false

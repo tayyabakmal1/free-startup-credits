@@ -1,0 +1,57 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Copyright (c) 2026 Tayyab Akmal and the free-startup-credits contributors.
+
+SCOPE
+-----
+This license covers the CURATED DATASET in this repository:
+
+    data/      the per-program YAML records and taxonomy files
+    api/       the generated programs.json, programs.csv and index.json
+    schema/    the JSON Schema describing the records
+
+The software that builds and validates this dataset (scripts/, templates/,
+.github/, Makefile) is licensed separately under the MIT License. See ../LICENSE.
+
+GRANT
+-----
+You are free to:
+
+  Share  -- copy and redistribute the material in any medium or format
+  Adapt  -- remix, transform, and build upon the material
+           for any purpose, even commercially.
+
+Under the following term:
+
+  Attribution -- You must give appropriate credit, provide a link to the
+  license, and indicate if changes were made. You may do so in any reasonable
+  manner, but not in any way that suggests the licensor endorses you or your
+  use.
+
+No additional restrictions -- You may not apply legal terms or technological
+measures that legally restrict others from doing anything the license permits.
+
+The full legal code is at:
+https://creativecommons.org/licenses/by/4.0/legalcode
+
+SUGGESTED ATTRIBUTION STRING
+----------------------------
+    Data from free-startup-credits (https://github.com/tayyabakmal1/free-startup-credits),
+    licensed CC BY 4.0.
+
+NOTICE ON QUOTED VENDOR TEXT
+----------------------------
+Records contain short quoted spans from vendor pages in the `evidence_quote`,
+`status_quote`, `regions_quote` and `tiers[].quote` fields. These are limited to
+the shortest text necessary to substantiate a factual claim, are always
+attributed to the source URL in `official_source`, and remain the property of
+their respective owners. Company and program names are used nominatively to
+identify the programs described. This dataset is not affiliated with, endorsed
+by, or sponsored by any vendor listed.
+
+NO WARRANTY
+-----------
+Program terms change without notice. This dataset is provided as-is, with a
+`last_verified` date and a `verification_level` on every record precisely so you
+can judge how much to trust each one. Always confirm terms with the vendor
+before making a decision.

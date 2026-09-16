@@ -1,0 +1,72 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: stripe-atlas
+company: Stripe
+program: Stripe Atlas
+category: legal
+tags: [incorporation, delaware-c-corp, 83b, safe]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://stripe.com"
+apply_url: "https://stripe.com/atlas"
+official_source: "https://stripe.com/atlas"
+
+# Benefit
+benefit_type: bundle
+benefit_summary: >-
+  Paid Delaware incorporation service ($500 one-time, $100/year thereafter)
+  that includes $2,500 in Stripe product credits for the first year after
+  incorporation and access to over $50,000 in third-party partner
+  discounts.
+amount_is_published: true
+amount_max: 2500
+currency: USD
+duration_months: 12
+expiry_note: $2,500 in Stripe product credits for your first year after incorporation
+after_credits: >-
+  $100 annually after your first year (renews automatically) for registered
+  agent services.
+partner_gate: none
+partners: [Google, Xero, OAI]
+stages: [idea, pre-seed]
+age_basis: incorporation
+requires_incorporation: false
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  Could not inspect: the itemised partner perk list behind stripe.com/atlas
+  'Perks' and the exact terms of the $2,500 Stripe credit (which Stripe
+  products it applies to) are not on this page. amount_max records only the
+  $2,500 Stripe product credit; the '$50,000 in discounts' is third-party
+  partner discount value and is deliberately not summed into it. Note this
+  is a paid product, not a free credits program: $500 one-time setup and
+  $100 annually after the first year. Independently re-audited: a second
+  reviewer opened the vendor page and checked the quote, amount and source.
+
+# Application
+application_mechanism: self-serve-form
+approval_time: >-
+  Within two business days, you'll be incorporated and ready to bank,
+  fundraise, and accept payments.
+obligations:
+  - >-
+      $500 one-time setup fee (includes government fees and your first year of
+      registered agent services)
+
+# Status
+status: active-self-serve
+status_basis: inferred
+status_quote: Create a new Stripe account today and get started in minutes.
+fetch_note: >-
+  200 and rendered fully, including the pricing block listing the $2,500
+  credit and $500/$100 fees.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: $2,500 in Stripe product credits for your first year after incorporation
+bot_blocked: false

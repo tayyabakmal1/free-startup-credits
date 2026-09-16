@@ -1,0 +1,71 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+slug: hubspot-for-startups
+company: HubSpot
+program: HubSpot for Startups
+category: marketing
+tags:
+- crm
+- marketing-automation
+- sales
+homepage: https://www.hubspot.com/
+apply_url: https://app.hubspot.com/signup-hubspot/hubspot-for-startups
+official_source: https://www.hubspot.com/startups
+benefit_type: discount
+benefit_summary: 'Tiered discount on net-new Professional or Enterprise HubSpot products:
+  90% off year one for VC-funded or partner-affiliated startups, or 30% off year one via approved
+  entrepreneurial organizations, tapering in later years.'
+amount_is_published: false
+amount_max: null
+after_credits: 'Tier one: "Get 50% off in the second year and 25% off in year three". Tier
+  two: "Get 15% off year two". Standard pricing applies afterwards.'
+excludes:
+- Series B and later companies (for the 90% tier)
+- Products other than net-new Professional or Enterprise level products
+tiers:
+- name: 90% off year one
+  quote: Raised Pre-seed, Seed or Series A funding, but not Series B or later
+  partner_gate: required-soft
+  notes: 'Also requires being "Affiliated with an approved HubSpot for Startups partner or
+    have raised verified venture funding." Follow-on years: "Get 50% off in the second year
+    and 25% off in year three".'
+- name: 30% off year one
+  quote: Associated with one of our approved entrepreneurial organizations
+  partner_gate: required-hard
+  notes: 'Follow-on year: "Get 15% off year two".'
+partner_gate: required-soft
+stages:
+- pre-seed
+- seed
+- series-a
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: 'The page states "HubSpot for Startups pricing is applicable to net-new
+  Professional or Enterprise level products only." It describes funding being verified via
+  Crunchbase or Pitchbook, but I could not open a standalone terms/eligibility page (404),
+  so the full list of approved partners and entrepreneurial organizations, annual-commitment
+  terms, and any country restrictions were not inspectable. The 90% and 30% year-one headline
+  figures appear as tier labels on the marketing page; only the year-two/year-three sentences
+  were recoverable as clean verbatim spans. Multi-year structure quoted from the page: "Get
+  50% off in the second year and 25% off in year three" for the 90% tier, and "Get 15% off
+  year two" for the 30% tier. Access requires being "Affiliated with an approved HubSpot for
+  Startups partner or have raised verified venture funding". Pricing applies to net-new Professional
+  or Enterprise products only. Multi-year structure quoted from the page: "Get 50% off in
+  the second year and 25% off in year three" for the 90% tier, and "Get 15% off year two"
+  for the 30% tier. Access requires being "Affiliated with an approved HubSpot for Startups
+  partner or have raised verified venture funding". Pricing applies to net-new Professional
+  or Enterprise products only.'
+application_mechanism: self-serve-form
+status: active-partner-only
+status_basis: asserted
+status_quote: Affiliated with an approved HubSpot for Startups partner or have raised verified
+  venture funding.
+fetch_note: https://www.hubspot.com/startups fetched 200 and rendered the tier and eligibility
+  copy. A dedicated eligibility subpage at https://www.hubspot.com/startups/eligibility returned
+  404, so no separate terms page was inspectable.
+last_verified: '2026-09-16'
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: Raised Pre-seed, Seed or Series A funding, but not Series B or later
+bot_blocked: false
+requires_vc_backing: true

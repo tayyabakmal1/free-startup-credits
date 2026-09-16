@@ -1,0 +1,68 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: databricks-for-startups
+company: Databricks
+program: Databricks for Startups
+category: databases
+tags: [data-platform, lakehouse, ai, neon, postgres]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://www.databricks.com"
+apply_url: "https://www.databricks.com/product/startups"
+official_source: "https://www.databricks.com/product/startups"
+
+# Benefit
+benefit_type: credit
+benefit_summary: >-
+  Up to $200K in credits split across Databricks and Neon, plus technical
+  guidance and go-to-market access. Credit duration is not published.
+amount_is_published: true
+amount_max: 200000
+currency: USD
+partner_gate: none
+stages: [pre-seed, seed, series-a]
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  The target URL https://www.databricks.com/startups returns 404; the live
+  program page is https://www.databricks.com/product/startups. That page
+  publishes the credit figure but NO eligibility criteria at all — no age,
+  funding, VC-backing, employee or regional rule — and instead says "Not
+  sure if you qualify? Apply or ask your investor". The stages listed here
+  come from Databricks' own announcement post
+  https://www.databricks.com/blog/announcing-new-databricks-startup-program
+  (16 June 2026), which describes "Early-stage, venture-backed startups"
+  that "recently raised institutional funding (pre-seed through Series A)".
+  Because that wording is on the blog and not on the program page,
+  requires_vc_backing and funding_required are left unknown rather than set
+  true. Credit duration and any expiry are published nowhere I could find.
+  The apply button points to a Google Sites form
+  (sites.google.com/databricks.com/startup-program-apply) carrying itm_
+  tracking parameters, so apply_url is set to the clean program page
+  instead. Independently re-audited: a second reviewer opened the vendor
+  page and checked the quote, amount and source.
+
+# Application
+application_mechanism: self-serve-form
+requires_sales_call: false
+
+# Status
+status: active-self-serve
+status_basis: inferred
+fetch_note: >-
+  https://www.databricks.com/startups returned 404.
+  https://www.databricks.com/product/startups returned 200 and rendered but
+  contains no eligibility criteria and no FAQ. The announcement blog also
+  returned 200 and rendered.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: >-
+  Qualifying startups can receive up to $200K in credits for Databricks and
+  Neon.
+bot_blocked: false

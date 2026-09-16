@@ -1,0 +1,93 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: civo-startup-program
+company: Civo
+program: Civo Startup Program
+category: cloud
+tags: [kubernetes, compute, managed-databases]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://www.civo.com"
+apply_url: "https://www.civo.com/startup-program#contact"
+official_source: "https://www.civo.com/startup-program"
+
+# Benefit
+benefit_type: credit
+benefit_summary: >-
+  Three-stage cloud credit program offering up to $1,000 (Launchpad), up to
+  $10,000 (Propel) or up to $50,000 (Elevate) in Civo credits, with
+  technical support and community access; the program runs 6-12 months
+  depending on stage.
+amount_is_published: true
+amount_max: 50000
+currency: USD
+expiry_note: >-
+  The program lasts for 6-12 months, depending on the stage you're accepted
+  into.
+excludes: ["GPU instances are not included in the program's credit allocation."]
+stacking_notes: >-
+  'Are there any additional costs or fees associated with the program?' -
+  'No, there are no additional costs or fees associated with the program.'
+tiers:
+  - name: Launchpad
+    amount_max: 1000
+    quote: >-
+      For early-stage startups, Launchpad provides up to $1,000 in cloud
+      credits, technical support, and community access to help you get off the
+      ground.
+    partner_gate: unknown
+    notes: Earliest stage.
+  - name: Propel
+    amount_max: 10000
+    quote: >-
+      For startups that have achieved some traction, Propel offers up to
+      $10,000 in cloud credits, dedicated technical support, and access to
+      Civo's network of partners and investors to help you scale.
+    partner_gate: unknown
+    notes: "Requires 'some traction'; no metric published."
+  - name: Elevate
+    amount_max: 50000
+    quote: >-
+      For established startups looking to scale rapidly, Elevate provides up to
+      $50,000 in cloud credits, personalized technical support, and strategic
+      guidance from Civo's experienced team.
+    partner_gate: unknown
+    notes: >-
+      Quote trimmed at 200 chars; full sentence continues 'to help you achieve
+      your goals.'
+stages: [pre-seed, seed, series-a]
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  No funding cap, company-age cap, headcount cap or region restriction is
+  published. The FAQ declines to state which stage you get: 'The amount of
+  cloud credit varies depending on the stage of the program you're accepted
+  into.' Duration is given as a range (6-12 months) rather than a fixed
+  term, so duration_months is left null. Independently re-audited: a second
+  reviewer opened the vendor page and checked the quote, amount and source.
+
+# Application
+application_mechanism: self-serve-form
+
+# Status
+status: active-self-serve
+status_basis: inferred
+status_quote: >-
+  To apply, simply fill out our online application form, which includes
+  providing basic information about your startup.
+fetch_note: >-
+  200 and rendered for both https://www.civo.com/startups and
+  https://www.civo.com/startup-program; FAQ answers are present in the
+  server-rendered HTML.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: >-
+  We back your ambition with up to $50,000 in free credits, dedicated
+  support, and a community of peers who get it.
+bot_blocked: false

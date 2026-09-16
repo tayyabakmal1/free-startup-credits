@@ -1,0 +1,74 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: elevenlabs-grants
+company: ElevenLabs
+program: ElevenLabs Grants
+category: ai
+tags: [voice-ai, tts, agents, grants]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://elevenlabs.io"
+apply_url: "https://elevenlabs.io/grants"
+official_source: "https://elevenlabs.io/startup-grants"
+
+# Benefit
+benefit_type: usage-allowance
+benefit_summary: >-
+  Scale plan for 12 months with 33,000,000 characters, which the page
+  describes as over 680 hours of Agents usage and more than $5,500+ in
+  value. Converts to the Free plan at the end of the term.
+amount_is_published: true
+amount_max: 5500
+currency: USD
+duration_months: 12
+expiry_note: >-
+  Ends at 12 months or when the allocated characters are used, whichever
+  comes first.
+after_credits: >-
+  After your grant period is over or once you have 10,000 credits left,
+  your plan will automatically convert to a Free plan, unless you have
+  selected otherwise.
+excludes:
+  - Agencies or consulting firms
+  - Existing enterprise customers
+  - Short-term or one-off projects
+  - Projects built for children aged 18 or under
+  - Applicants without a business or monetization strategy
+stacking_notes: One application per company.
+partner_gate: none
+stages: [idea, pre-seed, seed]
+employees_max: 25
+requires_company_email: true
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  Employee cap is worded as a strict inequality: "open to all startups or
+  companies with less than 25 employees at the time of receiving the
+  application" — so 25 is the stated threshold, not an inclusive ceiling.
+  Business-email requirement is explicit: "Only applications with valid
+  business emails will be considered." No geographic restriction is stated
+  anywhere on the page. Independently re-audited: a second reviewer opened
+  the vendor page and checked the quote, amount and source.
+
+# Application
+application_mechanism: self-serve-form
+requires_sales_call: false
+approval_time: Within one week of application
+
+# Status
+status: active-self-serve
+status_basis: asserted
+status_quote: Applications are reviewed on a rolling basis with no deadline.
+fetch_note: >-
+  200 and rendered; full page including eligibility and post-grant sections
+  read.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: More than $5,500+ in value.
+bot_blocked: false

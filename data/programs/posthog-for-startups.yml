@@ -1,0 +1,73 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: posthog-for-startups
+company: PostHog
+program: PostHog for Startups
+category: analytics
+tags: [product-analytics, session-replay, feature-flags, error-tracking]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://posthog.com"
+apply_url: "https://app.posthog.com/startups"
+official_source: "https://posthog.com/startups"
+
+# Benefit
+benefit_type: credit
+benefit_summary: >-
+  $50,000 in PostHog platform credits valid for 12 months, plus merch and
+  separate partner discounts (Incident.io, Speakeasy, Chroma, Depot) the
+  page values at $12,000.
+amount_is_published: true
+amount_max: 50000
+currency: USD
+duration_months: 12
+expiry_note: Credits are valid for 12 months.
+excludes:
+  - PostHog Desktop
+  - PostHog Slack app
+  - Replay Vision
+  - PostHog AI
+  - Inbox
+  - applications from personal email addresses, like gmail.com or outlook.com
+stacking_notes: Requires signing up to a paid (usage-billed) PostHog plan before applying.
+partner_gate: none
+partners: [Incident.io, Speakeasy, Chroma, Depot]
+funding_max_usd: 5000000
+stages: [idea, pre-seed, seed]
+company_age_max_years: 2
+requires_company_email: true
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  An extra eligibility clause beyond funding/age: 'you need to have signed
+  up any time from Jan 1st 2023 onwards'. From September 14, 2026 credits
+  no longer apply to PostHog AI tooling. The on-page comparison table lists
+  the same criteria (<$5m in funding, <2 years old, Company email domain),
+  so marketing and FAQ agree. The FAQ item 'What happens at the end of the
+  12 months?' is a JS accordion with no server-side answer and was not
+  inspectable. Independently re-audited: a second reviewer opened the
+  vendor page and checked the quote, amount and source.
+
+# Application
+application_mechanism: in-product
+
+# Status
+status: active-self-serve
+status_basis: asserted
+status_quote: >-
+  Sign up to a paid plan in PostHog (you are only charged for usage) and
+  complete the startups application form from an account that uses your
+  company email address.
+fetch_note: >-
+  200 and rendered. FAQ accordion bodies are empty in the DOM but the full
+  answers were recovered verbatim from the page's embedded FAQPage JSON-LD.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: $50,000 in PostHog credits for 12 months
+bot_blocked: false

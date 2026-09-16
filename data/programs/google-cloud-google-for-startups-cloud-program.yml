@@ -1,0 +1,100 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: google-cloud-google-for-startups-cloud-program
+company: Google Cloud
+program: Google for Startups Cloud Program
+category: cloud
+tags: [gcp, firebase, tiered, ai-startups]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://startup.google.com/cloud/"
+apply_url: "https://cloud.google.com/startup/apply"
+official_source: "https://startup.google.com/cloud/"
+
+# Benefit
+benefit_type: credit
+benefit_summary: >-
+  Start tier: up to $2,000 USD in credits over a year for startups not yet
+  backed by equity funding. Scale tier: year-one Google Cloud and Firebase
+  usage covered with credits up to $100,000, plus 20% of year-two usage
+  covered up to an additional $100,000.
+amount_is_published: true
+amount_max: 100000
+currency: USD
+duration_months: 12
+after_credits: >-
+  plus 20% of Google Cloud and Firebase usage costs covered in year two (up
+  to an additional $100,000 in credits).*
+tiers:
+  - name: Start
+    quote: "$2,000 USD in credits*"
+    amount_max: 2000
+    partner_gate: none
+    notes: >-
+      For startups 'not yet backed with startup equity funding'; credits are
+      'to use over a year'.
+  - name: Scale
+    quote: Google Cloud and Firebase usage covered with credits up to $100,000
+    amount_max: 100000
+    partner_gate: unknown
+    notes: >-
+      For startups 'backed with startup equity funding'. Year two adds 20% of
+      usage costs covered, up to an additional $100,000. Age limit for Scale is
+      10 years.
+  - name: AI-first startups
+    quote: You can receive up to $350,000 USD in cloud cost coverage
+    amount_max: 350000
+    partner_gate: unknown
+    notes: >-
+      Stated as cloud cost coverage, not a flat credit grant; detailed terms
+      are on a separate linked page that was not inspected.
+
+# Eligibility. Tri-state gates are written only when the vendor states
+# them. An omitted gate reads as `unknown` and keeps this entry out of
+# the matching collection, which is the intended behaviour.
+funding_required: false
+open_to_bootstrapped: true
+requires_vc_backing: false
+stages: [idea, pre-seed, seed, series-a, series-b]
+company_age_max_years: 5
+requires_company_email: true
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  amount_max is the Scale tier YEAR ONE figure only; year two is separate
+  and percentage-based (see after_credits). The page's headline 'up to
+  $200,000 (up to $350,000 for AI startups) over your first two years' is a
+  two-year sum and is deliberately not used as amount_max. The AI-first
+  figure of $350,000 is published on this page but its detailed terms live
+  on a separate 'Learn more here' page that was not inspected. Company age
+  is worded 'Founded within 5 years of applying to the program (or 10 years
+  for Scale)' — 'founded' is not defined as incorporation, so age_basis is
+  unknown; top-level company_age_max_years uses the Start/general 5-year
+  figure. The page says 'Here are some of the basic requirements', so the
+  eligibility list is explicitly non-exhaustive and partner_gate is left
+  unknown. Independently re-audited: a second reviewer opened the vendor
+  page and checked the quote, amount and source.
+
+# Application
+application_mechanism: self-serve-form
+
+# Status
+status: active-self-serve
+status_basis: inferred
+fetch_note: >-
+  HTTP 200 via curl at https://startup.google.com/cloud/ (canonical adds
+  trailing slash); full page text rendered server-side. The on-page apply
+  link carried utm_ parameters which were stripped;
+  https://cloud.google.com/startup/apply returns 200 but redirects to a
+  Google accounts sign-in wall, so the application form itself was not
+  inspected.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: Google Cloud and Firebase usage covered with credits up to $100,000
+bot_blocked: false

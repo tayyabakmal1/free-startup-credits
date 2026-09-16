@@ -1,0 +1,88 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+slug: mongodb-for-startups
+company: MongoDB
+program: MongoDB for Startups
+category: databases
+tags:
+- database
+- atlas
+- vector-search
+- voyage-ai
+homepage: https://www.mongodb.com
+apply_url: https://www.mongodb.com/solutions/startups
+official_source: https://www.mongodb.com/solutions/startups
+benefit_type: credit
+benefit_summary: Atlas credits and Voyage AI tokens delivered as a promo code, in four stage-based
+  tiers (Inspire, Grow, Innovate, Scale). No credit figure is published for any tier.
+amount_is_published: false
+amount_max: null
+duration_months: 12
+expiry_note: Startups have 12 months to activate their promo code. Once activated, startups
+  have 12 months to use your Atlas credits. Extensions are considered case-by-case.
+excludes:
+- development shops and agencies
+- startups previously accepted into the MongoDB for Startups program
+stacking_notes: 'Preferred route is a referral: "We work closely with VCs, accelerators, and
+  incubators. Please ask your VC or accelerator partner to refer you." Direct application
+  is still available: "If you are not involved with a VC, accelerator, or incubator, please
+  apply above on this page."'
+tiers:
+- name: Inspire
+  quote: Inspire For bootstrapped startups Kickstart your journey with baseline credits to
+    validate your idea and bring your product to life.
+  notes: No credit amount published for this tier.
+  partner_gate: improves-offer
+- name: Grow
+  quote: Grow For early-funded startups Access expanded credits and hands-on technical support
+    to help you strengthen your foundation and accelerate early growth.
+  notes: No credit amount published for this tier.
+  partner_gate: improves-offer
+- name: Innovate
+  quote: Innovate For rising VC-backed startups Unlock additional credits and access to expanded
+    expertise to accelerate product innovation and adoption.
+  notes: No credit amount published for this tier.
+  partner_gate: improves-offer
+- name: Scale
+  quote: Scale For rapidly scaling startups Receive maximum credits, priority support, and
+    expert guidance to help your startup scale globally.
+  notes: No credit amount published for this tier.
+  partner_gate: improves-offer
+partner_gate: improves-offer
+stages:
+- idea
+- pre-seed
+- seed
+- series-a
+company_age_max_years: 7
+new_customer_only: true
+requires_company_email: true
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: 'The page names four tiers and describes each by stage but publishes no
+  credit amount for any of them, so no per-tier figure can be recorded. Stated criteria are
+  explicitly a minimum for the base tier only: "At a minimum, to qualify for our base tier,
+  we look for startups that are..." — criteria for the higher tiers are not published. No
+  credit amount is published for any tier. Also verbatim: "New participants: Not previously
+  accepted into the MongoDB for Startups program" and "Established online: Have an active
+  company website and LinkedIn profile". A direct path exists: "If you are not involved with
+  a VC, accelerator, or incubator, please apply above on this page." No credit amount is published
+  for any tier. Also verbatim: "New participants: Not previously accepted into the MongoDB
+  for Startups program" and "Established online: Have an active company website and LinkedIn
+  profile". A direct path exists: "If you are not involved with a VC, accelerator, or incubator,
+  please apply above on this page."'
+application_mechanism: self-serve-form
+approval_time: If you haven't heard back from us after five business days please contact us.
+obligations:
+- Have an active company website and LinkedIn profile
+status: active-amount-undisclosed
+status_basis: inferred
+status_quote: Once you are accepted into the program, you will receive a unique promo code
+  in your welcome email.
+fetch_note: 200 and rendered via curl; full page including the four tier cards and every FAQ
+  answer extracted, plus the embedded application form fields.
+last_verified: '2026-09-16'
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: 'Early-stage: Less than 7 years old and Series A or earlier'
+bot_blocked: false

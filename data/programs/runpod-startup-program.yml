@@ -1,0 +1,87 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: runpod-startup-program
+company: Runpod
+program: Runpod Startup Program
+category: ai
+tags: [gpu, compute, ai-infrastructure]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://www.runpod.io"
+apply_url: "https://www.runpod.io/startup-program"
+official_source: "https://www.runpod.io/startup-program"
+
+# Benefit
+benefit_type: bundle
+benefit_summary: >-
+  Two tiers: Growth Tier adds $25,000 in bonus credits on a $50,000 upfront
+  commitment under a 12-month agreement; Starter Tier grants $1,000 in
+  credits with self-serve onboarding.
+amount_is_published: true
+amount_max: 25000
+currency: USD
+expiry_note: >-
+  Growth Tier credits are loaded alongside the deposit under a 12-month
+  agreement; the page states there is no credit reload and the bonus is
+  one-time.
+tiers:
+  - name: Growth Tier
+    amount_max: 25000
+    quote: >-
+      Growth Tier members commit $50,000 upfront and receive $25,000 in bonus
+      credits — giving you $75,000 total to start.
+    partner_gate: none
+    notes: >-
+      12-month agreement. Page states best fit is "Series Seed–B+ startups
+      spending (or ready to spend) $5K–$25K+/mo on GPU infrastructure." The
+      $75,000 figure includes the startup's own $50,000 deposit; only $25,000
+      is granted.
+  - name: Starter Tier
+    amount_max: 1000
+    quote: Starter Tier members receive $1,000 in credits to get started on the platform.
+    partner_gate: none
+    notes: >-
+      Page states best fit is "Pre-Series A startups with working products and
+      near-term GPU needs."
+partner_gate: none
+stages: [pre-seed, seed, series-a, series-b]
+new_customer_only: false
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  No hard eligibility gate is published. The FAQ hedges on funding:
+  "Venture backing is strongly preferred... That said, we review every
+  application holistically" while also directing pre-funding/bootstrapped
+  teams to self-serve pay-as-you-go instead, so funding_required and
+  open_to_bootstrapped are left unknown. Existing customers are not
+  categorically excluded: "The Runpod Startup Program is primarily designed
+  for new customers onboarding for the first time. If you're an existing
+  customer and your current spend is below the Growth Tier threshold, you
+  may still be eligible." No company-age, headcount, region or
+  incorporation criteria appear anywhere on the page. Independently
+  re-audited: a second reviewer opened the vendor page and checked the
+  quote, amount and source.
+
+# Application
+application_mechanism: self-serve-form
+
+# Status
+status: active-self-serve
+status_basis: inferred
+fetch_note: >-
+  200 and rendered (curl, full HTML including FAQ accordion text). Apply is
+  an on-page "Apply now" CTA; no separate application URL exists in the
+  page markup.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: >-
+  Growth Tier members commit $50,000 upfront and receive $25,000 in bonus
+  credits — giving you $75,000 total to start. Starter Tier members receive
+  $1,000 in credits to get started on the platform.
+bot_blocked: false

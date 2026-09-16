@@ -1,0 +1,97 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: linear-for-startups
+company: Linear
+program: Linear for startups
+category: productivity
+tags: [project-management, partner-gated, business-plan]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://linear.app"
+apply_url: "https://linear.app/startups"
+official_source: "https://linear.app/startups"
+
+# Benefit
+benefit_type: free-plan
+benefit_summary: >-
+  Free access to Linear's Business plan for startups affiliated with an
+  official Linear partner; valid only for non-paying Linear users with
+  fewer than 50 employees, redeemed through a partner link or code.
+amount_is_published: false
+amount_max: null
+after_credits: >-
+  When your free period ends, your workspace moves to Linear's free plan
+  unless you choose to upgrade. You keep all of your data and can pick a
+  paid plan at any time.
+excludes:
+  - Paying Linear users
+  - Companies with 50 or more employees
+  - Startups with no official Linear partner affiliation
+stacking_notes: >-
+  To redeem you must be an admin of your Linear workspace and logged in;
+  follow the partner's redemption link or enter the partner code when
+  prompted.
+accelerator_required: false
+requires_vc_backing: false
+partner_gate: required-hard
+partners:
+  - a16z
+  - Accel
+  - Sequoia
+  - Index Ventures
+  - Kleiner Perkins
+  - NEA
+  - General Catalyst
+  - Greylock
+  - Bessemer Venture Partners
+  - Thrive Capital
+  - First Round Capital
+  - 500 Global
+  - Techstars
+  - Antler
+  - STATION F
+  - On Deck
+  - South Park Commons
+  - Stripe Atlas
+  - Mercury
+  - Brex
+  - Clerky
+  - Ramp
+employees_max: 50
+new_customer_only: true
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  Linear does NOT state the length of the free period anywhere on the page
+  - it refers only to "your free period" - so duration_months is left null.
+  The employee cap is worded "less than 50 employees" / "fewer than 50
+  employees", recorded here as employees_max 50. Partners include venture
+  capital firms, startup accelerators and startup communities (455 listed,
+  including non-VC entities such as Stripe Atlas, Mercury, Brex, Clerky and
+  Ramp), so partner affiliation does not necessarily mean VC backing.
+
+# Application
+application_mechanism: partner-code
+
+# Status
+status: active-partner-only
+status_basis: asserted
+status_quote: >-
+  Only companies affiliated with an official Linear partner can participate
+  in the program.
+fetch_note: >-
+  200 and rendered; the full "Questions and answers" section, the partner
+  directory and the partner application form were all present in the server
+  HTML and read directly.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: >-
+  Startups affiliated with a partner in Linear's startup program receive
+  free access to Linear's Business plan.
+bot_blocked: false

@@ -1,0 +1,63 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+slug: nvidia-inception
+company: NVIDIA
+program: NVIDIA Inception
+category: ecosystem
+tags:
+- gpu
+- ai
+- hardware
+- accelerator
+homepage: https://www.nvidia.com
+apply_url: https://www.nvidia.com/en-us/startups/
+official_source: https://www.nvidia.com/en-us/startups/
+benefit_type: bundle
+benefit_summary: Free membership bundling free cloud credits from NVIDIA and partners, preferred
+  pricing on select NVIDIA hardware and software, free self-paced technical courses, and VC
+  network exposure. No dollar amounts published.
+amount_is_published: false
+amount_max: null
+excludes:
+- consulting and outsourced development firms
+- cryptocurrency-associated companies
+- cloud service providers
+- resellers and distributors
+- public companies
+partner_gate: none
+stages:
+- any
+company_age_max_years: 10
+age_basis: incorporation
+requires_incorporation: true
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: 'Age cap and incorporation requirement confirmed on the FAQ page (https://www.nvidia.com/en-us/startups/faq/):
+  "Members must employ at least one developer, maintain a working website, be officially incorporated,
+  and be less than 10 years old." Excluded categories are listed there too. The page states
+  revenue is not required; it makes no affirmative statement about funding being required
+  or not, so funding gates are left unknown. No dollar value is attached to the cloud credits
+  anywhere on the page. Benefits quoted verbatim: "Members benefit from preferred pricing
+  on a subset of our enterprise-grade GPUs." and "Access free cloud credits from NVIDIA and
+  partners". Funding is not an eligibility condition - the FAQ states "Generating revenue
+  isn''t required for membership". Excluded: consulting and outsourced development firms,
+  cryptocurrency companies, cloud service providers, resellers and distributors, public companies.
+  Benefits quoted verbatim: "Members benefit from preferred pricing on a subset of our enterprise-grade
+  GPUs." and "Access free cloud credits from NVIDIA and partners". Funding is not an eligibility
+  condition - the FAQ states "Generating revenue isn''t required for membership". Excluded:
+  consulting and outsourced development firms, cryptocurrency companies, cloud service providers,
+  resellers and distributors, public companies.'
+application_mechanism: self-serve-form
+requires_sales_call: false
+status: active-self-serve
+status_basis: asserted
+status_quote: There are no application fees, deadlines, or cohorts.
+fetch_note: 200 and rendered for https://www.nvidia.com/en-us/startups/ and https://www.nvidia.com/en-us/startups/faq/.
+  Both read in full including FAQ content.
+last_verified: '2026-09-16'
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: Members must employ at least one developer, maintain a working website, be
+  officially incorporated, and be less than 10 years old.
+bot_blocked: false
+funding_required: false

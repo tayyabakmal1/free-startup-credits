@@ -1,0 +1,17 @@
+# Generated output and the rules that protect the data. Requires branch
+# protection with "Require review from Code Owners" enabled -- CODEOWNERS
+# alone suggests reviewers and blocks nothing.
+
+/schema/                 @tayyabakmal1
+/scripts/                @tayyabakmal1
+/templates/              @tayyabakmal1
+/.github/                @tayyabakmal1
+/README.md               @tayyabakmal1
+/categories/             @tayyabakmal1
+/collections/            @tayyabakmal1
+/api/                    @tayyabakmal1
+/data/categories.yml     @tayyabakmal1
+/data/regions.yml        @tayyabakmal1
+/data/collections.yml    @tayyabakmal1
+/data/startupflow.yml    @tayyabakmal1
+/docs/verification-policy.md @tayyabakmal1

@@ -1,0 +1,37 @@
+name: Traffic snapshot
+
+# GitHub discards referrer and view data after 14 days. Without this running
+# BEFORE launch, there is no way to tell afterwards which channel actually
+# worked -- the launch becomes unmeasurable after a fortnight.
+on:
+  schedule:
+    - cron: "0 5 * * *"   # daily, ahead of the Monday link/freshness jobs
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  snapshot:
+    if: github.repository == 'tayyabakmal1/free-startup-credits'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - uses: actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38 # v5.4.0
+        with:
+          python-version: "3.12"
+
+      - name: Snapshot traffic
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: python scripts/traffic_snapshot.py | tee -a "$GITHUB_STEP_SUMMARY"
+
+      - name: Commit the history
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data-history/traffic.jsonl
+          git diff --staged --quiet || git commit -m "chore: traffic snapshot"
+          git push

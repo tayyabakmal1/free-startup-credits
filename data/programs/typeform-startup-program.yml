@@ -1,0 +1,77 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: typeform-startup-program
+company: Typeform
+program: Typeform startup program
+category: marketing
+tags: [forms, annual-discount, seed-stage]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://www.typeform.com/typeform-startups"
+apply_url: "https://tfsales.typeform.com/to/cHOQj40j"
+official_source: "https://help.typeform.com/hc/en-us/articles/360045878891-Startup-discount-at-Typeform"
+
+# Benefit
+benefit_type: discount
+benefit_summary: >-
+  75% off Typeform's Business plan for one year, available only on a yearly
+  plan, for seed-stage startups that are not already Typeform customers.
+amount_is_published: false
+amount_max: null
+duration_months: 12
+excludes:
+  - Existing / paying Typeform customers
+  - Monthly plans
+  - Plans other than Business
+stacking_notes: The discount code is only valid for our annual Business plans.
+partner_gate: none
+funding_max_usd: 1000000
+stages: [seed]
+company_age_max_years: 5
+employees_max: 50
+revenue_max_usd: 1000000
+new_customer_only: true
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  VENDOR SELF-CONTRADICTION on eligibility. The Help Center article (cited
+  as official_source) states: "Your startup must be at a seed stage. Your
+  startup must have less than $1 million in funding. Your startup must have
+  less than $1 million in lifetime revenue. Your startup must not be an
+  existing Typeform customer." The marketing landing page at
+  https://www.typeform.com/typeform-startups states a DIFFERENT and looser
+  set in its FAQ: "Not already be a paying Typeform customer / Less then
+  $5M in funding / Less then 50 employees / Less then 5 years old". Per the
+  conservative rule, funding_max_usd and revenue_max_usd are taken from the
+  Help Center ($1,000,000 each); employees_max (50) and
+  company_age_max_years (5) appear ONLY on the landing page and are
+  recorded with that caveat. Full terms and conditions live behind
+  https://admin.typeform.com/to/dwk6gt, which was not opened.
+
+# Application
+application_mechanism: self-serve-form
+
+# Status
+status: active-self-serve
+status_basis: asserted
+status_quote: >-
+  If you meet the criteria below, you can sign up to get started with
+  Typeform at 75% off our Business plan for a year.
+fetch_note: >-
+  help.typeform.com article: 200 and rendered, full criteria list read from
+  server HTML. www.typeform.com/typeform-startups: 200 and rendered, FAQ
+  accordion bodies present in server HTML. Apply link
+  https://tfsales.typeform.com/to/cHOQj40j returns 200 (the page's own href
+  carries a bare trailing '?', stripped here).
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: >-
+  you can sign up to get started with Typeform at 75% off our Business plan
+  for a year. This discount is only available on a yearly plan.
+bot_blocked: false

@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+slug: apollo-for-startups
+company: Apollo.io
+program: Apollo for Startups
+category: crm
+tags:
+- sales-engagement
+- b2b-data
+- seat-capped
+homepage: https://www.apollo.io
+apply_url: https://www.apollo.io/startups
+official_source: https://www.apollo.io/startups
+benefit_type: discount
+benefit_summary: 50% off Apollo's Basic or Professional plan for 12 months, up to 5 seats,
+  plus full B2B database access and 1:1 support.
+amount_is_published: false
+amount_max: null
+duration_months: 12
+excludes:
+- startups with an existing Apollo subscription
+partner_gate: required-soft
+stages:
+- idea
+- pre-seed
+- seed
+employees_max: 20
+new_customer_only: true
+requires_company_email: true
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: 'The page lists four eligibility criteria: fewer than 20 employees, no
+  existing Apollo subscription, a valid company domain, and affiliation with one of Apollo''s
+  startup ecosystem partners. The partner requirement reads as soft rather than hard: the
+  page adds that if your startup isn''t connected to a partner you can still apply and Apollo
+  will provide guidance. employees_max is recorded as 20 but the page''s exact wording is
+  "Fewer than 20 employees". Percentage discount is published; no dollar cap is published
+  by Apollo itself. Eligibility quoted verbatim: "your company should have fewer than 20 employees,
+  no existing Apollo subscription, a valid company domain, and an affiliation with one of
+  our startup ecosystem partners". Unaffiliated startups may still apply and be connected
+  with next steps. No funding limit is published. Eligibility quoted verbatim: "your company
+  should have fewer than 20 employees, no existing Apollo subscription, a valid company domain,
+  and an affiliation with one of our startup ecosystem partners". Unaffiliated startups may
+  still apply and be connected with next steps. No funding limit is published.'
+application_mechanism: self-serve-form
+requires_sales_call: false
+status: active-self-serve
+status_basis: asserted
+status_quote: 50% off Apollo for 1 year
+fetch_note: 200 and rendered in full, including eligibility list and application guidance.
+last_verified: '2026-09-16'
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: 50% off Apollo's Basic or Professional plan for 1 year (up to 5 seats)
+bot_blocked: false

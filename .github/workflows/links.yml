@@ -1,0 +1,118 @@
+name: Check links
+
+# Two modes, deliberately different. The weekly sweep covers the generated
+# README and collection pages as well as data/, so the handful of StartupFlow AI
+# links are monitored on exactly the same footing as every vendor link.
+#
+# On a pull request: strict, but ONLY the URLs in files that pull request changed.
+# A contributor must never be blocked because an unrelated vendor rate-limited us.
+#
+# Weekly: the whole dataset, non-blocking, filed into one rolling issue. Note that
+# a 200 OK proves nothing about whether a programme still exists -- this catches
+# dead links, not dead programmes. Human re-verification does the rest.
+on:
+  pull_request:
+    paths: ["data/**"]
+  schedule:
+    # Mondays 06:00 UTC
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  changed:
+    name: Changed files only
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0
+
+      - name: Collect changed data files
+        id: changed
+        env:
+          BASE: ${{ github.event.pull_request.base.sha }}
+          HEAD: ${{ github.event.pull_request.head.sha }}
+        run: |
+          files=$(git diff --name-only --diff-filter=ACMR "$BASE" "$HEAD" -- 'data/**/*.yml' | tr '\n' ' ')
+          echo "files=$files" >> "$GITHUB_OUTPUT"
+          echo "Changed: ${files:-none}"
+
+      - name: Check links in changed files
+        if: steps.changed.outputs.files != ''
+        uses: lycheeverse/lychee-action@82202e5e9c2f4ef1a55a3d02563e1cb6041e5332 # v2.4.1
+        with:
+          args: --config lychee.toml --extensions yml,yaml --no-progress ${{ steps.changed.outputs.files }}
+          fail: true
+
+  full:
+    name: Whole dataset
+    if: github.event_name != 'pull_request' && github.repository == 'tayyabakmal1/free-startup-credits'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - uses: actions/cache@1bd1e32a3bdc45362d1e726936510720a7c30a57 # v4.2.0
+        with:
+          path: .lycheecache
+          key: lychee-${{ github.run_id }}
+          restore-keys: lychee-
+
+      - name: Check every URL in data/
+        id: lychee
+        uses: lycheeverse/lychee-action@82202e5e9c2f4ef1a55a3d02563e1cb6041e5332 # v2.4.1
+        with:
+          args: >-
+            --config lychee.toml --extensions yml,yaml,md
+            --cache --max-cache-age 1d
+            --output lychee/out.md
+            data/ README.md categories/ collections/ docs/
+          fail: false
+
+      - name: Open or update the rolling issue
+        if: steps.lychee.outputs.exit_code != 0
+        uses: peter-evans/create-issue-from-file@e8ef132d6df98ed982188e460ebb3b5d4ef3a9cd # v5.0.1
+        with:
+          title: "Link check: unreachable URLs"
+          content-filepath: lychee/out.md
+          labels: automated, rot-report
+
+      - uses: actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38 # v5.4.0
+        with:
+          python-version: "3.12"
+
+      - run: pip install --disable-pip-version-check pyyaml
+
+      - name: Redirect audit (semantic rot)
+        # lychee reports a 200 and stops. This follows every redirect and flags
+        # cross-domain hops and landings on a site root -- the signals that
+        # actually indicate a programme was folded into a parent brand or
+        # quietly removed. Non-blocking; it feeds the weekly triage.
+        continue-on-error: true
+        run: |
+          python scripts/audit_list.py --self --json redirect-audit.json | tee redirect-audit.txt
+          {
+            echo "### Redirect audit"
+            echo ""
+            echo '```'
+            tail -n 40 redirect-audit.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Remind that a 200 is not a live programme
+        if: always()
+        run: |
+          {
+            echo "### Link check"
+            echo ""
+            echo "A \`200 OK\` means the URL resolves. It does **not** mean the"
+            echo "programme still exists: a vendor can be acquired or shut down"
+            echo "while its marketing page stays up for years."
+            echo ""
+            echo "Dead links are caught here. Dead *programmes* are caught by the"
+            echo "180-day human re-verification cycle and by founder reports."
+          } >> "$GITHUB_STEP_SUMMARY"

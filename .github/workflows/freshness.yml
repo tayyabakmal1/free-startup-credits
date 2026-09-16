@@ -1,0 +1,42 @@
+name: Re-verification queue
+
+# Keeps ONE rolling issue updated rather than opening 52 a year.
+# Staleness never fails a pull request -- only this scheduled job cares.
+on:
+  schedule:
+    # Mondays 07:00 UTC, an hour after the link check
+    - cron: "0 7 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  freshness:
+    # Without this, every fork inherits the schedule.
+    if: github.repository == 'tayyabakmal1/free-startup-credits'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - uses: actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38 # v5.4.0
+        with:
+          python-version: "3.12"
+
+      - run: pip install --disable-pip-version-check pyyaml
+
+      - name: Build the re-verification checklist
+        id: freshness
+        env:
+          FRESHNESS_OUT: freshness.md
+        run: python scripts/freshness.py
+
+      - name: Update the rolling issue
+        if: steps.freshness.outputs.total_flagged != '0'
+        uses: JasonEtco/create-an-issue@1b14a70e4d8dc185e5cc76d3bec9eab20257b2c5 # v2.9.2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          filename: .github/ISSUE_TEMPLATE/reverify.md
+          update_existing: true

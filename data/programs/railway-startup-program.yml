@@ -1,0 +1,62 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+slug: railway-startup-program
+company: Railway
+program: Startup Program
+category: hosting
+tags:
+- paas
+- deployment
+- infrastructure
+homepage: https://railway.com
+apply_url: https://startup.railway.app/
+official_source: https://railway.com/changelog/2024-04-26-startup-program
+benefit_type: credit
+benefit_summary: $5,000 in Railway credits announced in an April 2024 changelog for startups
+  with $2M-$25M raised, founded 2020 or later, and under $100 lifetime Railway spend.
+amount_is_published: true
+amount_max: 5000
+currency: USD
+excludes:
+- Companies with $100 or more in lifetime Railway platform spend
+funding_required: true
+open_to_bootstrapped: false
+partner_gate: none
+funding_min_usd: 2000000
+funding_max_usd: 25000000
+stages:
+- seed
+- series-a
+age_basis: incorporation
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: 'Criteria quoted verbatim from the changelog: "$2M - $25M in outside funding",
+  "Founded in 2020 or later", "New to Railway or less than $100 in lifetime platform spend".
+  Note the third criterion permits existing accounts under $100 lifetime spend, so this is
+  not strictly new-customer-only; new_customer_only left unknown rather than true. Could not
+  inspect: current availability. The application portal linked from the changelog, https://startup.railway.app/,
+  returns HTTP 404, and https://railway.com/startups also returns 404. Railway''s current
+  credits documentation (https://docs.railway.com/pricing/credits) describes generic promotions
+  and does not mention a startup program. Treat the offer as unconfirmed for 2026; the amount
+  and criteria are recorded only as stated in the dated 2024 announcement. AUDIT: the application
+  path is dead; only a dated changelog survives. Not treated as active. AUDIT: the application
+  path is dead; only a dated changelog survives, so this is not treated as active. Independently
+  re-audited: a second reviewer opened the vendor page and checked the quote, amount and source.
+  Re-checked 2026-09-16. The changelog post still renders and the terms are quoted verbatim,
+  but it is a dated April 2024 announcement and does not state the programme is still running;
+  the application paths 404. Per the verification policy an announcement page cannot support
+  an active status, so this stays unverified. Criteria as published: $2M-$25M in outside funding,
+  founded 2020 or later, new to Railway or under $100 lifetime spend.'
+application_mechanism: self-serve-form
+approval_time: Changelog states applicants can expect to hear back within a few days of applying.
+status: unverified
+status_basis: inferred
+fetch_note: 'Changelog page: 200 and rendered, dated 2024-04-26. Apply portal https://startup.railway.app/:
+  404. https://railway.com/startups: 404. No current Railway-hosted startup program page found
+  via site-restricted search.'
+last_verified: '2026-09-16'
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: For the first rollout of this program, we're offering $5K in Railway credits
+  to startups that meet certain criteria
+bot_blocked: false

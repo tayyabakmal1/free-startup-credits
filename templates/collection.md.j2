@@ -1,0 +1,53 @@
+{{ banner }}
+# {{ collection.emoji }} {{ collection.title }}
+
+{{ collection.blurb }}
+
+{% if collection.sections %}
+{% for s in collection.sections %}{% if not loop.first %} · {% endif %}{% if loop.first %}**{{ s.count }} {{ s.id | replace('-', ' ') }}**{% else %}{{ s.count }} {{ s.id | replace('-', ' ') }}{% endif %}{% endfor %}{% if stats.as_of %} · data as of {{ stats.as_of }}{% endif %}
+{% else %}
+{{ collection.count }} program(s){% if stats.as_of %} · data as of {{ stats.as_of }}{% endif %}
+{% endif %}
+
+[← Back to all credits](../README.md)
+
+{% if collection.sections %}
+{% for section in collection.sections %}
+
+## {{ section.title }} ({{ section.count }})
+
+{{ section.blurb }}
+
+{% for p in section.programs %}
+{{ p | render_entry(1) }}
+{% endfor %}
+{% if not section.programs %}
+_Nothing here yet._
+{% endif %}
+{% endfor %}
+
+---
+
+**Why two sections?** A vendor that does not publish a geographic restriction has
+not confirmed that it serves your country. Our own region groupings are a display
+aid and are never treated as proof — a vendor saying "APAC" does not establish
+that a startup in Pakistan can apply. Only the vendor's own words put a program
+in the confirmed list. See the
+[verification policy](../docs/verification-policy.md).
+{% else %}
+
+{% for p in collection.programs %}
+{{ p | render_entry(1) }}
+{% endfor %}
+{% if not collection.programs %}
+_No programs match yet._
+{% endif %}
+
+---
+
+**How membership works.** A program appears here only when the vendor's own page
+affirmatively establishes it. An unknown value is never treated as permission, so
+this list is a floor, not a ceiling — some excluded programs may also qualify,
+but we have not confirmed it. See the
+[verification policy](../docs/verification-policy.md).
+{% endif %}

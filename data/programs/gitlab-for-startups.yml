@@ -1,0 +1,94 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+slug: gitlab-for-startups
+company: GitLab
+program: GitLab for Startups
+category: devtools
+tags:
+- devops
+- ci-cd
+- seat-capped
+- two-year
+homepage: https://about.gitlab.com
+apply_url: https://about.gitlab.com/solutions/startups/join/
+official_source: https://gitlab.com/gitlab-com/content-sites/handbook/-/raw/58a525ef350e2e865c8208d53a90798e94df4e24/content/handbook/marketing/developer-relations/community-programs/startups-program/_index.md
+benefit_type: discount
+benefit_summary: 'Two-tier, two-year program for new customers: Seed stage gets a free Ultimate
+  licence for year one and 50% off in year two; Series A/B gets 50% off in year one and 25%
+  off in year two. All tiers capped at 20 seats.'
+amount_is_published: false
+amount_max: null
+duration_months: 12
+after_credits: 'Year two benefits are published per tier: Seed stage receives "50% discount
+  on any tier; up to 20 seats" and Series A/B receives "25% discount on any tier; up to 20
+  seats".'
+excludes:
+- existing GitLab customers
+- startups with no externally raised capital
+tiers:
+- name: Seed stage — year one
+  funding_max_usd: 5000000
+  partner_gate: none
+  quote: Free Ultimate licence for a year (SaaS or self-managed) up to 20 seats
+  notes: Eligibility quoted as "Pre-Seed or Seed Stage; up to $5 million in funding", externally
+    raised, "New customers only." Support not included.
+- name: Seed stage — year two
+  funding_max_usd: 5000000
+  partner_gate: none
+  quote: 50% discount on any tier; up to 20 seats
+  notes: Second-year continuation of the Seed tier.
+- name: Early stage (Series A/B) — year one
+  funding_max_usd: 20000000
+  partner_gate: none
+  quote: 50% discount on any tier; up to 20 seats
+  notes: Eligibility quoted as "Currently series A or Series B; up to $20 million in funding",
+    externally raised, "New customers only." Support not included.
+- name: Early stage (Series A/B) — year two
+  funding_max_usd: 20000000
+  partner_gate: none
+  quote: 25% discount on any tier; up to 20 seats
+  notes: Second-year continuation of the Early Stage tier.
+funding_required: true
+partner_gate: none
+funding_max_usd: 5000000
+stages:
+- pre-seed
+- seed
+- series-a
+- series-b
+new_customer_only: true
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: 'NOT INSPECTABLE: GitLab''s public-facing program page and application
+  form could not be read — https://about.gitlab.com/solutions/startups and https://about.gitlab.com/solutions/startups/join/
+  both return 403 to automated fetching, and every handbook.gitlab.com path 302-redirects
+  to a projects.gitlab.io auth endpoint. The record is therefore built on the handbook source
+  markdown served from GitLab''s own gitlab.com repository, read at a pinned commit; the live
+  page may differ. Funding caps are ceilings: Seed "up to $5 million in funding", Series A/B
+  "up to $20 million in funding", both requiring externally raised capital, and both "New
+  customers only." Support is excluded in year one for both tiers. Separately, https://docs.gitlab.com/subscriptions/community_programs/
+  states the program "provides GitLab Ultimate, plus 50,000 compute minutes per month for
+  12 months" without restating the tier split. apply_url is the address named in the handbook
+  and was NOT independently confirmed to resolve. Imported from a verification sweep whose
+  quote fidelity later failed audit in 13 of 22 sampled records. This entry was NOT independently
+  re-audited, so the evidence quote may be a close paraphrase rather than the vendor''s exact
+  wording. Re-read the source before relying on precise phrasing. Re-confirmed 2026-09-16
+  on about.gitlab.com. Two tiers are published: Seed stage gets a "Free Ultimate license for
+  a year (SaaS or self-managed) up to 20 seats" with up to $5M raised; Early stage gets "50%
+  discount on any tier; up to 20 Users" for Series A/B with up to $20M raised. All offers
+  are "New customers only".'
+application_mechanism: self-serve-form
+requires_sales_call: false
+obligations:
+- self-hosted instances must enable usage and analytics features
+status: active-self-serve
+status_basis: inferred
+fetch_note: about.gitlab.com/solutions/startups 403 Forbidden; handbook.gitlab.com paths 302-redirect
+  to projects.gitlab.io auth. Handbook source markdown fetched 200 from gitlab.com raw at
+  commit 58a525e and read in full. docs.gitlab.com/subscriptions/community_programs/ 200 and
+  rendered.
+last_verified: '2026-09-16'
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: Pre-Seed or Seed stage with up to $5M in external funding
+bot_blocked: true

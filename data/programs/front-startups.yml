@@ -1,0 +1,54 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: front-startups
+company: Front
+program: Front for Startups
+category: support
+tags: [shared-inbox, customer-service]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://front.com"
+apply_url: "https://front.com/pricing"
+official_source: "https://front.com/pricing"
+
+# Benefit
+benefit_type: discount
+benefit_summary: >-
+  No Front startup program page currently exists: the former program URL
+  now permanently redirects to Front's general pricing page, which contains
+  no startup offer.
+amount_is_published: false
+amount_max: null
+stages: [any]
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  Could not inspect any program terms because no program page exists. Both
+  https://front.com/startups (301 -> https://front.com/pricing) and the
+  announcement post https://front.com/blog/introducing-front-for-startups
+  (301 -> https://front.com/blog) have been removed. The landing pricing
+  page's only startup reference is the generic 'Plans for startups,
+  enterprises, and everything in between.' Front has not published a
+  statement that the program ended, so status is 'unverified' rather than
+  'discontinued' and no discontinued_date can be given. Third-party and
+  search-cache descriptions of a '6 months free, up to 15 users on Growth'
+  offer could NOT be confirmed against any live Front page and are
+  deliberately not recorded.
+
+# Status
+status: unverified
+status_basis: inferred
+fetch_note: >-
+  https://front.com/startups returned 301 to https://front.com/pricing
+  (200, rendered, no startup offer present).
+  https://front.com/blog/introducing-front-for-startups returned 301 to
+  https://front.com/blog. No live Front page states any startup offer.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: needs-manual-verification
+bot_blocked: false

@@ -1,0 +1,205 @@
+{
+  "data_as_of": "2026-09-16",
+  "counts": {
+    "total": 108,
+    "live": 85,
+    "closed": 8,
+    "fresh": 108,
+    "verified": 96,
+    "partially_verified": 1,
+    "needs_manual": 11
+  },
+  "reverify_days": 180,
+  "categories": [
+    {
+      "id": "ai",
+      "name": "AI & ML",
+      "count": 14
+    },
+    {
+      "id": "cloud",
+      "name": "Cloud",
+      "count": 13
+    },
+    {
+      "id": "devtools",
+      "name": "Developer Tools",
+      "count": 15
+    },
+    {
+      "id": "databases",
+      "name": "Databases",
+      "count": 11
+    },
+    {
+      "id": "hosting",
+      "name": "Hosting & Infrastructure",
+      "count": 2
+    },
+    {
+      "id": "marketing",
+      "name": "Marketing & Growth",
+      "count": 4
+    },
+    {
+      "id": "analytics",
+      "name": "Analytics & Data",
+      "count": 5
+    },
+    {
+      "id": "security",
+      "name": "Security & Compliance",
+      "count": 4
+    },
+    {
+      "id": "productivity",
+      "name": "Productivity & Ops",
+      "count": 8
+    },
+    {
+      "id": "crm",
+      "name": "CRM & Sales",
+      "count": 5
+    },
+    {
+      "id": "design",
+      "name": "Design",
+      "count": 2
+    },
+    {
+      "id": "finance",
+      "name": "Finance & Banking",
+      "count": 6
+    },
+    {
+      "id": "legal",
+      "name": "Legal & Incorporation",
+      "count": 2
+    },
+    {
+      "id": "hr",
+      "name": "HR & People",
+      "count": 3
+    },
+    {
+      "id": "support",
+      "name": "Customer Support",
+      "count": 7
+    },
+    {
+      "id": "ecosystem",
+      "name": "Accelerator & Ecosystem Bundles",
+      "count": 7
+    }
+  ],
+  "collections": [
+    {
+      "id": "no-partner-required",
+      "title": "No Partner or Accelerator Required",
+      "count": 44,
+      "confirmed": null
+    },
+    {
+      "id": "direct-application",
+      "title": "Direct Application",
+      "count": 69,
+      "confirmed": null
+    },
+    {
+      "id": "no-funding-required",
+      "title": "No Funding Required",
+      "count": 15,
+      "confirmed": null
+    },
+    {
+      "id": "bootstrapped",
+      "title": "Bootstrapped Startups",
+      "count": 10,
+      "confirmed": null
+    },
+    {
+      "id": "ai-startups",
+      "title": "AI Startups",
+      "count": 14,
+      "confirmed": null
+    },
+    {
+      "id": "global-programs",
+      "title": "Global Programs",
+      "count": 1,
+      "confirmed": null
+    },
+    {
+      "id": "cloud-credits",
+      "title": "Cloud Credits",
+      "count": 13,
+      "confirmed": null
+    },
+    {
+      "id": "ai-credits",
+      "title": "AI Credits",
+      "count": 11,
+      "confirmed": null
+    },
+    {
+      "id": "developer-tools",
+      "title": "Developer Tools",
+      "count": 15,
+      "confirmed": null
+    },
+    {
+      "id": "europe",
+      "title": "Europe",
+      "count": 107,
+      "confirmed": null
+    },
+    {
+      "id": "country-pk",
+      "title": "Startup Credits and Pakistan",
+      "count": 108,
+      "confirmed": 1
+    },
+    {
+      "id": "country-us",
+      "title": "Startup Credits and United States",
+      "count": 108,
+      "confirmed": 2
+    },
+    {
+      "id": "country-gb",
+      "title": "Startup Credits and United Kingdom",
+      "count": 108,
+      "confirmed": 2
+    },
+    {
+      "id": "country-in",
+      "title": "Startup Credits and India",
+      "count": 108,
+      "confirmed": 1
+    },
+    {
+      "id": "country-ca",
+      "title": "Startup Credits and Canada",
+      "count": 108,
+      "confirmed": 2
+    },
+    {
+      "id": "country-ae",
+      "title": "Startup Credits and United Arab Emirates",
+      "count": 108,
+      "confirmed": 2
+    },
+    {
+      "id": "country-sg",
+      "title": "Startup Credits and Singapore",
+      "count": 108,
+      "confirmed": 2
+    },
+    {
+      "id": "country-ng",
+      "title": "Startup Credits and Nigeria",
+      "count": 108,
+      "confirmed": 1
+    }
+  ]
+}

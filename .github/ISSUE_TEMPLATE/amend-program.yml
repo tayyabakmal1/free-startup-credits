@@ -1,0 +1,51 @@
+name: Correct a program's details
+description: Eligibility, region, benefit or verification details that are wrong or incomplete
+title: "[Fix] "
+labels: ["correction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Corrections are as valuable as additions. Two kinds are especially useful:
+
+        - **We claim something the vendor never said.** Inventing a barrier that
+          does not exist is just as harmful as missing one.
+        - **We treat an unknown as permission.** If an entry appears under
+          "No Funding Required" but the vendor never says that, it is a bug.
+
+  - type: input
+    id: slug
+    attributes:
+      label: Which entry?
+      description: The filename under data/programs/, or just the program name
+      placeholder: cloudflare-for-startups
+    validations:
+      required: true
+
+  - type: dropdown
+    id: field
+    attributes:
+      label: What is wrong?
+      options:
+        - The credit amount or benefit structure
+        - Funding requirement (and whether it is a minimum or maximum)
+        - Accelerator / partner requirement
+        - Country or region availability
+        - Company age, headcount or revenue limits
+        - The application process
+        - The source URL does not contain the quoted text
+        - An entry appears in a collection it should not qualify for
+        - Something else
+    validations:
+      required: true
+
+  - type: textarea
+    id: correction
+    attributes:
+      label: What should it say, and where does the vendor say it?
+      description: >-
+        Please include the exact sentence from the vendor's page and the URL it is
+        on. If the vendor contradicts itself between pages, tell us both -- we
+        record the conflict rather than silently picking one.
+    validations:
+      required: true

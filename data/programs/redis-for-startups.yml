@@ -1,0 +1,42 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+slug: redis-for-startups
+company: Redis
+program: Redis for Startups
+category: databases
+tags:
+- cache
+- vector-search
+- in-memory-database
+homepage: https://redis.io
+apply_url: https://redis.io/startups/
+official_source: https://redis.io/startups/
+benefit_type: free-plan
+benefit_summary: 'The English Redis for Startups page no longer resolves: it redirects to
+  the Redis homepage, so no current program terms, amounts or eligibility rules can be confirmed.'
+amount_is_published: false
+amount_max: null
+stages:
+- any
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: 'Could not inspect: any amount, duration, funding cap, company-age cap
+  or application route. https://redis.io/startups/ returns 307 to https://redis.io/ and https://redis.io/redis-for-startups/
+  returns 308 to https://redis.io/. A stale Spanish-locale page (https://redis.io/es/redis-for-startups/)
+  still returns 200 and says ''Redis gratis para las startups elegibles'' (Redis free for
+  eligible startups) with no amount, but the canonical English page is gone, so this is not
+  treated as current. Redis has published no statement that the program ended, so no discontinued_date
+  can be given. Re-checked 2026-09-16: redis.io/startups/ now serves the generic Redis homepage.
+  No startup programme, credit or discount is published. Re-checked 2026-09-16: redis.io/startups/
+  now serves the generic Redis homepage. No startup programme, credit or discount is published.'
+status: no-program
+status_basis: inferred
+fetch_note: https://redis.io/startups/ returned 307 to https://redis.io/ (homepage rendered,
+  no startup program content). https://redis.io/redis-for-startups/ returned 308 to https://redis.io/.
+  Only the Spanish locale variant /es/redis-for-startups/ still returns 200.
+last_verified: '2026-09-16'
+verified_by: tayyabakmal1
+verification_level: verified
+bot_blocked: false
+evidence_quote: Developers love Redis. Unlock the full potential of the Redis database with
+  Redis Enterprise and start building blazing fast apps.

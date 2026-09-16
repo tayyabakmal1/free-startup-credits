@@ -1,0 +1,42 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+slug: puzzle-for-startups
+company: Puzzle
+program: Puzzle for Startups
+category: finance
+tags:
+- accounting
+- bookkeeping
+- general-ledger
+homepage: https://puzzle.io
+apply_url: https://puzzle.io/pricing
+official_source: https://puzzle.io/solutions/startup
+benefit_type: discount
+benefit_summary: No Puzzle startup credits or discount program terms are published. The Y
+  Combinator partner page now redirects to the Puzzle homepage; the live startup and pricing
+  pages publish only a 14-day free trial and general plan promotions.
+amount_is_published: false
+amount_max: null
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: 'NOT INSPECTABLE: no startup-program eligibility, discount code, amount
+  or duration is published on any reachable puzzle.io page. The only quantified offers on
+  https://puzzle.io/pricing are plan-level promotions ("100% off for 2 months" on the entry
+  tier, "Save 50% for 3 months" on higher tiers) that carry no startup eligibility gate, plus
+  a 14-day free trial. "Puzzle for Startups" is product positioning, not a gated program.
+  The YC-specific offer is no longer published. Re-checked 2026-09-16: puzzle.io/solutions/startup
+  shows ''Get started for free'' calls to action but publishes no free-plan terms, no startup
+  discount and no eligibility criteria. Re-checked 2026-09-16: puzzle.io/solutions/startup
+  shows ''Get started for free'' calls to action but publishes no free-plan terms, no startup
+  discount and no eligibility criteria.'
+status: unverified
+status_basis: inferred
+fetch_note: https://puzzle.io/partners/yc 200s only after an in-domain 301 to https://puzzle.io/
+  — the YC partner program page no longer exists. https://puzzle.io/solutions/startup, https://puzzle.io/pricing
+  and https://puzzle.io/partner-rewards all returned 200 and rendered fully in server HTML,
+  and none of them publishes a startup program, eligibility gate, code or credit amount.
+last_verified: '2026-09-16'
+verified_by: tayyabakmal1
+verification_level: verified
+bot_blocked: false
+evidence_quote: Get started for free

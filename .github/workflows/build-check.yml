@@ -1,0 +1,72 @@
+name: Generated files are current
+
+# README.md, categories/, collections/, api/ and schema/ are generated from data/.
+# This regenerates them and fails if the committed output differs, which catches
+# both a stale build and a hand-edit that would otherwise be silently wiped by
+# the next build.
+on:
+  pull_request:
+    paths:
+      - "data/**"
+      - "schema/**"
+      - "scripts/**"
+      - "templates/**"
+      - "README.md"
+      - "categories/**"
+      - "collections/**"
+      - "api/**"
+      - ".github/workflows/build-check.yml"
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - uses: actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38 # v5.4.0
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install --disable-pip-version-check pyyaml jsonschema jinja2 rapidfuzz
+
+      - name: Regenerate
+        run: |
+          python scripts/gen_schema.py
+          python scripts/build.py
+
+      - name: Fail if generated output drifted
+        run: |
+          if ! git diff --quiet -- README.md categories/ collections/ api/ schema/; then
+            {
+              echo "### Generated files are out of date"
+              echo ""
+              echo "\`README.md\`, \`categories/\`, \`collections/\`, \`api/\` and \`schema/\`"
+              echo "are built from \`data/\`. Do not edit them by hand."
+              echo ""
+              echo "Run \`make build\` (or \`python scripts/build.py\`) and commit the result."
+              echo ""
+              echo '```diff'
+              git --no-pager diff --stat -- README.md categories/ collections/ api/ schema/
+              echo '```'
+            } >> "$GITHUB_STEP_SUMMARY"
+            echo "::error::Generated files are out of date. Run 'make build' and commit."
+            git --no-pager diff -- README.md categories/ collections/ api/ schema/
+            exit 1
+          fi
+          echo "Generated output matches data/."
+
+      - name: Verify the build is deterministic
+        # A build that is not reproducible would make the drift check above
+        # fail at random and train everyone to ignore it.
+        run: |
+          python scripts/build.py > /dev/null
+          python scripts/build.py | tee /tmp/second.txt
+          grep -q "no changes" /tmp/second.txt \
+            || (echo "::error::build.py is not deterministic"; exit 1)

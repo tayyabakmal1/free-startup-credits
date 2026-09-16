@@ -1,0 +1,79 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: together-ai-startup-accelerator
+company: Together AI
+program: Together AI Startup Accelerator
+category: ai
+tags: [inference, gpu, fine-tuning, llm]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://www.together.ai/"
+apply_url: "https://www.together.ai/startup-accelerator"
+official_source: "https://www.together.ai/startup-accelerator"
+
+# Benefit
+benefit_type: credit
+benefit_summary: >-
+  Tiered program giving up to $15K, $30K or $50K in free Together AI
+  platform credits plus 3, 6 or 10 hours of forward-deployed engineering
+  time, with the tier set by how much the company has raised.
+amount_is_published: true
+amount_max: 50000
+currency: USD
+excludes: [Reserved GPU Clusters]
+tiers:
+  - name: Build
+    quote: Up to $5M raised
+    amount_max: 15000
+    funding_max_usd: 5000000
+    partner_gate: none
+    notes: >-
+      Benefits listed as "Up to $15K in free platform credits*" and "3 hours of
+      free forward-deployed engineering time".
+  - name: Scale
+    quote: $5M–$10M raised
+    amount_max: 30000
+    funding_min_usd: 5000000
+    funding_max_usd: 10000000
+    partner_gate: none
+    notes: >-
+      Benefits listed as "Up to $30K in free platform credits*" and "6 hours of
+      free forward-deployed engineering time".
+  - name: Grow
+    quote: Over $10M raised
+    amount_max: 50000
+    funding_min_usd: 10000000
+    partner_gate: none
+    notes: >-
+      Benefits listed as "Up to $50K in free platform credits*" and "10 hours
+      of free forward-deployed engineering time".
+partner_gate: none
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  Tier assignment is by total funding raised; the page states no
+  company-age, employee-count, region or incorporation requirement, so
+  those gates are unknown rather than absent. Independently re-audited: a
+  second reviewer opened the vendor page and checked the quote, amount and
+  source.
+
+# Application
+application_mechanism: self-serve-form
+
+# Status
+status: active-self-serve
+status_basis: inferred
+fetch_note: >-
+  The supplied url https://www.together.ai/startups returned 404. WebSearch
+  on together.ai found https://www.together.ai/startup-accelerator, which
+  fetched 200 and rendered the full tier table and eligibility text.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: "Up to $50K in free platform credits*"
+bot_blocked: false

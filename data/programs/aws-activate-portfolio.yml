@@ -1,0 +1,114 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: aws-activate-portfolio
+company: AWS
+program: AWS Activate Credits
+category: ecosystem
+tags: [cloud, credits, tiered, activate-provider]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://aws.amazon.com"
+apply_url: "https://aws.amazon.com/startups/join?destination=/credits/apply"
+official_source: "https://aws.amazon.com/startups/credits/"
+
+# Benefit
+benefit_type: credit
+benefit_summary: >-
+  AWS promotional credits by tier: up to $200,000 for pre-Series B startups
+  applying with an Activate Provider's Org ID (Activate Portfolio), up to
+  $5,000 for self-funded founders, and an invite-only AI tier above that.
+amount_is_published: true
+amount_max: 200000
+currency: USD
+stacking_notes: >-
+  Applicants must be "either new to Activate Credits or requesting more
+  credits than previously received"; prior recipients can request an
+  increment rather than a fresh full grant.
+tiers:
+  - name: Activate Founders (self-funded)
+    amount_max: 5000
+    quote: >-
+      *Start with $1,000 USD in Activate Credits. Select participants may
+      qualify for additional credits up to $5,000
+    partner_gate: none
+    notes: >-
+      Page says "Apply directly if you're bootstrapped or self-funded".
+      Starting grant is $1,000; the $5,000 figure is a conditional ceiling for
+      select participants.
+  - name: Activate Portfolio (pre-Series B)
+    amount_max: 200000
+    quote: >-
+      *You must have an Organization ID (Org ID) from your Activate Provider,
+      such as an accelerator, angel investor, and venture capital firm
+    partner_gate: required-hard
+    notes: >-
+      Applied for with the Activate Provider's Org ID. Activate Providers named
+      as examples: Andreessen Horowitz, Brex, Carta, Greylock Partners,
+      Sequoia, Y Combinator.
+  - name: AWS Credits for AI Startups
+    quote: Invite only for startups ready to scale post Activate Portfolio
+    partner_gate: unknown
+    notes: >-
+      Page lists "$200,000+ in AWS Credits" and directs applicants to "Talk
+      with your Account Manager"; no fixed figure or eligibility test is
+      published, so no amount is recorded for this tier.
+open_to_bootstrapped: true
+partner_gate: tiered
+partners:
+  - Andreessen Horowitz
+  - Brex
+  - Carta
+  - Greylock Partners
+  - Sequoia
+  - Y Combinator
+stages: [idea, pre-seed, seed, series-a]
+company_age_max_years: 10
+new_customer_only: false
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  PARTIALLY VERIFIED: credit duration and expiry are governed by the linked
+  "AWS Promotional Credit Terms & Conditions" and the linked Activate FAQ
+  page, neither of which I opened — so duration_months and expiry_note are
+  left null rather than guessed. Program-wide eligibility as published:
+  "Eligibility for AWS Activate: Pre-series B, founded in the last 10
+  years, AWS Account on Paid Tier Plan, and either new to Activate Credits
+  or requesting more credits than previously received".
+  open_to_bootstrapped=true rests on the Activate Founders row: "Apply
+  directly if you're bootstrapped or self-funded" — but bootstrapped teams
+  get up to $5,000, NOT the $200,000 headline, which requires an Activate
+  Provider Org ID. requires_vc_backing and accelerator_required stay
+  unknown because an Activate Provider may be an accelerator, an angel
+  investor OR a VC firm. new_customer_only=false because prior Activate
+  recipients may reapply for more credits. Independently re-audited: a
+  second reviewer opened the vendor page and checked the quote, amount and
+  source.
+
+# Application
+application_mechanism: self-serve-form
+approval_time: "You'll hear back within 5–10 business days."
+
+# Status
+status: active-partner-only
+status_basis: asserted
+status_quote: >-
+  *You must have an Organization ID (Org ID) from your Activate Provider,
+  such as an accelerator, angel investor, and venture capital firm
+fetch_note: >-
+  https://aws.amazon.com/activate/portfolio/ 301-redirects to
+  https://aws.amazon.com/startups/credits/; fetched 200 and rendered
+  including the full tier table and how-to-apply steps. apply_url returned
+  200, redirecting to
+  https://startups.aws.com/join?destination=/credits/apply.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: >-
+  Apply for up to $200,000 in AWS Activate Credits, with additional credits
+  available for AI startups ready to scale.
+bot_blocked: false

@@ -1,0 +1,126 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+
+slug: render-for-startups
+company: Render
+program: Render for Startups
+category: hosting
+tags: [paas, tiered, vc-partner, ai-credits]
+
+# Links. official_source is the exact page carrying evidence_quote.
+homepage: "https://render.com"
+apply_url: "https://render.com/startup-application"
+official_source: "https://render.com/startups"
+
+# Benefit
+benefit_type: credit
+benefit_summary: >-
+  Four tiers of Render credits valid one year: $500 Prototype (open to all
+  qualified startups), $2,500–$5K Build, $10K–$25K Scale and $100K AI; the
+  Build, Scale and AI tiers require applying through an enrolled
+  accelerator or VC partner.
+amount_is_published: true
+amount_max: 100000
+currency: USD
+duration_months: 12
+expiry_note: >-
+  Upon approval, the credits are automatically applied to your account and
+  you will receive a confirmation email. You will have one year from the
+  date of the confirmation email to use your credits.
+after_credits: >-
+  Our pricing is always transparent, predictable, and scales with you. You
+  will always keep your existing setup and data, and there are no
+  surprises.
+excludes:
+  - "Series B and later companies ('Pre-Series B')"
+  - "Existing Render customers ('New customer')"
+tiers:
+  - name: Prototype
+    quote: $500 in startup credits
+    amount_max: 500
+    funding_min_usd: 25000
+    funding_max_usd: 100000000
+    partner_gate: none
+    notes: >-
+      'All qualified startups are eligible for our Founder credit offer'.
+      Eligibility: New customer; Have seed funding (min $25K); Less than 5
+      years in operation; Raised less than $100M; Pre-Series B.
+  - name: Build
+    quote: $5K in credits for startups from select partners
+    amount_max: 5000
+    funding_min_usd: 25000
+    funding_max_usd: 100000000
+    partner_gate: required-hard
+    notes: >-
+      Same card also states '$2,500 in credits for startups from a partner'.
+      Eligibility adds 'Applied through enrolled partner'. FAQ: 'The majority
+      of VCs and accelerators qualify for our Build tier and $5k in credits.'
+  - name: Scale
+    quote: $25K in startup credits for startups with $1M in funding or more
+    amount_max: 25000
+    funding_min_usd: 1000000
+    funding_max_usd: 100000000
+    partner_gate: required-hard
+    notes: >-
+      Same card states '$10K in startup credits for startups with less than $1M
+      in funding'. Eligibility adds 'Funding from enrolled top tier VC'.
+  - name: AI
+    quote: At least $2.5M in funding from enrolled top tier VC
+    amount_max: 100000
+    funding_min_usd: 2500000
+    funding_max_usd: 100000000
+    partner_gate: required-hard
+    notes: >-
+      Benefit is '$100K in startup credits' for 'AI-native, data-heavy, or
+      agent/LLM-driven products'. Also includes a 1:1 onboarding session, a
+      dedicated support Slack for 1 year, and co-marketing case-study
+      eligibility.
+
+# Eligibility. Tri-state gates are written only when the vendor states
+# them. An omitted gate reads as `unknown` and keeps this entry out of
+# the matching collection, which is the intended behaviour.
+funding_required: true
+open_to_bootstrapped: false
+partner_gate: tiered
+funding_min_usd: 25000
+funding_max_usd: 100000000
+stages: [pre-seed, seed, series-a]
+company_age_max_years: 5
+new_customer_only: true
+
+# Geography. See docs/verification-policy.md for what 'asserted' requires.
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: >-
+  VENDOR SELF-CONTRADICTION on the Build tier: the tier card lists two
+  figures, '$2,500 in credits for startups from a partner' and '$5K in
+  credits for startups from select partners', while the FAQ states 'The
+  majority of VCs and accelerators qualify for our Build tier and $5k in
+  credits.' The more conservative tier-card wording is recorded — assume
+  $2,500 unless your partner is a 'select' one. All four tiers share the
+  eligibility floor/ceiling recorded at top level (new customer, seed
+  funding min $25K, less than 5 years in operation, raised less than $100M,
+  Pre-Series B). Tier amounts are NOT summed. 'Less than 5 years in
+  operation' is not defined as incorporation date, so age_basis is unknown.
+  Independently re-audited: a second reviewer opened the vendor page and
+  checked the quote, amount and source.
+
+# Application
+application_mechanism: self-serve-form
+obligations: ["AI tier lists 'AI case study eligible for co-marketing' as a benefit"]
+
+# Status
+status: active-self-serve
+status_basis: inferred
+fetch_note: >-
+  HTTP 200 via curl at https://render.com/startups; all four tier cards
+  rendered in the HTML and every FAQ answer was recovered from the embedded
+  page JSON (the accordion bodies are collapsed in the visible DOM).
+  https://render.com/startup-application returns 200.
+
+# Provenance
+last_verified: "2026-09-14"
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: $100K in startup credits
+bot_blocked: false

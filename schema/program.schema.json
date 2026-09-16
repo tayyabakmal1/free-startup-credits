@@ -1,0 +1,684 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json",
+  "title": "Startup credit program",
+  "description": "One verified startup credit, perk or discount program. One file per program at data/programs/<slug>.yml. Every claim must trace to the vendor's own page.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "slug",
+    "company",
+    "program",
+    "category",
+    "apply_url",
+    "official_source",
+    "benefit_type",
+    "benefit_summary",
+    "status",
+    "last_verified",
+    "verified_by",
+    "verification_level"
+  ],
+  "properties": {
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "maxLength": 80,
+      "description": "Kebab-case identifier. MUST equal the filename without .yml, e.g. cloudflare-for-startups."
+    },
+    "company": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 80,
+      "description": "Vendor name as the vendor writes it, e.g. Cloudflare."
+    },
+    "program": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120,
+      "description": "Official program name, e.g. Cloudflare for Startups. Not a description."
+    },
+    "category": {
+      "enum": [
+        "ai",
+        "cloud",
+        "devtools",
+        "databases",
+        "hosting",
+        "marketing",
+        "analytics",
+        "security",
+        "productivity",
+        "crm",
+        "design",
+        "finance",
+        "legal",
+        "hr",
+        "support",
+        "ecosystem"
+      ],
+      "description": "Primary category. Generated from data/categories.yml -- do not invent values."
+    },
+    "tags": {
+      "type": "array",
+      "uniqueItems": true,
+      "maxItems": 8,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+      },
+      "description": "Optional free tags for cross-category discovery, e.g. gpu, vector-db, soc2."
+    },
+    "homepage": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https://",
+      "description": "Vendor homepage. Optional."
+    },
+    "apply_url": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https://",
+      "description": "Where a founder actually applies. No affiliate, referral or utm_* parameters -- CI rejects them. Must be reachable; a cross-domain redirect to a parent brand means the program is likely discontinued."
+    },
+    "official_source": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https://",
+      "description": "The EXACT vendor URL carrying the sentence in evidence_quote. Not the prettiest landing page. If the amount lives on a docs or help-centre subpage, link that subpage."
+    },
+    "benefit_type": {
+      "enum": [
+        "credit",
+        "discount",
+        "free-plan",
+        "usage-allowance",
+        "matched-credit",
+        "spend-commitment",
+        "hardware",
+        "services",
+        "bundle"
+      ],
+      "description": "What kind of thing this is. credit=a grant of spendable credit. discount=percentage off list. free-plan=a named plan free for a period. usage-allowance=non-dollar units (tokens, characters, seats). matched-credit=vendor matches your spend. spend-commitment=credit unlocked by committing spend. Choosing 'credit' for a discount misrepresents the offer."
+    },
+    "benefit_summary": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 300,
+      "description": "One objective sentence. State the structure, not a marketing claim. 'Up to $350k in credits, tiered by funding stage and partner status.' Never 'the best cloud credits program'."
+    },
+    "amount_is_published": {
+      "type": "boolean",
+      "description": "Does the vendor publish a figure at all? Many real programs (MongoDB, Anthropic, Modal, Snowflake) publish none. false means 'vendor states no number', which is different from 'we did not look'."
+    },
+    "amount_max": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "description": "Maximum headline value in `currency`. Only when the vendor publishes it. Never estimate, round, or convert. Must be null when verification_level is needs-manual-verification."
+    },
+    "currency": {
+      "enum": [
+        "USD",
+        "EUR",
+        "GBP",
+        "INR",
+        "SGD",
+        "AUD",
+        "CAD"
+      ],
+      "description": "Currency the vendor publishes in. OVHcloud and Scaleway publish EUR -- do not silently convert to USD."
+    },
+    "duration_months": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 120,
+      "description": "How long the benefit lasts. A $100k/12-month offer is not the same product as $100k/24-month."
+    },
+    "expiry_note": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 300,
+      "description": "Expiry or burn-down terms in the vendor's words, e.g. 'valid for up to one year or when all credits are consumed, whichever comes first'."
+    },
+    "after_credits": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 300,
+      "description": "What happens when the benefit ends. Affects runway planning: Algolia auto-transitions to pay-as-you-go; Retool drops to 25% off in year two."
+    },
+    "excludes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 200
+      },
+      "maxItems": 12,
+      "description": "What the credit cannot be spent on. Civo excludes GPU instances; Retool excludes Enterprise and all annual plans."
+    },
+    "stacking_notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 400,
+      "description": "Stated non-combination rules. Sentry: YC and a16z founders must use their portal deal instead, and it does not combine. Vanta voids if you are already engaged with sales."
+    },
+    "tiers": {
+      "type": "array",
+      "maxItems": 8,
+      "description": "Only for genuinely tiered programs. Per-tier eligibility is REQUIRED here: advertising a $350k headline while omitting that the top tier needs $5M raised shows founders a number they can never reach.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "name",
+          "quote"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "maxLength": 60,
+            "description": "Tier name as the vendor writes it."
+          },
+          "amount_max": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "quote": {
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 200,
+            "description": "Shortest exact span from the vendor page describing this tier."
+          },
+          "funding_min_usd": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "funding_max_usd": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "partner_gate": {
+            "enum": [
+              "none",
+              "improves-offer",
+              "required-soft",
+              "required-hard",
+              "unknown"
+            ]
+          },
+          "notes": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 300
+          }
+        }
+      }
+    },
+    "funding_required": {
+      "enum": [
+        true,
+        false,
+        "unknown"
+      ],
+      "default": "unknown",
+      "description": "TRI-STATE. false ONLY when the vendor affirmatively says you need not have raised. unknown (or omitted) means we did not confirm -- and NEVER qualifies the entry for the 'No Funding Required' collection."
+    },
+    "accelerator_required": {
+      "enum": [
+        true,
+        false,
+        "unknown"
+      ],
+      "default": "unknown",
+      "description": "TRI-STATE. false ONLY when the vendor affirmatively says no accelerator, VC or partner referral is needed. unknown never qualifies for 'No Partner or Accelerator Required'."
+    },
+    "open_to_bootstrapped": {
+      "enum": [
+        true,
+        false,
+        "unknown"
+      ],
+      "default": "unknown",
+      "description": "TRI-STATE. true ONLY when the page affirmatively says bootstrapped or self-funded companies qualify. Absence of an exclusion is not permission."
+    },
+    "requires_vc_backing": {
+      "enum": [
+        true,
+        false,
+        "unknown"
+      ],
+      "default": "unknown",
+      "description": "TRI-STATE. true when institutional funding is a stated condition, as with Anthropic's credit tier."
+    },
+    "partner_gate": {
+      "enum": [
+        "none",
+        "improves-offer",
+        "required-soft",
+        "required-hard",
+        "tiered",
+        "unknown"
+      ],
+      "default": "unknown",
+      "description": "Not a boolean. none=open. improves-offer=better terms via a partner but not required (Miro: $500 solo vs $1,000 with a partner). required-soft=practically needs an intro. required-hard=needs a partner code. tiered=varies by tier (Cloudflare)."
+    },
+    "partners": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 80
+      },
+      "maxItems": 40,
+      "description": "Named accelerators/VCs that unlock or improve the offer. 'accelerator_required: true' alone is not actionable for a founder."
+    },
+    "partners_url": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uri",
+      "description": "Vendor's own partner list, when it publishes one rather than enumerating."
+    },
+    "funding_min_usd": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "description": "Numeric FLOOR when one exists. Deel requires at least $500k raised; Modal at least $1M. A max-only model renders a floor identically to a ceiling and silently misleads bootstrapped founders."
+    },
+    "funding_max_usd": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "description": "Numeric ceiling on total funding raised."
+    },
+    "stages": {
+      "type": "array",
+      "uniqueItems": true,
+      "maxItems": 7,
+      "items": {
+        "enum": [
+          "idea",
+          "pre-seed",
+          "seed",
+          "series-a",
+          "series-b",
+          "series-c-plus",
+          "any"
+        ]
+      },
+      "description": "Stages the vendor states it serves."
+    },
+    "company_age_max_years": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 30,
+      "description": "Maximum company age. Pair with age_basis -- vendors measure from different events."
+    },
+    "age_basis": {
+      "enum": [
+        "incorporation",
+        "launch",
+        "first-revenue",
+        "unknown"
+      ],
+      "default": "unknown",
+      "description": "What company_age_max_years is measured from. Clerk measures from LAUNCH, not incorporation."
+    },
+    "employees_max": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 1,
+      "description": "Headcount cap. Amplitude <20, Intercom <15, Miro <30, Linear <50, Notion <100, Zendesk <250."
+    },
+    "revenue_max_usd": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "description": "Revenue cap. Help Scout gates on <$1M ARR -- a rule no funding field can express."
+    },
+    "new_customer_only": {
+      "enum": [
+        true,
+        false,
+        "unknown"
+      ],
+      "default": "unknown",
+      "description": "TRI-STATE. Near-universal and a top rejection cause. Railway required under $100 lifetime spend; Cloudflare is first-time applicants only."
+    },
+    "requires_incorporation": {
+      "enum": [
+        true,
+        false,
+        "unknown"
+      ],
+      "default": "unknown",
+      "description": "TRI-STATE. Whether a registered legal entity is required."
+    },
+    "requires_company_email": {
+      "enum": [
+        true,
+        false,
+        "unknown"
+      ],
+      "default": "unknown",
+      "description": "TRI-STATE. Whether a matching business-domain email is required to apply."
+    },
+    "regions": {
+      "type": "array",
+      "uniqueItems": true,
+      "maxItems": 40,
+      "items": {
+        "type": "string",
+        "pattern": "^([A-Z]{2}|africa|apac|eea|eu|europe|global|latam|mena|north_america)$"
+      },
+      "description": "Where the vendor says the program is available. Use 'global' ONLY when the vendor says worldwide/global. Use a lowercase group id (e.g. apac) only when the vendor itself used that regional wording -- and then regions_basis must be 'inferred' unless the vendor also enumerated the countries. Region groups are a display aid and are NEVER proof a given country qualifies."
+    },
+    "excluded_regions": {
+      "type": "array",
+      "uniqueItems": true,
+      "maxItems": 40,
+      "items": {
+        "type": "string",
+        "pattern": "^([A-Z]{2}|africa|apac|eea|eu|europe|global|latam|mena|north_america)$"
+      },
+      "description": "Countries or regions the vendor explicitly excludes (sanctions, export controls, unsupported billing)."
+    },
+    "regions_basis": {
+      "enum": [
+        "asserted",
+        "inferred",
+        "unstated"
+      ],
+      "default": "unstated",
+      "description": "THE HONESTY GATE for country pages. asserted=vendor named the country, said worldwide/global, or named a region AND enumerated its countries -> may appear as Confirmed. inferred=vendor named a region but not its countries (a bare 'APAC') -> Not confirmed. unstated=vendor published no geographic restriction -> Not confirmed. Most real programs are 'unstated'."
+    },
+    "regions_quote": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 200,
+      "description": "Shortest exact span supporting regions_basis: asserted. Required in spirit whenever you claim 'asserted'."
+    },
+    "eligibility_notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2000,
+      "description": "Anything structured fields cannot hold. For partially-verified entries, name exactly which detail could not be inspected."
+    },
+    "application_mechanism": {
+      "enum": [
+        "self-serve-form",
+        "sales-call",
+        "partner-code",
+        "in-product",
+        "invite-only",
+        "unknown"
+      ],
+      "default": "unknown",
+      "description": "How you actually apply. The difference between an afternoon and a quarter."
+    },
+    "requires_sales_call": {
+      "enum": [
+        true,
+        false,
+        "unknown"
+      ],
+      "default": "unknown",
+      "description": "TRI-STATE. Plain and Crisp have no self-serve path at all."
+    },
+    "approval_time": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 120,
+      "description": "Vendor-published turnaround, e.g. '2-3 business days'. Only when published."
+    },
+    "obligations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 200
+      },
+      "maxItems": 8,
+      "description": "Non-monetary conditions. Grafana and Vultr require agreeing to be a public reference customer. These are real costs and belong beside the benefit."
+    },
+    "status": {
+      "enum": [
+        "active-self-serve",
+        "active-partner-only",
+        "active-sales-gated",
+        "active-amount-undisclosed",
+        "active-invite-only",
+        "time-boxed",
+        "closed-to-new",
+        "discontinued",
+        "no-program",
+        "unverified"
+      ],
+      "description": "Current state. 'no-program' records a vendor that explicitly states it offers no startup credits -- a genuinely useful negative. An entry whose only live artifact is a dated changelog or blog post may NEVER be marked active."
+    },
+    "status_basis": {
+      "enum": [
+        "asserted",
+        "inferred"
+      ],
+      "default": "inferred",
+      "description": "asserted=the status is quoted from the page (fill status_quote). inferred=your reading. Restrictive statuses invented by a reviewer harm founders as much as missing ones."
+    },
+    "status_quote": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 200,
+      "description": "Shortest exact span supporting a restrictive status."
+    },
+    "discontinued_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+      "description": "ISO date the program closed, when known. Webflow closed 2026-06-30 and is still listed as live by most aggregators -- dated closures are among the highest-value records here."
+    },
+    "replaced_by": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 200,
+      "description": "What superseded a discontinued program, if anything."
+    },
+    "last_verified": {
+      "type": "string",
+      "format": "date",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+      "description": "The date a HUMAN opened official_source and confirmed these terms. Never set by a bot, never backfilled. Re-verification cycle is 180 days."
+    },
+    "verified_by": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9](?:[A-Za-z0-9]|-(?=[A-Za-z0-9])){0,38}$",
+      "description": "GitHub handle of the person who did that."
+    },
+    "verification_level": {
+      "enum": [
+        "verified",
+        "partially-verified",
+        "needs-manual-verification"
+      ],
+      "description": "verified=the official page or docs were opened and the claim directly confirmed; carries evidence_quote. partially-verified=official info was read but some detail could not be inspected; name it in eligibility_notes. needs-manual-verification=the page is blocked, gated or account-only; NO financial amount may be published. A search snippet never carries the same standing as a page someone opened."
+    },
+    "evidence_quote": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 200,
+      "description": "The SHORTEST exact span from official_source that supports the claim. Never a paragraph or a full FAQ answer. Required for verified and partially-verified; omit for needs-manual-verification."
+    },
+    "conflicting_sources": {
+      "type": "array",
+      "maxItems": 4,
+      "description": "When a vendor contradicts ITSELF, record both readings rather than silently picking one. Algolia's page says <7yr/<$15M while its own FAQ says <3yr/<$5M. Picking the generous one misleads founders about rejection risk and makes good-faith reporters think the entry is fabricated.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "url",
+          "quote"
+        ],
+        "properties": {
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "quote": {
+            "type": "string",
+            "maxLength": 200
+          },
+          "note": {
+            "type": "string",
+            "maxLength": 200
+          }
+        }
+      }
+    },
+    "bot_blocked": {
+      "type": "boolean",
+      "default": false,
+      "description": "Vendor 403s or JS-renders, so automated checking cannot see the page. Permanent manual-review flag. Around 15% of vendors -- Google Cloud, Oracle, Carta, Cohere, JetBrains. Flag once; stop re-triaging."
+    },
+    "last_checked": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+      "description": "BOT-written: the last automated liveness check. Deliberately separate from last_verified. A bot fetching a URL is not a human confirming a $100k offer still exists on those terms."
+    },
+    "related": {
+      "type": "array",
+      "uniqueItems": true,
+      "maxItems": 10,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+      },
+      "description": "Slugs of related entries. Use for shared credit pools: Neon and Databricks advertise the SAME $200k through one form, so listing both without linking them double-counts."
+    },
+    "fetch_note": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 400,
+      "description": "What happened when the page was last fetched: 200 and rendered, 403, JS-only shell, redirected, 404. Recorded so a later reviewer knows whether a gap was the vendor blocking us or nobody looking."
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "verification_level": {
+            "const": "needs-manual-verification"
+          }
+        },
+        "required": [
+          "verification_level"
+        ]
+      },
+      "then": {
+        "properties": {
+          "amount_max": {
+            "type": "null"
+          },
+          "amount_is_published": {
+            "const": false
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "verification_level": {
+            "enum": [
+              "verified",
+              "partially-verified"
+            ]
+          }
+        },
+        "required": [
+          "verification_level"
+        ]
+      },
+      "then": {
+        "required": [
+          "evidence_quote"
+        ],
+        "properties": {
+          "evidence_quote": {
+            "type": "string",
+            "minLength": 3
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "discontinued"
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "then": {
+        "required": [
+          "discontinued_date"
+        ]
+      }
+    }
+  ]
+}

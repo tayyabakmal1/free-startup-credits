@@ -1,0 +1,64 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+slug: firstbase-rewards
+company: Firstbase
+program: Firstbase Rewards
+category: ecosystem
+tags:
+- perks-marketplace
+- incorporation
+- aggregate-value
+homepage: https://www.firstbase.io
+apply_url: https://www.firstbase.io/rewards
+official_source: https://www.firstbase.io/rewards
+benefit_type: bundle
+benefit_summary: A catalogue of third-party partner perks (e.g. AWS, Deepgram, Snowflake,
+  Deel, Zoho) that Firstbase states is worth over $350,000 in aggregate; each perk has its
+  own separate terms and there is no single per-company credit.
+amount_is_published: true
+stacking_notes: Each listed perk carries its own conditions - for example the AWS listing
+  reads "Up to $100,000 in credits or 20-50% off your monthly spend through an AWS partner
+  (must be spending $100+/month)".
+partners:
+- AWS Activate
+- Amazon EC2
+- Deepgram
+- Snowflake
+- Deel
+- DeepSeek AI
+- Zoho
+- Pipedrive
+- Amplitude
+- Omnisend
+- SurveyMonkey
+- Zoom
+- Riverside.fm
+- VEED.IO
+- Pixpa
+- VAT IT
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: 'Could not inspect / not stated: the page publishes NO eligibility criteria
+  and NO redemption mechanism - it does not state whether you must be a Firstbase customer
+  to claim the perks, nor how a perk is redeemed. Individual perk terms live on per-partner
+  subpages that were not opened. The "$350,000" is an aggregate marketing valuation of the
+  whole perk network, not a per-company amount, so amount_max is deliberately left null. Firstbase''s
+  own incorporation offer ("Formation is on us. Pay only your state fee.") is a separate promotion
+  on the homepage, not part of Rewards. This is an aggregate third-party perks catalogue,
+  not a Firstbase credit. One listed reward quotes "$2,000 in credits for 1 year if you never
+  raised funds // $350,000 in credits for 2 years if you did" - that is Google Cloud''s offer
+  surfaced through Firstbase. This is an aggregate third-party perks catalogue, not a Firstbase
+  credit. One listed reward quotes "$2,000 in credits for 1 year if you never raised funds
+  // $350,000 in credits for 2 years if you did" - that is Google Cloud''s offer surfaced
+  through Firstbase.'
+status: active-self-serve
+status_basis: inferred
+fetch_note: 'firstbase.io: 200 and rendered. firstbase.io/rewards: 200 and rendered; the perk
+  catalogue and its per-partner offer lines were present in the server HTML. No eligibility
+  or redemption section exists on the page.'
+last_verified: '2026-09-16'
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: Access our exclusive network with perks worth over $350,000 and boost your
+  company.
+bot_blocked: false

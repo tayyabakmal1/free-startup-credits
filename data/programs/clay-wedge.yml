@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+slug: clay-wedge
+company: Clay
+program: Clay Wedge
+category: crm
+tags:
+- gtm
+- accelerator
+- cohort
+- sales
+homepage: https://www.clay.com
+apply_url: https://cohorts.clay.com/wedge
+official_source: https://www.clay.com/clay-for-startups
+benefit_type: credit
+benefit_summary: Two-week live and async GTM accelerator cohort for pre-seed to Series A venture-backed
+  startups; participants earn Clay credits as they progress through the programme. No credit
+  amount is published.
+amount_is_published: false
+amount_max: null
+funding_required: true
+open_to_bootstrapped: false
+requires_vc_backing: true
+partner_gate: improves-offer
+stages:
+- pre-seed
+- seed
+- series-a
+regions:
+- global
+excluded_regions: []
+regions_basis: asserted
+regions_quote: Wedge is Clay’s virtual GTM acceleration program for the fastest-growing, Series
+  A and below venture-backed startups globally.
+eligibility_notes: Clay publishes no credit figure for Wedge — only "thousands of credits".
+  The separate "Startup Partner Program" is for VC firms, accelerators, incubators and studios
+  (not startups) and gives their portfolio "Automatic approval for Wedge". Clay's own discount
+  FAQ lists only a 10% annual-plan discount and a 25% non-profit discount, i.e. no standing
+  startup discount; a bespoke "Clay startup stipend" must be pitched for. The benefit is quoted
+  as "Earn thousands of credits throughout the two week, live & async programs" - no dollar
+  figure is published. "globally" is the vendor's own word, which is what supports the confirmed
+  geography. The benefit is quoted as "Earn thousands of credits throughout the two week,
+  live & async programs" - no dollar figure is published. "globally" is the vendor's own word,
+  which is what supports the confirmed geography.
+application_mechanism: self-serve-form
+obligations:
+- Attend a dated two-week cohort (~12 hours
+- live + async)
+status: active-amount-undisclosed
+status_basis: asserted
+status_quote: Wedge is Clay’s virtual GTM acceleration program for the fastest-growing, Series
+  A and below venture-backed startups globally.
+fetch_note: 200 and rendered on https://www.clay.com/clay-for-startups, https://www.clay.com/partners/startup-partner-program,
+  the Clay FAQ pages and https://cohorts.clay.com/wedge — all full text in server HTML. The
+  on-page Wedge link carried utm_ parameters, which were stripped for apply_url.
+last_verified: '2026-09-16'
+verified_by: tayyabakmal1
+verification_level: verified
+evidence_quote: Series A and below venture-backed startups globally
+bot_blocked: false
