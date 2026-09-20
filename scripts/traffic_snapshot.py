@@ -34,9 +34,15 @@ ENDPOINTS = {
 }
 
 
-def api(path: str):
+def api(path: str = ""):
+    # The repo endpoint is /repos/{owner}/{repo} with NO trailing slash -- the
+    # REST API answers 404 for /repos/{owner}/{repo}/, so only join a sub-path
+    # when there is one.
+    url = f"https://api.github.com/repos/{REPO}"
+    if path:
+        url = f"{url}/{path}"
     req = urllib.request.Request(
-        f"https://api.github.com/repos/{REPO}/{path}",
+        url,
         headers={
             "Accept": "application/vnd.github+json",
             "User-Agent": "free-startup-credits-traffic",
@@ -55,7 +61,7 @@ def main() -> int:
 
     snapshot: dict = {"repo": REPO}
     try:
-        repo = api("")
+        repo = api()
         snapshot["stars"] = repo.get("stargazers_count")
         snapshot["forks"] = repo.get("forks_count")
         snapshot["watchers"] = repo.get("subscribers_count")

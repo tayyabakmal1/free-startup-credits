@@ -26,7 +26,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
-        run: python scripts/traffic_snapshot.py | tee -a "$GITHUB_STEP_SUMMARY"
+        # Without pipefail the pipeline reports tee's exit status, so a failed
+        # snapshot passed this step green and only surfaced as a confusing
+        # "pathspec did not match any files" in the commit step below.
+        run: |
+          set -o pipefail
+          python scripts/traffic_snapshot.py | tee -a "$GITHUB_STEP_SUMMARY"
 
       - name: Commit the history
         run: |
