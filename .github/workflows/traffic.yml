@@ -24,7 +24,12 @@ jobs:
 
       - name: Snapshot traffic
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # The traffic endpoints need `Administration: read`, which the Actions
+          # GITHUB_TOKEN cannot be granted -- with it, all four return 403 and
+          # the snapshot records nothing. TRAFFIC_TOKEN is a fine-grained PAT
+          # with Administration:read. The fallback keeps forks running (they
+          # get stars/forks only, and the step fails loudly saying why).
+          GITHUB_TOKEN: ${{ secrets.TRAFFIC_TOKEN || secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
         # Without pipefail the pipeline reports tee's exit status, so a failed
         # snapshot passed this step green and only surfaced as a confusing

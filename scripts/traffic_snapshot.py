@@ -4,8 +4,11 @@ GitHub keeps referrer and view data for FOURTEEN DAYS only. If this is not
 running before launch, there is no way to reconstruct afterwards which channel
 actually produced the traffic -- the launch becomes unmeasurable.
 
-Appends one JSON line per run to data-history/traffic.jsonl (git-ignored by
-default; commit it if you want the history public).
+Appends one JSON line per run to data-history/traffic.jsonl, which CI commits
+so the history survives the 14-day window.
+
+The traffic endpoints need `Administration: read`. The Actions GITHUB_TOKEN
+cannot be granted that, so CI passes a fine-grained PAT as TRAFFIC_TOKEN.
 
     GITHUB_TOKEN=... python scripts/traffic_snapshot.py
 """
@@ -56,7 +59,7 @@ def api(path: str = ""):
 def main() -> int:
     if not TOKEN:
         print("ERROR: traffic endpoints need push access. Set GITHUB_TOKEN.", file=sys.stderr)
-        print("       In Actions: GITHUB_TOKEN with `permissions: contents: read`.", file=sys.stderr)
+        print("       In Actions: a PAT with Administration:read as TRAFFIC_TOKEN.", file=sys.stderr)
         return 2
 
     snapshot: dict = {"repo": REPO}
@@ -75,6 +78,25 @@ def main() -> int:
             snapshot[key] = api(path)
         except urllib.error.HTTPError as exc:
             snapshot[key] = {"error": exc.code}
+
+    # A snapshot with no traffic data is worse than no snapshot: the job goes
+    # green, the history fills with placeholders, and the 14-day window closes
+    # on data nobody noticed was missing. Partial failures are still worth
+    # recording; total failure always means the token is wrong.
+    errors = {
+        key: snapshot[key]["error"]
+        for key in ENDPOINTS
+        if isinstance(snapshot.get(key), dict) and "error" in snapshot[key]
+    }
+    if len(errors) == len(ENDPOINTS):
+        codes = sorted(set(errors.values()))
+        print(f"ERROR: every traffic endpoint failed {codes}; nothing recorded.", file=sys.stderr)
+        if 403 in codes:
+            print("       These endpoints need `Administration: read`, which the", file=sys.stderr)
+            print("       Actions GITHUB_TOKEN cannot be granted. Create a fine-grained", file=sys.stderr)
+            print("       PAT with Administration:read on this repo and store it as the", file=sys.stderr)
+            print("       TRAFFIC_TOKEN secret.", file=sys.stderr)
+        return 1
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     with OUT.open("a", encoding="utf-8") as fh:
