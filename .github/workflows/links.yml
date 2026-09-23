@@ -69,8 +69,11 @@ jobs:
           args: >-
             --config lychee.toml --extensions yml,yaml,md
             --cache --max-cache-age 1d
-            --output lychee/out.md
             data/ README.md categories/ collections/ docs/
+          # Must be the action input, not --output in args: the action always
+          # sets its own --output and refuses to run when args sets it too.
+          # The rolling-issue step below reads this same path.
+          output: lychee/out.md
           fail: false
 
       - name: Open or update the rolling issue
