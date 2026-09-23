@@ -5,8 +5,9 @@
 # behave like a browser, rate-limit ourselves politely, and keep a small,
 # commented exclude list that is reviewed like any other content.
 
-# Behave like a browser. Many vendor pages reject HEAD but answer GET.
-method = ["head", "get"]
+# Behave like a browser. Many vendor pages reject HEAD but answer GET, and
+# lychee takes a single method (not a fallback list), so ask for GET outright.
+method = "get"
 user_agent = "Mozilla/5.0 (compatible; free-startup-credits link checker; +https://github.com/tayyabakmal1/free-startup-credits)"
 
 # Be a good citizen: a burst of parallel requests to one vendor looks like an

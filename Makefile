@@ -39,7 +39,7 @@ check: validate build
 	      exit 1)
 
 links:
-	lychee --config lychee.toml data/
+	lychee --config lychee.toml 'data/**/*.yml'
 
 freshness:
 	@$(PY) $(SCRIPTS)/freshness.py
