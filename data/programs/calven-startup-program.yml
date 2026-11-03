@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/tayyabakmal1/free-startup-credits/main/schema/program.schema.json
+slug: calven-startup-program
+company: Calven
+program: Calven Startup Program
+category: marketing
+tags:
+- product-marketing
+- competitive-intelligence
+- ai-agent
+homepage: https://calven.ai
+apply_url: https://calven.ai/startups
+official_source: https://calven.ai/startups
+benefit_type: discount
+benefit_summary: 75% off the full Professional plan for 12 months - $200/month billed annually
+  (normally $800) or $250/month billed monthly (normally $1,000).
+amount_is_published: true
+amount_max: null
+currency: USD
+duration_months: 12
+after_credits: The workspace reprices to standard Professional pricing with 60 days notice.
+  Companies still under both thresholds can run the program a second year.
+partner_gate: none
+revenue_max_usd: 1000000
+employees_max: 10
+open_to_bootstrapped: true  # "Bootstrapped companies qualify on exactly the same terms"
+requires_vc_backing: false
+regions: []
+excluded_regions: []
+regions_basis: unstated
+eligibility_notes: 'Both criteria are required. Exact wording on the page: "Companies under
+  $1M in ARR with fewer than 10 employees. Both, not either." Eligibility is self-declared and spot-checked
+  against public sources. The discount is a percentage, so amount_max is left null. A separate
+  14-day free trial of Professional, no credit card, is available independently of the program.'
+application_mechanism: self-serve-form
+requires_sales_call: false
+status: active-self-serve
+status_basis: asserted
+status_quote: Apply with the form below
+last_verified: '2026-11-03'
+verified_by: lukas-kolek
+verification_level: verified
+evidence_quote: 75% off for 12 months
+bot_blocked: false
